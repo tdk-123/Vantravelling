@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Wanderlust</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background elements -->
+    <div class="bg-decoration"></div>
+    <div class="bg-hero-image"></div>
+
+    <header>
+        <a href="index.html" class="logo">Wanderlust.</a>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-translate="navHome">Home</a></li>
+                <li><a href="about.html" data-translate="navJourney">Our Journey</a></li>
+                <li><a href="blog.html" data-translate="navBlog">Blog</a></li>
+                <li><a href="contact.html" class="active" data-translate="navContact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="lang-switcher" class="lang-switcher">
+            <button class="lang-btn lang-nl" title="Nederlands">
+                <svg viewBox="0 0 32 24" class="flag-icon">
+                    <rect y="0" width="32" height="8" fill="#AE1C28" />
+                    <rect y="8" width="32" height="8" fill="#FFFFFF" />
+                    <rect y="16" width="32" height="8" fill="#21468B" />
+                </svg>
+            </button>
+            <button class="lang-btn lang-en" title="English">
+                <svg viewBox="0 0 32 24" class="flag-icon">
+                    <rect fill="#012169" width="32" height="24" />
+                    <path d="M0,0 L32,24 M32,0 L0,24" stroke="#fff" stroke-width="3" />
+                    <path d="M0,0 L32,24 M32,0 L0,24" stroke="#C8102E" stroke-width="1.5" />
+                    <path d="M16,0 V24 M0,12 H32" stroke="#fff" stroke-width="5" />
+                    <path d="M16,0 V24 M0,12 H32" stroke="#C8102E" stroke-width="3" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-content">
+            <h1 data-translate="contactTitle">Contact Us</h1>
+
+            <div class="contact-intro">
+                <p data-translate="contactIntro1">
+                    Our blog is intentionally designed as a digital oasis of calm. To maintain that atmosphere, we do
+                    not have a public comments section like social media sites.
+                </p>
+                <p data-translate="contactIntro2">
+                    Of course, we'd love to hear from you! Do you have questions, feedback, or want to report an issue
+                    with the website? Please use the form below.
+                </p>
+                <p data-translate="contactTechInfo">
+                    <em>If reporting an issue, please mention which device and browser you are using.</em>
+                </p>
+            </div>
+
+            <form id="comment-form" class="contact-form">
+                <div class="form-group">
+                    <label for="message" data-translate="contactLabelMessage">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <!-- Hidden fields for tech info -->
+                <input type="hidden" id="device-info" name="device-info">
+                <input type="hidden" id="browser-info" name="browser-info">
+
+                <button type="submit" class="cta-button" data-translate="contactBtnSubmit">Send Message</button>
+            </form>
+            <div id="comment-message" class="form-message"></div>
+
+            <div class="newsletter-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0e0;">
+                <p style="margin-bottom: 1rem;">If you want to receive an email when a new blog post appears, sign up
+                    here:</p>
+                <form id="newsletter-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="email" data-translate="contactLabelEmail">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="cta-button">Sign Up</button>
+                </form>
+                <div id="newsletter-message" class="form-message"></div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+
+</html>

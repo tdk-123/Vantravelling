@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Wanderlust</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Decorative background -->
+    <div class="bg-decoration"></div>
+    <div class="bg-hero-image"></div>
+
+    <header>
+        <a href="index.html" class="logo">Wanderlust.</a>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-translate="navHome">Home</a></li>
+                <li><a href="about.html" data-translate="navJourney">Onze Reis</a></li>
+                <li><a href="blog.html" class="active" data-translate="navBlog">Blog</a></li>
+                <li><a href="contact.html" data-translate="navContact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="lang-switcher" class="lang-switcher">
+            <button class="lang-btn lang-nl" title="Nederlands">
+                <svg viewBox="0 0 32 24" class="flag-icon">
+                    <rect y="0" width="32" height="8" fill="#AE1C28" />
+                    <rect y="8" width="32" height="8" fill="#FFFFFF" />
+                    <rect y="16" width="32" height="8" fill="#21468B" />
+                </svg>
+            </button>
+            <button class="lang-btn lang-en" title="English">
+                <svg viewBox="0 0 32 24" class="flag-icon">
+                    <rect fill="#012169" width="32" height="24" />
+                    <path d="M0,0 L32,24 M32,0 L0,24" stroke="#fff" stroke-width="3" />
+                    <path d="M0,0 L32,24 M32,0 L0,24" stroke="#C8102E" stroke-width="1.5" />
+                    <path d="M16,0 V24 M0,12 H32" stroke="#fff" stroke-width="5" />
+                    <path d="M16,0 V24 M0,12 H32" stroke="#C8102E" stroke-width="3" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="blog-container">
+            <button id="prev-btn" class="nav-arrow" aria-label="Previous Post">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <article id="blog-post-area">
+                <div class="post-header">
+                    <span id="post-date" class="post-date" data-translate="blogLoading">Laden...</span>
+                    <h1 id="post-title" class="post-title" data-translate="blogLoading">Laden...</h1>
+                </div>
+
+                <div id="post-body">
+                    <!-- Blocks inserted by JS -->
+                </div>
+            </article>
+
+            <button id="next-btn" class="nav-arrow" aria-label="Next Post">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </main>
+
+
+    <script src="js/main.js?v=3"></script>
+</body>
+
+</html>

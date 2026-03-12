@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Reisblog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Hero background image - set the CSS variable to enable -->
+    <style>
+        :root {
+            --hero-bg-image: url('assets/images/hero_background.png');
+        }
+    </style>
+    <!-- Decorative background -->
+    <div class="bg-decoration"></div>
+    <div class="bg-hero-image"></div>
+
+    <header>
+        <a href="index.html" class="logo">Wanderlust.</a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active" data-translate="navHome">Home</a></li>
+                <li><a href="about.html" data-translate="navJourney">Onze Reis</a></li>
+                <li><a href="blog.html" data-translate="navBlog">Blog</a></li>
+                <li><a href="contact.html" data-translate="navContact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="lang-switcher" class="lang-switcher">
+            <button class="lang-btn lang-nl" title="Nederlands">
+                <svg viewBox="0 0 32 24" class="flag-icon">
+                    <rect y="0" width="32" height="8" fill="#AE1C28" />
+                    <rect y="8" width="32" height="8" fill="#FFFFFF" />
+                    <rect y="16" width="32" height="8" fill="#21468B" />
+                </svg>
+            </button>
+            <button class="lang-btn lang-en" title="English">
+                <svg viewBox="0 0 32 24" class="flag-icon">
+                    <rect fill="#012169" width="32" height="24" />
+                    <path d="M0,0 L32,24 M32,0 L0,24" stroke="#fff" stroke-width="3" />
+                    <path d="M0,0 L32,24 M32,0 L0,24" stroke="#C8102E" stroke-width="1.5" />
+                    <path d="M16,0 V24 M0,12 H32" stroke="#fff" stroke-width="5" />
+                    <path d="M16,0 V24 M0,12 H32" stroke="#C8102E" stroke-width="3" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 data-translate="heroTitle">De Rust Ontdekken.</h1>
+            <p data-translate="heroSubtitle">Reis met ons mee terwijl we verborgen plekjes in de wereld verkennen, op
+                zoek naar rust in elk landschap en verhaal.</p>
+            <a href="blog.html" class="cta-button" data-translate="heroCta">Lees de Blog</a>
+        </section>
+
+        <section class="preview-grid" id="preview-grid">
+            <!-- Cards will be dynamically loaded from blog posts data -->
+        </section>
+    </main>
+
+
+    <script src="js/main.js?v=3"></script>
+</body>
+
+</html>

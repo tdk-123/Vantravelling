@@ -1,0 +1,794 @@
+:root {
+  --bg-color: #F8FBF8;
+  --bg-color-alt: #F0F7F0;
+  --card-bg: #FFFFFF;
+  --primary-text: #2C3E2C;
+  --secondary-text: #586B58;
+  --accent-light: #E0EFE0;
+  --accent-main: #98C198;
+  --accent-dark: #6B8F6B;
+  --accent-subtle: rgba(152, 193, 152, 0.12);
+  --shadow-sm: 0 2px 8px rgba(44, 62, 44, 0.05);
+  --shadow-md: 0 4px 12px rgba(44, 62, 44, 0.08);
+  --font-main: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== DECORATIVE BACKGROUND ===== */
+.bg-decoration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+  /* Multi-layer gradient with subtle color shifts */
+  background:
+    /* Soft green glow top-left */
+    radial-gradient(ellipse 90% 60% at 15% 15%, rgba(152, 193, 152, 0.18) 0%, transparent 50%),
+    /* Deeper green accent bottom-right */
+    radial-gradient(ellipse 70% 50% at 85% 80%, rgba(107, 143, 107, 0.14) 0%, transparent 45%),
+    /* Subtle warm shift center */
+    radial-gradient(ellipse 80% 40% at 50% 50%, rgba(180, 210, 160, 0.10) 0%, transparent 50%),
+    /* Cool undertone top-right */
+    radial-gradient(ellipse 50% 50% at 90% 10%, rgba(160, 200, 180, 0.12) 0%, transparent 40%),
+    /* Bottom edge fade */
+    radial-gradient(ellipse 100% 30% at 50% 100%, rgba(224, 239, 224, 0.22) 0%, transparent 50%),
+    /* Base gradient */
+    linear-gradient(175deg, var(--bg-color) 0%, #F5FAF5 40%, var(--bg-color-alt) 100%);
+}
+
+/* Layer 1: Dotted travel paths */
+.bg-decoration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+  background-image:
+    /* Primary dotted path grid */
+    radial-gradient(circle at 1.5px 1.5px, var(--accent-main) 1px, transparent 1px),
+    /* Larger scattered dots for depth */
+    radial-gradient(circle at 2px 2px, rgba(107, 143, 107, 0.4) 1.5px, transparent 1.5px);
+  background-size: 45px 45px, 90px 90px;
+  background-position: 0 0, 22px 22px;
+}
+
+/* Layer 2: Travel-themed SVG decorations */
+.bg-decoration::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.45;
+  background-image:
+    /* Compass rose pattern - top left */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='40' fill='none' stroke='%2398C198' stroke-width='1' opacity='0.5'/%3E%3Ccircle cx='60' cy='60' r='25' fill='none' stroke='%2398C198' stroke-width='0.5' opacity='0.4'/%3E%3Cpath d='M60 15 L60 30 M60 90 L60 105 M15 60 L30 60 M90 60 L105 60' stroke='%236B8F6B' stroke-width='1' opacity='0.6'/%3E%3Cpath d='M60 35 L55 60 L60 55 L65 60 Z' fill='%236B8F6B' opacity='0.5'/%3E%3C/svg%3E"),
+    /* Abstract plane silhouette - scattered */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 15 L45 35 L65 40 L45 42 L42 60 L40 45 L38 60 L35 42 L15 40 L35 35 Z' fill='%2398C198' opacity='0.35'/%3E%3C/svg%3E"),
+    /* Curved dotted flight path */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Cpath d='M0 120 Q 75 30, 150 75 T 300 30' stroke='%236B8F6B' stroke-width='2' stroke-dasharray='8 12' fill='none' opacity='0.4'/%3E%3C/svg%3E"),
+    /* Decorative compass circles */
+    radial-gradient(circle at 12% 20%, transparent 70px, rgba(152, 193, 152, 0.25) 70px, rgba(152, 193, 152, 0.25) 73px, transparent 73px),
+    radial-gradient(circle at 88% 75%, transparent 50px, rgba(152, 193, 152, 0.22) 50px, rgba(152, 193, 152, 0.22) 52px, transparent 52px),
+    radial-gradient(circle at 75% 12%, transparent 35px, rgba(152, 193, 152, 0.20) 35px, rgba(152, 193, 152, 0.20) 37px, transparent 37px),
+    /* Wave/horizon line */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='80' viewBox='0 0 400 80'%3E%3Cpath d='M0 40 Q 50 20, 100 40 T 200 40 T 300 40 T 400 40' stroke='%2398C198' stroke-width='1.5' fill='none' opacity='0.5'/%3E%3Cpath d='M0 50 Q 50 30, 100 50 T 200 50 T 300 50 T 400 50' stroke='%236B8F6B' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-size:
+    280px 280px,
+    /* compass */
+    200px 200px,
+    /* plane */
+    500px 250px,
+    /* flight path */
+    100% 100%,
+    /* circle 1 */
+    100% 100%,
+    /* circle 2 */
+    100% 100%,
+    /* circle 3 */
+    600px 80px;
+  /* waves */
+  background-position:
+    5% 8%,
+    /* compass */
+    85% 25%,
+    /* plane */
+    center 60%,
+    /* flight path */
+    center,
+    /* circles */
+    center,
+    center,
+    0 85%;
+  /* waves */
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    repeat-x;
+}
+
+/* Hero background image support */
+.bg-hero-image {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1600px;
+  height: 80vh;
+  pointer-events: none;
+  z-index: -1;
+  background-image: var(--hero-bg-image, none);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  /* Subtle fade on all edges - visible but not overwhelming */
+  opacity: 0.35;
+  -webkit-mask-image:
+    radial-gradient(ellipse 90% 80% at 50% 40%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 85%);
+  mask-image:
+    radial-gradient(ellipse 90% 80% at 50% 40%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 85%);
+}
+
+/* 
+ * To add a hero background image, set the CSS variable on the body or a style tag:
+ * 
+ * Option 1 - Inline style on body:
+ *   <body style="--hero-bg-image: url('assets/images/your-image.jpg');">
+ * 
+ * Option 2 - In a style tag or CSS:
+ *   :root { --hero-bg-image: url('assets/images/your-image.jpg'); }
+ * 
+ * The image will appear with a soft vignette fade into the patterned background.
+ */
+
+/* ===== HEADER ===== */
+header {
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--secondary-text);
+  font-weight: 500;
+  transition: color 0.2s, background-color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary-text);
+  background-color: var(--accent-light);
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.lang-btn {
+  background: var(--card-bg);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.35rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.lang-btn.active {
+  border-color: var(--accent-main);
+  background: var(--accent-light);
+}
+
+.flag-icon {
+  width: 28px;
+  height: 21px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 5%;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HOME STYLES ===== */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  color: var(--secondary-text);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-main);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-dark);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== PREVIEW GRID ===== */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.preview-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.preview-image {
+  width: 100%;
+  height: 200px;
+  background-color: var(--accent-light);
+  object-fit: cover;
+}
+
+.preview-content {
+  padding: 1.5rem;
+}
+
+.preview-content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-text);
+}
+
+.preview-content p {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+}
+
+/* ===== ABOUT STYLES ===== */
+.about-content {
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 1rem;
+}
+
+.about-content p {
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ===== BLOG STYLES ===== */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  position: relative;
+}
+
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--card-bg);
+  border: 1px solid var(--accent-light);
+  color: var(--accent-main);
+  cursor: pointer;
+  padding: 1rem;
+  transition: transform 0.2s, color 0.2s, box-shadow 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  z-index: 100;
+}
+
+#prev-btn {
+  left: max(1rem, calc((100vw - 1200px) / 2 - 80px));
+}
+
+#next-btn {
+  right: max(1rem, calc((100vw - 1200px) / 2 - 80px));
+}
+
+.nav-arrow:hover {
+  color: var(--card-bg);
+  background-color: var(--accent-main);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(152, 193, 152, 0.3);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+  background: var(--bg-color-alt);
+  box-shadow: none;
+}
+
+.nav-arrow:disabled:hover {
+  color: var(--accent-main);
+  background: var(--bg-color-alt);
+  transform: translateY(-50%);
+}
+
+.nav-arrow svg {
+  width: 48px;
+  height: 48px;
+}
+
+#blog-post-area {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width: 100%;
+}
+
+#blog-post-area.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-date {
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.2;
+}
+
+/* Post Blocks */
+.post-block {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.post-block-text {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  line-height: 1.8;
+}
+
+.post-block-image img,
+.post-block-video video {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  box-shadow: var(--shadow-sm);
+}
+
+.post-block-video video {
+  max-height: 500px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Specific spans for mosaic layout */
+.gallery-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.lightbox.open {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content-wrapper {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-img {
+  max-height: 90vh;
+  max-width: 90vw;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 2010;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background 0.2s;
+  z-index: 2010;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+/* Lightbox Caption */
+.lightbox-caption {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+  }
+}
+
+
+/* ===== CONTACT PAGE ===== */
+.contact-intro {
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.contact-intro p {
+  margin-bottom: 1rem;
+}
+
+.contact-intro em {
+  color: var(--accent-dark);
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  background: var(--bg-color-alt);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--accent-light);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--accent-light);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--primary-text);
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-main);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 0.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--accent-main);
+}
+
+.checkbox-group label {
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.form-message {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: none;
+  font-weight: 500;
+}
+
+.form-message.success {
+  display: block;
+  background-color: #E0EFE0;
+  color: #2C3E2C;
+  border: 1px solid #98C198;
+}
+
+.form-message.error {
+  display: block;
+  background-color: #F8D7DA;
+  color: #721C24;
+  border: 1px solid #F5C6CB;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .lang-switcher {
+    margin-left: auto;
+    order: 2;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .blog-container {
+    padding: 0;
+  }
+
+  .nav-arrow {
+    padding: 0.6rem;
+  }
+
+  #prev-btn {
+    left: 0.5rem;
+  }
+
+  #next-btn {
+    right: 0.5rem;
+  }
+
+  .nav-arrow svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  #blog-post-area {
+    padding: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+  }
+
+  .about-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+}

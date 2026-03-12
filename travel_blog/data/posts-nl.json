@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "title": "Een Ochtend in de Alpen",
+        "date": "12 oktober 2023",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/placeholder_1.png",
+                "alt": "Alpen Panorama"
+            },
+            {
+                "type": "text",
+                "content": "De lucht was fris, het soort dat je beter wakker maakt dan koffie. We wandelden voor zonsopgang naar boven om de zonsopkomst over de toppen te zien. Het was zo'n ochtend waarbij alles mogelijk lijkt."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {
+                        "src": "assets/images/placeholder_1.png",
+                        "alt": "Bergtop",
+                        "className": "large"
+                    },
+                    {
+                        "src": "assets/images/placeholder_2.png",
+                        "alt": "Groene Vallei"
+                    },
+                    {
+                        "src": "assets/images/placeholder_3.png",
+                        "alt": "Wandelpad"
+                    },
+                    {
+                        "src": "assets/images/placeholder_3.png",
+                        "alt": "Bevroren Bladeren"
+                    },
+                    {
+                        "src": "assets/images/placeholder_2.png",
+                        "alt": "Ochtendkoffie"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "De stilte was diep, alleen doorbroken door het kraken van onze laarzen op de rijp. Toen de zon over de bergen kwam, baadde het dal in een gouden licht dat bijna heilig aanvoelde. We zaten daar urenlang te kijken hoe het licht veranderde."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Door het Oude Bos",
+        "date": "15 oktober 2023",
+        "blocks": [
+            {
+                "type": "video",
+                "src": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+            },
+            {
+                "type": "text",
+                "content": "Wandelend door deze oude bossen verlies je elk besef van tijd. De bomen torenen boven je uit als hoeders van de geschiedenis. We volgden een kleine beek kilometers lang, simpelweg luisterend naar het water en de wind in de bladeren. Het zijn plekken zoals deze die ons eraan herinneren hoe klein we eigenlijk zijn."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Rust aan de Kust",
+        "date": "20 oktober 2023",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/placeholder_3.png",
+                "alt": "Kust Zonsondergang"
+            },
+            {
+                "type": "text",
+                "content": "We eindigden onze reis aan zee. Het ritme van de golven is het ultieme slaapliedje. We brachten de dag door met lezen, wandelen langs de kust en kijken hoe de kleuren van de oceaan verschoven van diepblauw naar turquoise terwijl de zon over de hemel bewoog. Een perfect einde van een reis vol rust."
+            }
+        ]
+    }
+]
