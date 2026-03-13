@@ -301,7 +301,37 @@ function getBlogPath() {
 
     // Don't run blog logic if elements don't exist
     if (!postArea) return;
+// ===== SWIPE NAVIGATION =====
+let touchStartX = 0;
+let touchStartY = 0;
+const SWIPE_THRESHOLD = 50; // Minimum px to count as a swipe
+const SWIPE_ANGLE_LIMIT = 0.75; // Max vertical ratio to distinguish horizontal swipe
 
+postArea.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+postArea.addEventListener('touchend', (e) => {
+    const deltaX = e.changedTouches[0].clientX - touchStartX;
+    const deltaY = e.changedTouches[0].clientY - touchStartY;
+
+    // Ignore if mostly vertical (user is scrolling)
+    if (Math.abs(deltaY) > Math.abs(deltaX) * SWIPE_ANGLE_LIMIT) return;
+
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+
+    if (deltaX < 0 && currentIndex < posts.length - 1) {
+        // Swipe left → next post
+        currentIndex++;
+        renderPost(currentIndex);
+    } else if (deltaX > 0 && currentIndex > 0) {
+        // Swipe right → previous post
+        currentIndex--;
+        renderPost(currentIndex);
+    }
+}, { passive: true });
+    
     let posts = [];
     let currentIndex = getPostIndexFromHash();
 
