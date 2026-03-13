@@ -7,60 +7,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return window.location.pathname.includes('/en/') ? 'en' : 'nl';
     }
 
-    // Switch language (preserves URL hash for blog post navigation)
-    function switchLanguage(targetLang) {
-        const hash = window.location.hash;
-        const currentPath = window.location.pathname;
-        
-        // Split path to handle filenames
-        const pathParts = currentPath.split('/');
-        let filename = pathParts.pop();
-        if (!filename) filename = 'index.html'; // Root is index.html
+    function getBasePath() {
+    const path = window.location.pathname;
+    if (path.includes('/en/')) {
+        // We're in /base/en/file.html — base is everything before /en/
+        return path.substring(0, path.indexOf('/en/'));
+    } else {
+        // We're in /base/file.html — base is everything before the filename
+        return path.substring(0, path.lastIndexOf('/'));
+    }
+}
+// Switch language (preserves URL hash for blog post navigation)
+function switchLanguage(targetLang) {
+    const hash = window.location.hash;
+    const currentPath = window.location.pathname;
+    const basePath = getBasePath();
 
-        let newPath;
-        if (targetLang === 'en') {
-            // Switch to English: ensure /en/ prefix
-            // If we are already in /en/, do nothing (shouldn't happen via switcher usually)
-            if (!currentPath.includes('/en/')) {
-                 newPath = '/en/' + filename;
-            } else {
-                 newPath = currentPath;
-            }
+    const pathParts = currentPath.split('/');
+    let filename = pathParts.pop();
+    if (!filename) filename = 'index.html';
+
+    let newPath;
+    if (targetLang === 'en') {
+        if (!currentPath.includes('/en/')) {
+            newPath = basePath + '/en/' + filename;
         } else {
-            // Switch to Dutch: remove /en/ prefix
-            if (currentPath.includes('/en/')) {
-                // If path is like /en/index.html, we want /index.html
-                // But wait, if we are in /travel_blog/en/index.html?
-                // The logical root might be complex. 
-                // Let's assume the structure is simple: root/index.html and root/en/index.html
-                // If we are in /en/file.html, we want ../file.html effectively, or /file.html from root.
-                // Using absolute paths based on knowledge of structure:
-                newPath = '/' + filename; 
-                // CAUTION: If the user is serving from a subdir (e.g. localhost:8000/travel_blog/), this breaks.
-                // Better to use relative navigation or smarter base detection.
-                // However, the original code used '/en/' + filename and '/' + filename.
-                // Let's stick to the original logic which seemed to assume root or specific structure,
-                // BUT improving it for subdirectories if possible.
-                // For now, let's stick to simple relative assumption for safety? 
-                // No, sticking to original logic is safest for "refactoring" unless I know it's broken.
-                // Original: newPath = '/' + filename; (for NL)
-                // If I am at /travel_blog/en/index.html, newPath becomes /index.html -> /travel_blog/ is lost!
-                // The original code was potentially buggy for subdirs.
-                
-                // Let's fix this.
-                // If we are in .../en/file.html, we want .../file.html
-                newPath = currentPath.replace('/en/', '/');
-            } else {
-                newPath = currentPath;
-            }
+            newPath = currentPath;
         }
-        
-        // Just in case replace didn't work as expected or valid check
-        if (newPath) {
-             window.location.href = newPath + hash;
+    } else {
+        if (currentPath.includes('/en/')) {
+            newPath = basePath + '/' + filename;
+        } else {
+            newPath = currentPath;
         }
     }
 
+    if (newPath) {
+        window.location.href = newPath + hash;
+    }
+}
     // Initialize language switcher
     function initLangSwitcher() {
         const lang = getCurrentLang();
@@ -103,11 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return isInEnFolder ? '../' + src : src;
     }
 
-    // Get the blog page path based on language
-    function getBlogPath() {
-        const isInEnFolder = window.location.pathname.includes('/en/');
-        return isInEnFolder ? '/en/blog.html' : '/blog.html';
-    }
+// Get the blog page path based on language
+function getBlogPath() {
+    const basePath = getBasePath();
+    const isInEnFolder = window.location.pathname.includes('/en/');
+    return isInEnFolder ? basePath + '/en/blog.html' : basePath + '/blog.html';
+}
 
     // Get post index from URL hash (e.g., #post-2 -> 1)
     // If no hash, returns -1 to signal "use newest post"
