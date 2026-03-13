@@ -23,43 +23,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // If we are on http(s), use relative path. If on file://, use localhost:8000
     const API_BASE = window.location.protocol.startsWith('http') ? '' : 'http://localhost:8000';
 
-    // Handler for Comment Form
-    if (commentForm) {
-        commentForm.addEventListener('submit', (e) => {
+    async function handleFormSubmit(formId, messageId, successText) {
+        const form = document.getElementById(formId);
+        const messageEl = document.getElementById(messageId);
+        if (!form) return;
+
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const formData = new FormData(commentForm);
-            const data = Object.fromEntries(formData.entries());
 
-            if (!data.message) {
-                showMessage(commentMessageDiv, getCurrentLang() === 'nl' ? 'Vul alstublieft een bericht in.' : 'Please enter a message.', 'error');
-                return;
+            const data = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    form.style.display = 'none';
+                    messageEl.textContent = successText;
+                    messageEl.style.color = 'green';
+                } else {
+                    messageEl.textContent = 'Er ging iets mis. Probeer het later opnieuw.';
+                    messageEl.style.color = 'red';
+                }
+            } catch (error) {
+                messageEl.textContent = 'Er ging iets mis. Controleer je internetverbinding.';
+                messageEl.style.color = 'red';
             }
-
-            // Add language info
-            data.language = getCurrentLang();
-
-            submitData(`${API_BASE}/api/comment`, data, commentForm, commentMessageDiv);
         });
     }
 
-    // Handler for Newsletter Form
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(newsletterForm);
-            const data = Object.fromEntries(formData.entries());
+    handleFormSubmit(
+        'comment-form',
+        'comment-message',
+        'Bedankt voor je bericht! We lezen het zeker.'
+    );
 
-            if (!data.email) {
-                showMessage(newsletterMessageDiv, getCurrentLang() === 'nl' ? 'Vul alstublieft een emailadres in.' : 'Please enter an email address.', 'error');
-                return;
-            }
-            // Add language info
-            data.language = getCurrentLang();
+    handleFormSubmit(
+        'newsletter-form',
+        'newsletter-message',
+        'Je bent ingeschreven! Je hoort van ons bij een nieuwe post.'
+    );
 
-            submitData(`${API_BASE}/api/subscribe`, data, newsletterForm, newsletterMessageDiv);
-        });
-    }
-
+});
     function submitData(url, data, form, messageDiv) {
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.textContent;
