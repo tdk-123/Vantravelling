@@ -264,6 +264,18 @@ function getBlogPath() {
             if (e.key === 'ArrowLeft') prevImage();
             if (e.key === 'ArrowRight') nextImage();
         });
+        // Touch swipe for lightbox
+        let lbTouchStartX = 0;
+        lb.addEventListener('touchstart', (e) => {
+            lbTouchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        lb.addEventListener('touchend', (e) => {
+            const deltaX = e.changedTouches[0].clientX - lbTouchStartX;
+            if (Math.abs(deltaX) < 50) return;
+            if (deltaX < 0) nextImage();
+            else prevImage();
+        }, { passive: true });
     }
 
     function openLightbox(imagesData, index) {
