@@ -11,6 +11,7 @@
   --shadow-sm: 0 2px 8px rgba(44, 62, 44, 0.05);
   --shadow-md: 0 4px 12px rgba(44, 62, 44, 0.08);
   --font-main: 'Outfit', sans-serif;
+  --hero-bg-image: url('../assets/images/hero_background.png');
 }
 
 * {
