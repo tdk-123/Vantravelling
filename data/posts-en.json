@@ -52,7 +52,7 @@
         "blocks": [
             {
                 "type": "video",
-                "src": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+                "src": "assets/video/strand.mp4"
             },
             {
                 "type": "text",
