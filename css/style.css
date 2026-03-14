@@ -800,4 +800,9 @@ main {
   .preview-grid {
     grid-template-columns: 1fr;
   }
+
+  nav a {
+      text-align: center;
+  }  
+
 }
