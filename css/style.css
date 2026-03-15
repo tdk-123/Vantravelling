@@ -390,7 +390,8 @@ main {
 }
 
 .nav-arrow:hover,
-.nav-arrow:focus-visible {
+.nav-arrow:focus-visible,
+.nav-arrow:active {
   color: var(--card-bg);
   background-color: var(--accent-main);
   transform: translateY(-50%) scale(1.1);
