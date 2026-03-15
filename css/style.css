@@ -340,6 +340,12 @@ main {
   font-size: 0.95rem;
 }
 
+.preview-date {
+  color: var(--accent-main);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
 /* ===== ABOUT STYLES ===== */
 .about-content {
   background: var(--card-bg);

@@ -202,6 +202,7 @@ function getBlogPath() {
                     card.innerHTML = `
                         <img src="${imageSrc}" alt="${post.title}" class="preview-image" onerror="this.src='assets/images/placeholder_3.png'">
                         <div class="preview-content">
+                            <p class="preview-date">${post.date}</p>
                             <h3>${post.title}</h3>
                             <p>${previewText}</p>
                         </div>
