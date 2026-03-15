@@ -75,5 +75,22 @@
                 "content": "We eindigden onze reis aan zee. Het ritme van de golven is het ultieme slaapliedje. We brachten de dag door met lezen, wandelen langs de kust en kijken hoe de kleuren van de oceaan verschoven van diepblauw naar turquoise terwijl de zon over de hemel bewoog. Een perfect einde van een reis vol rust."
             }
         ]
+    },
+    {
+        "id": 4,
+        "title": "Testing to add",
+        "date": "27 oktober 2025",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/cows.png",
+                "alt": "Koeien"
+            },
+            {
+                "type": "text",
+                "content": "Zie hier hoe de koeien rusten in de zon op een niet meer onbewoond eiland."
+            }
+        ]
     }
+
 ]

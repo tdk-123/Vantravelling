@@ -75,5 +75,21 @@
                 "content": "We ended our trip by the sea. The rhythm of the waves is the ultimate lullaby. We spent the day reading, walking along the shore, and watching the colors of the ocean shift from deep blue to turquoise as the sun moved across the sky. A perfect end to a journey of peace."
             }
         ]
+    },
+    {
+        "id": 4,
+        "title": "Testing to add",
+        "date": "27 oktober 2025",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/cows.png",
+                "alt": "Cows"
+            },
+            {
+                "type": "text",
+                "content": "See here how the cows rest in the sun on a previously uninhabited island."
+            }
+        ]
     }
 ]
