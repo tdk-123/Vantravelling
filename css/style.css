@@ -20,6 +20,10 @@
   padding: 0;
 }
 
+a, button, .preview-card, .gallery-item, .lang-btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
