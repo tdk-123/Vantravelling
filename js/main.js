@@ -16,15 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // We're in /base/file.html — base is everything before the filename
         return path.substring(0, path.lastIndexOf('/'));
     }
-    // ===== FIX STICKY HOVER ON TOUCH DEVICES =====
-    document.querySelectorAll('.nav-arrow').forEach(btn => {
-        btn.addEventListener('pointerdown', () => {
-            btn.classList.add('pressed');
-        });
-        btn.addEventListener('pointerup', () => {
-            setTimeout(() => btn.classList.remove('pressed'), 150);
-        });
-    });}
+
 // Switch language (preserves URL hash for blog post navigation)
 function switchLanguage(targetLang) {
     const hash = window.location.hash;
