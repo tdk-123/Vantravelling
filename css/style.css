@@ -398,22 +398,22 @@ main {
   right: max(1rem, calc((100vw - 1200px) / 2 - 80px));
 }
 
-/* Desktop hover */
-@media (hover: hover) {
-  .nav-arrow:hover {
-    color: var(--card-bg);
-    background-color: var(--accent-main);
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: var(--shadow-md), 0 0 20px rgba(152, 193, 152, 0.3);
-  }
-}
-
-/* Touch press - works on both Chrome and Firefox Android */
-.nav-arrow:active {
+.nav-arrow:hover,
+.nav-arrow:focus-visible,
+.nav-arrow.pressed {
   color: var(--card-bg);
   background-color: var(--accent-main);
   transform: translateY(-50%) scale(1.1);
   box-shadow: var(--shadow-md), 0 0 20px rgba(152, 193, 152, 0.3);
+}
+
+@media (hover: none) {
+  .nav-arrow:hover {
+    color: var(--accent-main);
+    background-color: var(--card-bg);
+    transform: translateY(-50%);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .nav-arrow:disabled {
@@ -424,8 +424,7 @@ main {
   box-shadow: none;
 }
 
-.nav-arrow:disabled:hover,
-.nav-arrow:disabled:active {
+.nav-arrow:disabled:hover {
   color: var(--accent-main);
   background: var(--bg-color-alt);
   transform: translateY(-50%);
