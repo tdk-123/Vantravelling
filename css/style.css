@@ -391,7 +391,7 @@ main {
 
 .nav-arrow:hover,
 .nav-arrow:focus-visible,
-.nav-arrow:active {
+.nav-arrow.pressed {
   color: var(--card-bg);
   background-color: var(--accent-main);
   transform: translateY(-50%) scale(1.1);
@@ -406,6 +406,7 @@ main {
     box-shadow: var(--shadow-md);
   }
 }
+
 .nav-arrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
