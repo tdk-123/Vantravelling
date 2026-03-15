@@ -24,9 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('pointerup', () => {
             setTimeout(() => btn.classList.remove('pressed'), 150);
         });
-        btn.addEventListener('pointercancel', () => {
-            btn.classList.remove('pressed');
-        });
     });}
 // Switch language (preserves URL hash for blog post navigation)
 function switchLanguage(targetLang) {
