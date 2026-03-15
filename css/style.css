@@ -385,6 +385,7 @@ main {
   border-radius: 50%;
   box-shadow: var(--shadow-md);
   z-index: 100;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #prev-btn {

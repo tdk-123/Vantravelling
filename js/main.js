@@ -18,15 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // ===== FIX STICKY HOVER ON TOUCH DEVICES =====
     document.querySelectorAll('.nav-arrow').forEach(btn => {
-        btn.addEventListener('touchstart', () => {
+        btn.addEventListener('pointerdown', () => {
             btn.classList.add('pressed');
-        }, { passive: true });
-
-        btn.addEventListener('touchend', () => {
+        });
+        btn.addEventListener('pointerup', () => {
             setTimeout(() => btn.classList.remove('pressed'), 150);
-        }, { passive: true });
-    });
-}
+        });
+        btn.addEventListener('pointercancel', () => {
+            btn.classList.remove('pressed');
+        });
+    });}
 // Switch language (preserves URL hash for blog post navigation)
 function switchLanguage(targetLang) {
     const hash = window.location.hash;
