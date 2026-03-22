@@ -537,15 +537,21 @@ main {
 
 @media (max-width: 768px) {
     .gallery-grid {
+        grid-auto-rows: 120px;
+    }
+    .gallery-item.large,
+    .gallery-item.wide { grid-column: span 2; grid-row: span 1; }
+    .gallery-item.tall  { grid-row: span 2; }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
         grid-auto-rows: 100px;
     }
-    /* tall heroes keep their row span on mobile */
-    /* wide/tall/large all work as-is — JS sets cols via inline style */
-    /* only large (2×2) is disabled since mobile never uses it */
-    .gallery-item.large {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
+    .gallery-item.large,
+    .gallery-item.wide { grid-column: span 2; grid-row: span 1; }
+    .gallery-item.tall  { grid-row: span 1; }
 }
 
 /* Lightbox */
