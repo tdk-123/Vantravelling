@@ -830,9 +830,17 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  .hero h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .hero p {
