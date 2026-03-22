@@ -506,7 +506,7 @@ main {
     display: grid;
     grid-auto-rows: 160px;
     grid-auto-flow: dense;
-    gap: 2px;
+    gap: 0px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
