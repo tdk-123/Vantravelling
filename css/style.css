@@ -502,7 +502,6 @@ main {
 }
 
 /* Gallery Grid */
-/* Gallery Grid */
 .gallery-grid {
     display: grid;
     grid-auto-rows: 160px;
