@@ -404,7 +404,12 @@ postArea.addEventListener('touchend', (e) => {
                         postBody.appendChild(blockDiv);
                     } else if (block.type === 'gallery') {
                         blockDiv.classList.add('gallery-grid');
-
+    			const count = block.images.length;
+    
+		    	// Set columns based on image count
+		    	const cols = count === 1 ? 1 : count === 2 ? 2 : count === 3 ? 3 : 4;
+			blockDiv.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    
                         // Collect all images in this gallery for the lightbox
                         const galleryImages = block.images;
 
