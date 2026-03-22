@@ -24,6 +24,26 @@
                     {
                         "src": "assets/images/starlink.png",
                         "alt": "Een stabiele internetconnectie om online te werken"
+                    },
+		    {
+                        "src": "assets/images/placeholder_1.png",
+                        "alt": "Mountain Peak",
+                    },
+                    {
+                        "src": "assets/images/placeholder_2.png",
+                        "alt": "Green Valley"
+                    },
+                    {
+                        "src": "assets/images/placeholder_3.png",
+                        "alt": "Hiking Trail"
+                    },
+                    {
+                        "src": "assets/images/placeholder_3.png",
+                        "alt": "Frosty Leaves"
+                    },
+                    {
+                        "src": "assets/images/placeholder_2.png",
+                        "alt": "Morning Coffee"
                     }
                 ]
             },
