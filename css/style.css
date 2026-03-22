@@ -850,10 +850,9 @@ main {
 
 }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    text-align: center;
-    word-spacing: normal;
-  }
+.hero h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
 }
-
