@@ -402,29 +402,54 @@ postArea.addEventListener('touchend', (e) => {
                         video.controls = true;
                         blockDiv.appendChild(video);
                         postBody.appendChild(blockDiv);
-                    } else if (block.type === 'gallery') {
-                        blockDiv.classList.add('gallery-grid');
+} else if (block.type === 'gallery') {
+    blockDiv.classList.add('gallery-grid');
+    const count = block.images.length;
 
-                        // Collect all images in this gallery for the lightbox
-                        const galleryImages = block.images;
+    // Determine columns and whether first image should be large
+    function getGalleryLayout(n) {
+        if (n === 1) return { cols: 1, large: false };
+        if (n === 2) return { cols: 2, large: false };
+        if (n === 3) return { cols: 2, large: true };  // large + 2 stacked
+        if (n === 4) return { cols: 4, large: false };  // 2x2 equal
+        if (n === 5) return { cols: 3, large: true };   // large + 4
+        if (n === 6) return { cols: 3, large: false };  // 3x2 equal
+        if (n === 7) return { cols: 4, large: true };   // large + 6
+        if (n === 8) return { cols: 4, large: false };  // 4x2 equal
+        if (n === 9) return { cols: 3, large: false };  // 3x3 equal
+        if (n <= 12) return { cols: 4, large: n % 4 !== 0 }; // large if not divisible by 4
+        if (n === 16) return { cols: 4, large: false }; // 4x4 equal
+        return { cols: 4, large: n % 4 !== 0 };         // default for large counts
+    }
 
-                        block.images.forEach((imgData, imgIndex) => {
-                            const item = document.createElement('div');
-                            item.className = `gallery-item ${imgData.className || ''}`;
+    const layout = getGalleryLayout(count);
+    blockDiv.style.gridTemplateColumns = `repeat(${layout.cols}, 1fr)`;
 
-                            const img = document.createElement('img');
-                            img.src = getMediaPath(imgData.src);
-                            img.alt = imgData.alt;
+    const galleryImages = block.images;
 
-                            item.appendChild(img);
-                            item.addEventListener('click', () => {
-                                openLightbox(galleryImages, imgIndex);
-                            });
+    block.images.forEach((imgData, imgIndex) => {
+        const item = document.createElement('div');
 
-                            blockDiv.appendChild(item);
-                        });
-                        postBody.appendChild(blockDiv);
-                    }
+        // Use explicit className from JSON if set, otherwise auto-assign
+        let className = imgData.className || '';
+        if (!className && imgIndex === 0 && layout.large) {
+            className = 'large';
+        }
+        item.className = `gallery-item ${className}`;
+
+        const img = document.createElement('img');
+        img.src = getMediaPath(imgData.src);
+        img.alt = imgData.alt;
+
+        item.appendChild(img);
+        item.addEventListener('click', () => {
+            openLightbox(galleryImages, imgIndex);
+        });
+
+        blockDiv.appendChild(item);
+    });
+    postBody.appendChild(blockDiv);
+}
                 });
             }
 
