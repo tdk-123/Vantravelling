@@ -18,10 +18,12 @@
                 "images": [
                     {   "src": "assets/images/elektrisch.png", "alt": "De regelaar voor de zonnepanelen en de omvormer"},
                     {   "src": "assets/images/starlink.png", "alt": "Een stabiele internetconnectie om online te werken"},
-                    {   "src": "assets/images/placeholder_1.png", "alt": "Bergtop"}
+                    {   "src": "assets/images/placeholder_1.png", "alt": "Bergtop"},
+                    {   "src": "assets/images/placeholder_2.png", "alt": "Bos"},
+                    {   "src": "assets/images/placeholder_1.png", "alt": "Bergtop"},
+                    {   "src": "assets/images/placeholder_2.png", "alt": "Bos"},
+                    {   "src": "assets/images/placeholder_1.png", "alt": "Bergtop"},
                     {   "src": "assets/images/placeholder_2.png", "alt": "Bos"}
-                    {   "src": "assets/images/placeholder_3.png", "alt": "zee"}
-
 
                 ]
             },
