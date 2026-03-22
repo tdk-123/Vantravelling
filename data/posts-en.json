@@ -50,8 +50,8 @@
     },
     {
         "id": 3,
-        "title": "Placeholder",
-        "date": "March 23, 2026",
+        "title": "Post 3",
+        "date": "March 24, 2026",
         "blocks": [
             {
                 "type": "image",
