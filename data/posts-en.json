@@ -19,6 +19,8 @@
                     {
                         "src": "assets/images/elektrisch.png",
                         "alt": "The solar charge controller and the inverter",
+                       "className": "large"
+ 
                     },
                     {
                         "src": "assets/images/starlink.png",
