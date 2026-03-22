@@ -19,12 +19,22 @@
                     {
                         "src": "assets/images/elektrisch.png",
                         "alt": "The solar charge controller and the inverter",
- 
+                         "className": "large"
                     },
                     {
                         "src": "assets/images/starlink.png",
                         "alt": "A stabel internet connection for online work"
+                    },
+                    {
+                        "src": "assets/images/placeholder_1.png",
+                        "alt": "Bergtop",
+                        "className": "large"
+                    },
+                    {
+                        "src": "assets/images/placeholder_2.png",
+                        "alt": "Groene Vallei"
                     }
+
                 ]
             },
             {
