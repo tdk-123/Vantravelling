@@ -417,29 +417,36 @@ let currentIndex = getPostIndexFromHash();
                         video.controls = true;
                         blockDiv.appendChild(video);
                         postBody.appendChild(blockDiv);
-                    } else if (block.type === 'gallery') {
-                        blockDiv.classList.add('gallery-grid');
+		    } else if (block.type === 'gallery') {
+    		    blockDiv.classList.add('gallery-grid');
+    		    const count = block.images.length;
+    		    const layout = getGalleryLayout(count);
+ 		    blockDiv.style.gridTemplateColumns = `repeat(${layout.cols}, 1fr)`;
 
-                        // Collect all images in this gallery for the lightbox
-                        const galleryImages = block.images;
+		    const galleryImages = block.images;
 
-                        block.images.forEach((imgData, imgIndex) => {
-                            const item = document.createElement('div');
-                            item.className = `gallery-item ${imgData.className || ''}`;
+		    block.images.forEach((imgData, imgIndex) => {
+		        const item = document.createElement('div');
 
-                            const img = document.createElement('img');
-                            img.src = getMediaPath(imgData.src);
-                            img.alt = imgData.alt;
+		        let className = imgData.className || '';
+		        if (!className && imgIndex === 0 && layout.large) {
+		            className = 'large';
+		        }
+		        item.className = `gallery-item ${className}`;
 
-                            item.appendChild(img);
-                            item.addEventListener('click', () => {
-                                openLightbox(galleryImages, imgIndex);
-                            });
+		        const img = document.createElement('img');
+		        img.src = getMediaPath(imgData.src);
+		        img.alt = imgData.alt;
 
-                            blockDiv.appendChild(item);
-                        });
-                        postBody.appendChild(blockDiv);
-                    }
+		        item.appendChild(img);
+		        item.addEventListener('click', () => {
+		            openLightbox(galleryImages, imgIndex);
+		        });
+
+		        blockDiv.appendChild(item);
+		    });
+		    postBody.appendChild(blockDiv);
+		}
                 });
             }
 
