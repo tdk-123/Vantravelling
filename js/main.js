@@ -345,8 +345,23 @@ postArea.addEventListener('touchend', (e) => {
     }
 }, { passive: true });
     
-    let posts = [];
-    let currentIndex = getPostIndexFromHash();
+function getGalleryLayout(n) {
+    if (n === 1) return { cols: 1, large: false };
+    if (n === 2) return { cols: 2, large: false };
+    if (n === 3) return { cols: 2, large: true };
+    if (n === 4) return { cols: 4, large: false };
+    if (n === 5) return { cols: 3, large: true };
+    if (n === 6) return { cols: 3, large: false };
+    if (n === 7) return { cols: 4, large: true };
+    if (n === 8) return { cols: 4, large: false };
+    if (n === 9) return { cols: 3, large: false };
+    if (n <= 12) return { cols: 4, large: n % 4 !== 0 };
+    if (n === 16) return { cols: 4, large: false };
+    return { cols: 4, large: n % 4 !== 0 };
+}
+
+let posts = [];
+let currentIndex = getPostIndexFromHash();
 
     // Fetch posts data
     fetch(getDataPath() + '?t=' + new Date().getTime())
