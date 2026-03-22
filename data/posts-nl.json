@@ -19,6 +19,7 @@
                     {
                         "src": "assets/images/elektrisch.png",
                         "alt": "De regelaar voor de zonnepanelen en de omvormer",
+                        "className": "large"
                     },
                     {
                         "src": "assets/images/starlink.png",
