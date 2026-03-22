@@ -345,19 +345,106 @@ postArea.addEventListener('touchend', (e) => {
     }
 }, { passive: true });
     
-function getGalleryLayout(n) {
-    if (n === 1) return { cols: 1, large: false };
-    if (n === 2) return { cols: 2, large: false };
-    if (n === 3) return { cols: 2, large: true };
-    if (n === 4) return { cols: 4, large: false };
-    if (n === 5) return { cols: 3, large: true };
-    if (n === 6) return { cols: 3, large: false };
-    if (n === 7) return { cols: 4, large: true };
-    if (n === 8) return { cols: 4, large: false };
-    if (n === 9) return { cols: 3, large: false };
-    if (n <= 12) return { cols: 4, large: n % 4 !== 0 };
-    if (n === 16) return { cols: 4, large: false };
-    return { cols: 4, large: n % 4 !== 0 };
+// --- Gallery layout helpers ---
+
+function getImageOrientation(src) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(img.naturalWidth <= img.naturalHeight ? 'vertical' : 'horizontal');
+        img.onerror = () => resolve('horizontal'); // safe fallback
+        img.src = src;
+    });
+}
+
+function getGalleryConfig(n, h1, h2) {
+    // h1, h2 = 'vertical' | 'horizontal' | null
+    // Returns { cols, cells[] }
+    // Each cell: { cls: '' | 'wide' | 'tall' | 'large' }
+    // 'wide'  = grid-column: span 2
+    // 'tall'  = grid-row: span 2
+    // 'large' = grid-column: span 2 AND grid-row: span 2
+
+    const plain = (count) => Array(count).fill({ cls: '' });
+    const hero1cls = (o) => o === 'vertical' ? 'tall' : 'wide';
+    const hero2cls = (o) => o === 'vertical' ? 'tall' : 'wide';
+
+    switch (n) {
+        case 1:  return { cols: 1, cells: [{ cls: 'wide' }] };
+
+        case 2:  return { cols: 2, cells: [{ cls: '' }, { cls: '' }] };
+
+        case 3:  return {
+            cols: 2,
+            cells: [{ cls: hero1cls(h1) }, ...plain(2)]
+        };
+
+        case 4:  return { cols: 2, cells: plain(4) };
+
+        case 5:  return {
+            cols: 3,
+            cells: [{ cls: hero1cls(h1) }, ...plain(4)]
+        };
+
+        case 6:  return { cols: 3, cells: plain(6) };
+
+        case 7:  return {
+            cols: 4,
+            cells: [{ cls: hero1cls(h1) }, ...plain(6)]
+        };
+
+        case 8:  return { cols: 4, cells: plain(8) };
+
+        case 9:  return { cols: 3, cells: plain(9) };
+
+        case 10: {
+            // hero2 goes below hero1 if h1 is horizontal, to the right if h1 is vertical
+            const c1 = hero1cls(h1);
+            const c2 = hero2cls(h2);
+            return { cols: 4, cells: [{ cls: c1 }, { cls: c2 }, ...plain(8)] };
+        }
+
+        case 11: return {
+            cols: 4,
+            cells: [{ cls: hero1cls(h1) }, ...plain(10)]
+        };
+
+        case 12: return { cols: 4, cells: plain(12) };
+
+        case 13: return {
+            cols: 4,
+            cells: [{ cls: 'large' }, ...plain(12)]
+        };
+
+        case 14: {
+            const c1 = hero1cls(h1);
+            const c2 = hero2cls(h2);
+            return { cols: 4, cells: [{ cls: c1 }, { cls: c2 }, ...plain(12)] };
+        }
+
+        case 15: return { cols: 5, cells: plain(15) };
+
+        case 16: return { cols: 4, cells: plain(16) };
+
+        case 17: return {
+            cols: 5,
+            cells: [{ cls: 'large' }, ...plain(16)]
+        };
+
+        case 18: {
+            const c1 = hero1cls(h1);
+            const c2 = hero2cls(h2);
+            return { cols: 5, cells: [{ cls: c1 }, { cls: c2 }, ...plain(16)] };
+        }
+
+        case 19: return {
+            cols: 5,
+            cells: [{ cls: hero1cls(h1) }, ...plain(18)]
+        };
+
+        case 20: return { cols: 5, cells: plain(20) };
+
+        default: return { cols: 4, cells: plain(n) };
+    }
 }
 
 let posts = [];
@@ -417,37 +504,55 @@ let currentIndex = getPostIndexFromHash();
                         video.controls = true;
                         blockDiv.appendChild(video);
                         postBody.appendChild(blockDiv);
-		    } else if (block.type === 'gallery') {
-    		    blockDiv.classList.add('gallery-grid');
-    		    const count = block.images.length;
-    		    const layout = getGalleryLayout(count);
- 		    blockDiv.style.gridTemplateColumns = `repeat(${layout.cols}, 1fr)`;
+} else if (block.type === 'gallery') {
+    blockDiv.classList.add('gallery-grid');
+    const images = block.images;
+    const count = images.length;
 
-		    const galleryImages = block.images;
+    // Which counts need hero orientation detection?
+    const needsH1 = [3, 5, 7, 10, 11, 14, 18, 19].includes(count);
+    const needsH2 = [10, 14, 18].includes(count);
 
-		    block.images.forEach((imgData, imgIndex) => {
-		        const item = document.createElement('div');
+    const buildGrid = (h1, h2) => {
+        blockDiv.innerHTML = '';
+        const { cols, cells } = getGalleryConfig(count, h1, h2);
+        blockDiv.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
 
-		        let className = imgData.className || '';
-		        if (!className && imgIndex === 0 && layout.large) {
-		            className = 'large';
-		        }
-		        item.className = `gallery-item ${className}`;
+        images.forEach((imgData, i) => {
+            const item = document.createElement('div');
+            const cls = (cells[i] && cells[i].cls) ? cells[i].cls : '';
+            item.className = ('gallery-item ' + cls).trim();
 
-		        const img = document.createElement('img');
-		        img.src = getMediaPath(imgData.src);
-		        img.alt = imgData.alt;
+            const img = document.createElement('img');
+            img.src = getMediaPath(imgData.src);
+            img.alt = imgData.alt || '';
+            img.loading = 'lazy';
 
-		        item.appendChild(img);
-		        item.addEventListener('click', () => {
-		            openLightbox(galleryImages, imgIndex);
-		        });
+            item.appendChild(img);
+            item.addEventListener('click', () => openLightbox(images, i));
+            blockDiv.appendChild(item);
+        });
+    };
 
-		        blockDiv.appendChild(item);
-		    });
-		    postBody.appendChild(blockDiv);
-		}
-                });
+    if (needsH1 || needsH2) {
+        // Render a plain grid immediately so the post doesn't look broken while loading
+        buildGrid(null, null);
+
+        const h1src = needsH1 ? getMediaPath(images[0].src) : null;
+        const h2src = needsH2 ? getMediaPath(images[1].src) : null;
+
+        Promise.all([
+            h1src ? getImageOrientation(h1src) : Promise.resolve(null),
+            h2src ? getImageOrientation(h2src) : Promise.resolve(null),
+        ]).then(([h1, h2]) => {
+            buildGrid(h1, h2);
+        });
+    } else {
+        buildGrid(null, null);
+    }
+
+    postBody.appendChild(blockDiv);
+}                });
             }
 
             prevBtn.disabled = index === 0;
