@@ -17,25 +17,7 @@
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/elektrisch.png", "alt": "The solar charge controller and the inverter"},
-                    {   "src": "assets/images/starlink.png", "alt": "A stabel internet connection for online work"},
-                    {   "src": "assets/images/placeholder_1.png", "alt": "Bergtop"},
-                    {   "src": "assets/images/placeholder_2.png", "alt": "Groene Vallei"},
-                    {   "src": "assets/images/placeholder_3.png", "alt": "Zee"},
-                    {   "src": "assets/images/fallback.png", "alt": "van"},
-                    {   "src": "assets/images/cows.png", "alt": "cows"},
-                    {   "src": "assets/images/placeholder_3.png", "alt": "Zee"},
-                    {   "src": "assets/images/fallback.png", "alt": "van"},
-                    {   "src": "assets/images/cows.png", "alt": "cows"},
-                    {   "src": "assets/images/placeholder_3.png", "alt": "Zee"},
-                    {   "src": "assets/images/fallback.png", "alt": "van"},
-                    {   "src": "assets/images/cows.png", "alt": "cows"},
-                    {   "src": "assets/images/placeholder_3.png", "alt": "Zee"},
-                    {   "src": "assets/images/fallback.png", "alt": "van"},
-                    {   "src": "assets/images/cows.png", "alt": "cows"},
-                    {   "src": "assets/images/placeholder_3.png", "alt": "Zee"},
-                    {   "src": "assets/images/fallback.png", "alt": "van"}
-
-
+                    {   "src": "assets/images/starlink.png", "alt": "A stabel internet connection for online work"}
                 ]
             },
             {
