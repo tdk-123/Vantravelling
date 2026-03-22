@@ -24,6 +24,19 @@
                     {
                         "src": "assets/images/starlink.png",
                         "alt": "Een stabiele internetconnectie om online te werken"
+                    },
+                    {
+                        "src": "assets/images/placeholder_1.png",
+                        "alt": "Bergtop",
+                        "className": "large"
+                    },
+                    {
+                        "src": "assets/images/placeholder_2.png",
+                        "alt": "Groene Vallei"
+                    },
+                    {
+                        "src": "assets/images/placeholder_3.png",
+                        "alt": "Wandelpad"
                     }
 
                 ]
