@@ -850,3 +850,10 @@ main {
 
 }
 
+@media (max-width: 768px) {
+  .hero h1 {
+    text-align: center;
+    word-spacing: normal;
+  }
+}
+
