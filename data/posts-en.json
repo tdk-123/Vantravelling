@@ -1,94 +1,66 @@
 [
     {
         "id": 1,
-        "title": "A Morning in the Alps",
-        "date": "October 12, 2023",
+        "title": "Preparations",
+        "date": "March 19, 2026",
         "blocks": [
             {
                 "type": "image",
-                "src": "assets/images/placeholder_1.png",
-                "alt": "Alps Panorama"
+                "src": "assets/images/fallback.png",
+                "alt": "The van"
             },
             {
                 "type": "text",
-                "content": "The air was crisp, the kind that wakes you up better than coffee. We hiked up before dawn to catch the sunrise over the peaks. It was one of those mornings where everything feels possible."
+                "content": "Preparations always take longer than planned. The goal is not to have a beautifully furnished camper right away, but to ensure the basics function."
             },
             {
                 "type": "gallery",
                 "images": [
                     {
-                        "src": "assets/images/placeholder_1.png",
-                        "alt": "Mountain Peak",
+                        "src": "assets/images/elektrisch.png",
+                        "alt": "The solar charge controller and the inverter",
                         "className": "large"
                     },
                     {
-                        "src": "assets/images/placeholder_2.png",
-                        "alt": "Green Valley"
-                    },
-                    {
-                        "src": "assets/images/placeholder_3.png",
-                        "alt": "Hiking Trail"
-                    },
-                    {
-                        "src": "assets/images/placeholder_3.png",
-                        "alt": "Frosty Leaves"
-                    },
-                    {
-                        "src": "assets/images/placeholder_2.png",
-                        "alt": "Morning Coffee"
+                        "src": "assets/images/starlink.png",
+                        "alt": "A stabel internet connection for online work"
                     }
                 ]
             },
             {
                 "type": "text",
-                "content": "The silence was profound, broken only by the crunch of our boots on the frost. As the sun crested the mountains, the valley was bathed in a golden light that felt almost sacred. We sat there for hours, just watching the light shift across the granite faces."
+                "content": "There is a bed to sleep on, the electricity and internet work, and we can leave for a test drive. But then comes an unexpected turn of events: the camper is not yet fully mechanically sound, so we cannot leave yet! When traveling in a camper, you always have to be able to handle unexpected twists. Adjusting plans, and above all realizing that this is not so bad at all, and that traveling is largely about this ability to adapt. The advantage now is that I can start doing that even before a test drive has begun!"
             }
         ]
     },
     {
         "id": 2,
-        "title": "Through the Ancient Forest",
-        "date": "October 15, 2023",
+        "title": "Update",
+        "date": "March 21, 2026",
         "blocks": [
             {
-                "type": "video",
-                "src": "assets/video/strand.mp4"
+                "type": "image",
+                "src": "assets/images/voorkant.png"
             },
             {
                 "type": "text",
-                "content": "Walking through these ancient woods, you lose all sense of time. The trees tower above like guardians of history. We followed a small stream for miles, simply listening to the water and the wind in the leaves. It's places like this that remind us how small we really are."
+                "content": "The van was checked mechanically and we are ready to hit the road! There might be a few extra things that need to be done later, but for now, we are on our way. So, really picking up the camper next week! And I promise I will post more photos then too."
             }
         ]
     },
     {
         "id": 3,
-        "title": "Coastal Tranquility",
-        "date": "October 20, 2023",
-        "blocks": [
-            {
-                "type": "image",
-                "src": "assets/images/placeholder_3.png",
-                "alt": "Coastal Sunset"
-            },
-            {
-                "type": "text",
-                "content": "We ended our trip by the sea. The rhythm of the waves is the ultimate lullaby. We spent the day reading, walking along the shore, and watching the colors of the ocean shift from deep blue to turquoise as the sun moved across the sky. A perfect end to a journey of peace."
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "title": "Testing to add",
-        "date": "27 oktober 2025",
+        "title": "Placeholder",
+        "date": "March 23, 2026",
         "blocks": [
             {
                 "type": "image",
                 "src": "assets/images/cows.png",
-                "alt": "Cows"
+                "alt": "Koeien"
             },
             {
                 "type": "text",
-                "content": "See here how the cows rest in the sun on a previously uninhabited island."
+                "content": "Test whether this third blogpost also appears."
             }
         ]
     }
