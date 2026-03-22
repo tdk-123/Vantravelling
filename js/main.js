@@ -447,95 +447,6 @@ function getGalleryConfig(n, h1, h2) {
     }
 }
 
-function getMobileGalleryConfig(n, h1, h2) {
-    // Mobile: max 3 cols, heroes can be 'wide' or 'tall', never 'large'
-    // 1 col for n=1, 2 cols for n=2-4, 3 cols for n>=5
-    const plain = (count) => Array(count).fill({ cls: '' });
-    const hcls = (o) => o === 'vertical' ? 'tall' : 'wide';
-
-    switch (n) {
-        case 1:  return { cols: 1, cells: plain(1) };
-
-        case 2:  return { cols: 2, cells: plain(2) };
-
-        case 3:  return {
-            cols: 2,
-            cells: [{ cls: hcls(h1) }, ...plain(2)]
-        };
-
-        case 4:  return { cols: 2, cells: plain(4) };
-
-        // --- 3 columns from here ---
-
-        case 5:  return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, ...plain(4)]
-        };
-
-        case 6:  return { cols: 3, cells: plain(6) };
-
-        case 7:  return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, ...plain(6)]
-        };
-
-        case 8:  return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, ...plain(7)]
-        };
-
-        case 9:  return { cols: 3, cells: plain(9) };
-
-        case 10: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(8)]
-        };
-
-        case 11: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, ...plain(10)]
-        };
-
-        case 12: return { cols: 3, cells: plain(12) };
-
-        case 13: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(11)]
-        };
-
-        case 14: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, ...plain(13)]
-        };
-
-        case 15: return { cols: 3, cells: plain(15) };
-
-        case 16: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(14)]
-        };
-
-        case 17: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, ...plain(16)]
-        };
-
-        case 18: return { cols: 3, cells: plain(18) };
-
-        case 19: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(17)]
-        };
-
-        case 20: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, ...plain(19)]
-        };
-
-        default: return { cols: 3, cells: plain(n) };
-    }
-}
-
 let posts = [];
 let currentIndex = getPostIndexFromHash();
 
@@ -602,35 +513,27 @@ let currentIndex = getPostIndexFromHash();
     const needsH1 = [3, 5, 7, 10, 11, 14, 18, 19].includes(count);
     const needsH2 = [10, 14, 18].includes(count);
 
-const isMobile = window.innerWidth <= 768;
+    const buildGrid = (h1, h2) => {
+        blockDiv.innerHTML = '';
+        const { cols, cells } = getGalleryConfig(count, h1, h2);
+        blockDiv.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
 
-// Counts that need h1 on desktop, mobile, or both
-const needsH1 = [3, 5, 7, 8, 10, 11, 13, 14, 17, 18, 19, 20].includes(count);
-// Counts that need h2 on desktop, mobile, or both
-const needsH2 = [10, 13, 14, 16, 18, 19].includes(count);
+        images.forEach((imgData, i) => {
+            const item = document.createElement('div');
+            const cls = (cells[i] && cells[i].cls) ? cells[i].cls : '';
+            item.className = ('gallery-item ' + cls).trim();
 
-const buildGrid = (h1, h2) => {
-    blockDiv.innerHTML = '';
-    const { cols, cells } = isMobile
-        ? getMobileGalleryConfig(count, h1, h2)
-        : getGalleryConfig(count, h1, h2);
-    blockDiv.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+            const img = document.createElement('img');
+            img.src = getMediaPath(imgData.src);
+            img.alt = imgData.alt || '';
+            img.loading = 'lazy';
 
-    images.forEach((imgData, i) => {
-        const item = document.createElement('div');
-        const cls = (cells[i] && cells[i].cls) ? cells[i].cls : '';
-        item.className = ('gallery-item ' + cls).trim();
+            item.appendChild(img);
+            item.addEventListener('click', () => openLightbox(images, i));
+            blockDiv.appendChild(item);
+        });
+    };
 
-        const img = document.createElement('img');
-        img.src = getMediaPath(imgData.src);
-        img.alt = imgData.alt || '';
-        img.loading = 'lazy';
-
-        item.appendChild(img);
-        item.addEventListener('click', () => openLightbox(images, i));
-        blockDiv.appendChild(item);
-    });
-};
     if (needsH1 || needsH2) {
         // Render a plain grid immediately so the post doesn't look broken while loading
         buildGrid(null, null);
