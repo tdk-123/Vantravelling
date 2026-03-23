@@ -17,7 +17,7 @@
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/elektrisch.png", "alt": "The solar charge controller and the inverter"},
-                    {   "src": "assets/images/starlink.png", "alt": "A stabel internet connection for online work"}
+                    {   "src": "assets/images/starlink.png", "alt": "A stable internet connection for online work"}
                 ]
             },
             {
