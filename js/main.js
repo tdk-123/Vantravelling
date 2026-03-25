@@ -598,9 +598,10 @@ let currentIndex = getPostIndexFromHash();
     const images = block.images;
     const count = images.length;
 
-    // Which counts need hero orientation detection?
-    const needsH1 = [3, 5, 7, 10, 11, 14, 18, 19].includes(count);
-    const needsH2 = [10, 14, 18].includes(count);
+// Counts that need h1 on desktop, mobile, or both
+const needsH1 = [3, 5, 7, 8, 10, 11, 13, 14, 17, 18, 19, 20].includes(count);
+// Counts that need h2 on desktop, mobile, or both
+const needsH2 = [10, 13, 14, 16, 18, 19].includes(count);
 
     const buildGrid = (h1, h2) => {
         blockDiv.innerHTML = '';
