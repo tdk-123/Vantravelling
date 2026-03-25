@@ -17,6 +17,7 @@
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/elektrisch.png", "alt": "The solar charge controller and the inverter"},
+                    {   "src": "assets/images/bed.png", "alt": "The bed"},
                     {   "src": "assets/images/starlink.png", "alt": "A stable internet connection for online work"}
                 ]
             },
@@ -33,7 +34,7 @@
         "blocks": [
             {
                 "type": "image",
-                "src": "assets/images/voorkant.png"
+                "src": "assets/images/motor.png"
             },
             {
                 "type": "text",
@@ -43,18 +44,26 @@
     },
     {
         "id": 3,
-        "title": "Post 3",
-        "date": "March 24, 2026",
+        "title": "Final preparations",
+        "date": "March 25, 2026",
         "blocks": [
             {
                 "type": "image",
-                "src": "assets/images/cows.png",
-                "alt": "Koeien"
+                "src": "assets/images/keuken.png",
+                "alt": "The kitchen"
             },
             {
                 "type": "text",
-                "content": "Test whether this third blogpost also appears."
+                "content": "The last preparations are being done before leaving for some test drives!"
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/wc.png", "alt": "The toilet"},
+                    {   "src": "assets/images/stoel.png", "alt": "When the toilet is closed, it's just a normal seat"}
+                ]
             }
+
         ]
     }
 ]

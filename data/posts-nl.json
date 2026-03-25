@@ -17,6 +17,7 @@
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/elektrisch.png", "alt": "De regelaar voor de zonnepanelen en de omvormer"},
+                    {   "src": "assets/images/bed.png", "alt": "Het bed"},
                     {   "src": "assets/images/starlink.png", "alt": "Een stabiele internetconnectie om online te werken"}
                 ]
             },
@@ -33,7 +34,7 @@
         "blocks": [
             {
                 "type": "image",
-                "src": "assets/images/voorkant.png"
+                "src": "assets/images/motor.png"
             },
             {
                 "type": "text",
@@ -43,17 +44,24 @@
     },
     {
         "id": 3,
-        "title": "Post 3",
-        "date": "24 maart 2026",
+        "title": "Laatste voorbereidingen",
+        "date": "25 maart 2026",
         "blocks": [
             {
                 "type": "image",
-                "src": "assets/images/cows.png",
-                "alt": "Koeien"
+                "src": "assets/images/keuken.png",
+                "alt": "De keuken"
             },
             {
                 "type": "text",
-                "content": "Test of deze derde blogpost ook verschijnt."
+                "content": "De laatste voorbereidingen worden gedaan, en dan op weg voor enkele proefritten!"
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/wc.png", "alt": "Het toilet"},
+                    {   "src": "assets/images/stoel.png", "alt": "Wanneer het toilet naar beneden is, is het gewoon een zitplaats"}
+                ]
             }
         ]
     }
