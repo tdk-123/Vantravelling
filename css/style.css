@@ -841,3 +841,13 @@ main {
     display: block;
   }
 }
+
+.desktop-space {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .desktop-space {
+    display: none;
+  }
+}
