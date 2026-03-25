@@ -447,6 +447,95 @@ function getGalleryConfig(n, h1, h2) {
     }
 }
 
+function getMobileGalleryConfig(n, h1, h2) {
+    // Mobile: max 3 cols, heroes can be 'wide' or 'tall', never 'large'
+    // 1 col for n=1, 2 cols for n=2-4, 3 cols for n>=5
+    const plain = (count) => Array(count).fill({ cls: '' });
+    const hcls = (o) => o === 'vertical' ? 'tall' : 'wide';
+
+    switch (n) {
+        case 1:  return { cols: 1, cells: plain(1) };
+
+        case 2:  return { cols: 2, cells: plain(2) };
+
+        case 3:  return {
+            cols: 2,
+            cells: [{ cls: hcls(h1) }, ...plain(2)]
+        };
+
+        case 4:  return { cols: 2, cells: plain(4) };
+
+        // --- 3 columns from here ---
+
+        case 5:  return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, ...plain(4)]
+        };
+
+        case 6:  return { cols: 3, cells: plain(6) };
+
+        case 7:  return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, ...plain(6)]
+        };
+
+        case 8:  return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, ...plain(7)]
+        };
+
+        case 9:  return { cols: 3, cells: plain(9) };
+
+        case 10: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(8)]
+        };
+
+        case 11: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, ...plain(10)]
+        };
+
+        case 12: return { cols: 3, cells: plain(12) };
+
+        case 13: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(11)]
+        };
+
+        case 14: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, ...plain(13)]
+        };
+
+        case 15: return { cols: 3, cells: plain(15) };
+
+        case 16: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(14)]
+        };
+
+        case 17: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, ...plain(16)]
+        };
+
+        case 18: return { cols: 3, cells: plain(18) };
+
+        case 19: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(17)]
+        };
+
+        case 20: return {
+            cols: 3,
+            cells: [{ cls: hcls(h1) }, ...plain(19)]
+        };
+
+        default: return { cols: 3, cells: plain(n) };
+    }
+}
+
 let posts = [];
 let currentIndex = getPostIndexFromHash();
 
