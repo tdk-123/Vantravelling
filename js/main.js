@@ -605,26 +605,28 @@ const needsH1 = [3, 5, 7, 8, 10, 11, 13, 14, 17, 18, 19, 20].includes(count);
 // Counts that need h2 on desktop, mobile, or both
 const needsH2 = [10, 13, 14, 16, 18, 19].includes(count);
 
-    const buildGrid = (h1, h2) => {
-        blockDiv.innerHTML = '';
-        const { cols, cells } = getGalleryConfig(count, h1, h2);
-        blockDiv.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+const buildGrid = (h1, h2) => {
+    blockDiv.innerHTML = '';
+    const { cols, cells } = isMobile
+        ? getMobileGalleryConfig(count, h1, h2)
+        : getGalleryConfig(count, h1, h2);
+    blockDiv.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
 
-        images.forEach((imgData, i) => {
-            const item = document.createElement('div');
-            const cls = (cells[i] && cells[i].cls) ? cells[i].cls : '';
-            item.className = ('gallery-item ' + cls).trim();
+    images.forEach((imgData, i) => {
+        const item = document.createElement('div');
+        const cls = (cells[i] && cells[i].cls) ? cells[i].cls : '';
+        item.className = ('gallery-item ' + cls).trim();
 
-            const img = document.createElement('img');
-            img.src = getMediaPath(imgData.src);
-            img.alt = imgData.alt || '';
-            img.loading = 'lazy';
+        const img = document.createElement('img');
+        img.src = getMediaPath(imgData.src);
+        img.alt = imgData.alt || '';
+        img.loading = 'lazy';
 
-            item.appendChild(img);
-            item.addEventListener('click', () => openLightbox(images, i));
-            blockDiv.appendChild(item);
-        });
-    };
+        item.appendChild(img);
+        item.addEventListener('click', () => openLightbox(images, i));
+        blockDiv.appendChild(item);
+    });
+};
 
     if (needsH1 || needsH2) {
         // Render a plain grid immediately so the post doesn't look broken while loading
