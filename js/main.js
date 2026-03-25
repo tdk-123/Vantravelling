@@ -579,13 +579,17 @@ let currentIndex = getPostIndexFromHash();
                         blockDiv.classList.add('post-block-text');
                         blockDiv.innerHTML = `<p>${block.content}</p>`;
                         postBody.appendChild(blockDiv);
-                    } else if (block.type === 'image') {
-                        blockDiv.classList.add('post-block-image');
-                        const img = document.createElement('img');
-                        img.src = getMediaPath(block.src);
-                        img.alt = block.alt;
-                        blockDiv.appendChild(img);
-                        postBody.appendChild(blockDiv);
+		    } else if (block.type === 'image') {
+		        blockDiv.classList.add('post-block-image');
+		        const img = document.createElement('img');
+		        img.src = getMediaPath(block.src);
+		        img.alt = block.alt || '';
+		        img.loading = 'lazy';
+		        img.style.cursor = 'pointer';
+		        img.addEventListener('click', () => openLightbox([{ src: block.src, alt: block.alt || '' }], 0));
+		        blockDiv.appendChild(img);
+		        postBody.appendChild(blockDiv);
+		    }
                     } else if (block.type === 'video') {
                         blockDiv.classList.add('post-block-video');
                         const video = document.createElement('video');
