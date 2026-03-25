@@ -598,6 +598,8 @@ let currentIndex = getPostIndexFromHash();
     const images = block.images;
     const count = images.length;
 
+const isMobile = window.innerWidth <= 768;
+
 // Counts that need h1 on desktop, mobile, or both
 const needsH1 = [3, 5, 7, 8, 10, 11, 13, 14, 17, 18, 19, 20].includes(count);
 // Counts that need h2 on desktop, mobile, or both
