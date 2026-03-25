@@ -589,7 +589,7 @@ let currentIndex = getPostIndexFromHash();
 		        img.addEventListener('click', () => openLightbox([{ src: block.src, alt: block.alt || '' }], 0));
 		        blockDiv.appendChild(img);
 		        postBody.appendChild(blockDiv);
-		    }
+		    
                     } else if (block.type === 'video') {
                         blockDiv.classList.add('post-block-video');
                         const video = document.createElement('video');
