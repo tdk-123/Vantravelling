@@ -60,7 +60,7 @@
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/wc.png", "alt": "The toilet"},
-                    {   "src": "assets/images/stoel.png", "alt": "When the toilet is closed, it's just a normal seat"}
+                    {   "src": "assets/images/stoel.png", "alt": "When the toilet is closed, it's just a normal seat"},
                     {   "src": "assets/images/closet.png", "alt": "The second seat, aka the closet"},
                     {   "src": "assets/images/gasstel.png", "alt": "Stove"},
                     {   "src": "assets/images/solar.png", "alt": "Solar panels"}
