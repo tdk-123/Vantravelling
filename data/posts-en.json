@@ -54,13 +54,17 @@
             },
             {
                 "type": "text",
-                "content": "The last preparations are being done before leaving for some test drives!"
+                "content": "It was actually an advantage to wait another week, because now some extra things could be done. The solar panels have been permanently attached, the wardrobe has been installed, and the gas stove has also passed its first test. Tomorrow a few final preparations, and then off for some test drives!"
             },
             {
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/wc.png", "alt": "The toilet"},
                     {   "src": "assets/images/stoel.png", "alt": "When the toilet is closed, it's just a normal seat"}
+                    {   "src": "assets/images/closet.png", "alt": "The second seat, aka the closet"},
+                    {   "src": "assets/images/gasstel.png", "alt": "Stove"},
+                    {   "src": "assets/images/solar.png", "alt": "Solar panels"}
+
                 ]
             }
 

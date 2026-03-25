@@ -54,13 +54,16 @@
             },
             {
                 "type": "text",
-                "content": "De laatste voorbereidingen worden gedaan, en dan op weg voor enkele proefritten!"
+                "content": "Het was eigenlijk wel een voordeel om nog een week te wachten, want nu konden er wat extra dingen gedaan worden. De zonnepanelen zijn definitief bevestigd, de kledingkast is geinstalleerd en het gasstel heeft ook de eerste test doorstaan. Morgen nog een paar laatste voorbereidingen, en dan op weg voor enkele proefritten!"
             },
             {
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/wc.png", "alt": "Het toilet"},
-                    {   "src": "assets/images/stoel.png", "alt": "Wanneer het toilet naar beneden is, is het gewoon een zitplaats"}
+                    {   "src": "assets/images/stoel.png", "alt": "Wanneer het toilet naar beneden is, is het gewoon een zitplaats"},
+                    {   "src": "assets/images/closet.png", "alt": "De tweede zitplaats, oftewel de kledingkast"},
+                    {   "src": "assets/images/gasstel.png", "alt": "Gasstel"},
+                    {   "src": "assets/images/solar.png", "alt": "De zonnepanelen"}
                 ]
             }
         ]
