@@ -221,63 +221,192 @@ function getBlogPath() {
     const postBody = document.getElementById('post-body'); // Unified container
 
     // Lightbox Elements (created dynamically)
-    let lightboxCtx = {
-        isOpen: false,
-        images: [], // {src, alt}
-        currentIndex: 0,
-        el: null,
-        imgEl: null,
-        captionEl: null
-    };
+let lightboxCtx = {
+    isOpen: false,
+    images: [],
+    currentIndex: 0,
+    el: null,
+    imgEl: null,
+    captionEl: null,
+    // Zoom state
+    isZoomed: false,
+    zoomTranslateX: 0,
+    zoomTranslateY: 0,
+};
 
-    function initLightbox() {
-        if (document.querySelector('.lightbox')) return;
+function initLightbox() {
+    if (document.querySelector('.lightbox')) return;
+    const lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.innerHTML = `
+        <div class="lightbox-close">&times;</div>
+        <div class="lightbox-nav lightbox-prev">&#10094;</div>
+        <div class="lightbox-nav lightbox-next">&#10095;</div>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-img" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    `;
+    document.body.appendChild(lb);
+    lightboxCtx.el = lb;
+    lightboxCtx.imgEl = lb.querySelector('.lightbox-img');
+    lightboxCtx.captionEl = lb.querySelector('.lightbox-caption');
 
-        const lb = document.createElement('div');
-        lb.className = 'lightbox';
-        lb.innerHTML = `
-            <div class="lightbox-close">&times;</div>
-            <div class="lightbox-nav lightbox-prev">&#10094;</div>
-            <div class="lightbox-nav lightbox-next">&#10095;</div>
-            <div class="lightbox-content-wrapper">
-                <img class="lightbox-img" src="" alt="">
-                <div class="lightbox-caption"></div>
-            </div>
-        `;
-        document.body.appendChild(lb);
-
-        lightboxCtx.el = lb;
-        lightboxCtx.imgEl = lb.querySelector('.lightbox-img');
-        lightboxCtx.captionEl = lb.querySelector('.lightbox-caption');
-
-        // Events
-        lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-        lb.querySelector('.lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
-        lb.querySelector('.lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
-        lb.addEventListener('click', (e) => {
-            if (e.target === lb) closeLightbox();
-        });
-
-        // Keyboard support
-        document.addEventListener('keydown', (e) => {
-            if (!lightboxCtx.isOpen) return;
-            if (e.key === 'Escape') closeLightbox();
+    // --- Existing click/keyboard events (unchanged) ---
+    lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lb.querySelector('.lightbox-prev').addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!lightboxCtx.isZoomed) prevImage();
+    });
+    lb.querySelector('.lightbox-next').addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!lightboxCtx.isZoomed) nextImage();
+    });
+    lb.addEventListener('click', (e) => {
+        if (e.target === lb) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (!lightboxCtx.isOpen) return;
+        if (e.key === 'Escape') {
+            if (lightboxCtx.isZoomed) resetZoom();
+            else closeLightbox();
+        }
+        if (!lightboxCtx.isZoomed) {
             if (e.key === 'ArrowLeft') prevImage();
             if (e.key === 'ArrowRight') nextImage();
-        });
-        // Touch swipe for lightbox
-        let lbTouchStartX = 0;
-        lb.addEventListener('touchstart', (e) => {
-            lbTouchStartX = e.touches[0].clientX;
-        }, { passive: true });
+        }
+    });
 
-        lb.addEventListener('touchend', (e) => {
-            const deltaX = e.changedTouches[0].clientX - lbTouchStartX;
-            if (Math.abs(deltaX) < 50) return;
-            if (deltaX < 0) nextImage();
-            else prevImage();
-        }, { passive: true });
-    }
+    // --- Touch handling ---
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+    let lastTapTime = 0;
+    let lastTapX = 0;
+    let lastTapY = 0;
+    let isDragging = false;
+    let dragMode = null; // 'pan' | 'swipe' | 'dismiss'
+    let dragCurrentX = 0;
+    let dragCurrentY = 0;
+
+    lightboxCtx.imgEl.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+            isDragging = false;
+            dragMode = null;
+        }
+    }, { passive: true });
+
+    lightboxCtx.imgEl.addEventListener('touchmove', (e) => {
+        if (e.touches.length !== 1) return;
+        const dx = e.touches[0].clientX - touchStartX;
+        const dy = e.touches[0].clientY - touchStartY;
+
+        if (!isDragging) {
+            // Commit to a drag mode once movement exceeds threshold
+            if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+            isDragging = true;
+            if (lightboxCtx.isZoomed) {
+                dragMode = 'pan';
+            } else {
+                dragMode = Math.abs(dy) > Math.abs(dx) ? 'dismiss' : 'swipe';
+            }
+        }
+
+        if (dragMode === 'pan') {
+            dragCurrentX = lightboxCtx.zoomTranslateX + dx;
+            dragCurrentY = lightboxCtx.zoomTranslateY + dy;
+            applyZoomTransform(dragCurrentX, dragCurrentY);
+        } else if (dragMode === 'dismiss') {
+            // Visually follow finger downward only
+            if (dy > 0) {
+                lb.style.transform = `translateY(${dy}px)`;
+                lb.style.opacity = Math.max(0, 1 - dy / 300);
+            }
+        }
+        // 'swipe' mode: no visual feedback needed, handled on touchend
+    }, { passive: true });
+
+    lightboxCtx.imgEl.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        const elapsed = Date.now() - touchStartTime;
+        const now = Date.now();
+
+        // --- Double-tap detection ---
+        if (!isDragging && elapsed < 300) {
+            const timeSinceLastTap = now - lastTapTime;
+            const tapDx = e.changedTouches[0].clientX - lastTapX;
+            const tapDy = e.changedTouches[0].clientY - lastTapY;
+            const tapDist = Math.sqrt(tapDx * tapDx + tapDy * tapDy);
+
+            if (timeSinceLastTap < 300 && tapDist < 40) {
+                // Double-tap
+                if (lightboxCtx.isZoomed) {
+                    resetZoom();
+                } else {
+                    // Zoom centered on tap point relative to image
+                    const rect = lightboxCtx.imgEl.getBoundingClientRect();
+                    const tapX = e.changedTouches[0].clientX;
+                    const tapY = e.changedTouches[0].clientY;
+                    // Offset from image center
+                    const offsetX = (rect.left + rect.width / 2) - tapX;
+                    const offsetY = (rect.top + rect.height / 2) - tapY;
+                    lightboxCtx.zoomTranslateX = offsetX;
+                    lightboxCtx.zoomTranslateY = offsetY;
+                    lightboxCtx.isZoomed = true;
+                    lb.classList.add('zoomed');
+                    applyZoomTransform(offsetX, offsetY);
+                }
+                lastTapTime = 0; // reset so triple-tap doesn't re-trigger
+                return;
+            }
+            lastTapTime = now;
+            lastTapX = e.changedTouches[0].clientX;
+            lastTapY = e.changedTouches[0].clientY;
+            return;
+        }
+
+        // --- Drag end ---
+        if (dragMode === 'pan') {
+            // Commit the translated position
+            lightboxCtx.zoomTranslateX = dragCurrentX;
+            lightboxCtx.zoomTranslateY = dragCurrentY;
+        } else if (dragMode === 'dismiss') {
+            if (dy > 80) {
+                closeLightbox();
+            } else {
+                // Snap back
+                lb.style.transform = '';
+                lb.style.opacity = '';
+            }
+        } else if (dragMode === 'swipe') {
+            if (Math.abs(dx) > 50 && !lightboxCtx.isZoomed) {
+                if (dx < 0) nextImage();
+                else prevImage();
+            }
+        }
+
+        isDragging = false;
+        dragMode = null;
+    }, { passive: true });
+}
+
+function applyZoomTransform(x, y) {
+    lightboxCtx.imgEl.style.transform = `scale(2) translate(${x / 2}px, ${y / 2}px)`;
+}
+
+function resetZoom() {
+    lightboxCtx.isZoomed = false;
+    lightboxCtx.zoomTranslateX = 0;
+    lightboxCtx.zoomTranslateY = 0;
+    lightboxCtx.imgEl.style.transform = '';
+    lightboxCtx.el.classList.remove('zoomed');
+    lightboxCtx.el.style.transform = '';
+    lightboxCtx.el.style.opacity = '';
+}
 
     function openLightbox(imagesData, index) {
         if (!lightboxCtx.el) initLightbox();
@@ -293,6 +422,7 @@ function getBlogPath() {
         if (!lightboxCtx.el) return;
         lightboxCtx.isOpen = false;
         lightboxCtx.el.classList.remove('open');
+	resetZoom();
     }
 
     function nextImage() {
@@ -306,6 +436,7 @@ function getBlogPath() {
     }
 
     function updateLightboxImage() {
+	resetZoom();
         const imgData = lightboxCtx.images[lightboxCtx.currentIndex];
         lightboxCtx.imgEl.src = getMediaPath(imgData.src); // Ensure path is correct
         lightboxCtx.imgEl.alt = imgData.alt;

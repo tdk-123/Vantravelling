@@ -642,6 +642,27 @@ main {
   font-size: 1rem;
 }
 
+/* Zoom transition on lightbox image */
+.lightbox-img {
+    transition: transform 0.25s ease;
+    touch-action: none; /* prevents browser default pan/zoom interfering */
+}
+
+/* Hide nav arrows and disable cursor when zoomed */
+.lightbox.zoomed .lightbox-prev,
+.lightbox.zoomed .lightbox-next {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Smooth dismiss drag */
+.lightbox {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+/* But not while dragging — transition would lag behind finger */
+.lightbox.dragging {
+    transition: none;
+}
 
 /* ===== CONTACT PAGE ===== */
 .contact-intro {
