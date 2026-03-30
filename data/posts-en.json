@@ -69,5 +69,25 @@
             }
 
         ]
+    },
+    {
+        "id": 4,
+        "title": "Test drive",
+        "date": "March 30, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/meer.png"
+            },
+            {
+                "type": "text",
+                "content": "The long drive to Belgium went well, and then a short trip to a beautiful lake in the area. Tomorrow we leave the solid soil behind and embark on the real journey."
+            },
+            {
+                "type": "image",
+                "src": "assets/images/pond.png"
+            }
+        ]
     }
+
 ]

@@ -67,6 +67,25 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 4,
+        "title": "Proefrit",
+        "date": "March 27, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/meer.png"
+            },
+            {
+                "type": "text",
+                "content": "De lange rit naar België verliep goed, en daarna een korte tocht naar een mooi meer in de buurt. Morgen laat ik de vaste grond achter en vertrek voor de echte reis."
+            },
+            {
+                "type": "image",
+                "src": "assets/images/pond.png"
+            }
+        ]
     }
 
 ]
