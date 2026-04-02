@@ -88,6 +88,45 @@
                 "src": "assets/images/pond.png"
             }
         ]
+    },
+    {
+        "id": 5,
+        "title": "On the way",
+        "date": "April 2, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/back1.png",
+                "alt": "Luggage"
+            },
+            {
+                "type": "text",
+                "content": "The first steps to get on the way were to pack all my stuff, store it in the van and clean the apartment. This was pretty intense, but with great help it all worked out very well! (Thank you W&J!!) Then most of my stuff was offloaded to give away, and some to store, and then this picture shows what's left. Before it nearly reached the ceiling of the van! You always have more stuff than you thought, even after you scaled down already in preparation to move into the van."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/kitchen mess.png", "alt": "Even after getting rid of most stuff, inside it's still a mess (with also some nice things! ;)"},
+                    {   "src": "assets/images/back2.png", "alt": "Instead of the picture above, I might also have shown this one. A bit less messy, just to take this picture."}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Then the real journey starts. The electricity suddenly didn't work the first day, but that turned out to be just a low battery. The water pump keeps running, so I just disconnect it when not needed. The teethinh troubles of a 'new' van. But we're on the road, first visiting the Dutch National Education Museum in Dordrecht, and then the nearby Nature reserve De Biesbosch."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/education.png", "alt": "Education museum"},
+                    {   "src": "assets/images/river.png", "alt": "Biesbosch 1"},
+                    {   "src": "assets/images/swam.png", "alt": "Biesbosch 2"},
+                    {   "src": "assets/images/museum.png", "alt": "Biesbosch 3"},
+                    {   "src": "assets/images/hut.png", "alt": "Biesbosch 4"},
+                    {   "src": "assets/images/path.png", "alt": "Biesbosch 5"}
+                ]
+            }
+        ]
     }
+
 
 ]

@@ -86,6 +86,44 @@
                 "src": "assets/images/pond.png"
             }
         ]
+    },
+    {
+        "id": 5,
+        "title": "Onderweg",
+        "date": "April 2, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/back1.png",
+                "alt": "Luggage"
+            },
+            {
+                "type": "text",
+                "content": "De eerste stappen om op weg te gaan waren al mijn spullen inpakken, in de camper laden en het appartement schoonmaken. Dat was best een klus, maar met geweldige hulp is het allemaal heel goed gegaan! (Dankjewel W&J!!) Daarna heb ik het grootste deel van mijn spullen weggegeven en een deel opgeslagen. Deze foto laat zien wat er over is. Daarvoor reikte het bijna tot aan het plafond van de camper/verhuiswagen! Je hebt altijd meer spullen dan je dacht, zelfs nadat je al spullen was kwijtgeraakt ter voorbereiding op leven in een camper."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/kitchen mess.png", "alt": "Zelfs nadat ik de meeste spullen heb weggegooid, is het binnen nog steeds een rommel (maar er liggen ook een paar leuke dingen! ;)"},
+                    {   "src": "assets/images/back2.png", "alt": "In plaats van de bovenstaande foto had ik ook deze kunnen laten zien. Iets minder rommelig, alleen gedaan om deze foto te kunnen maken."}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Dan begint de echte reis. De elektriciteit viel de eerste dag plotseling uit, maar dat bleek gewoon een lege accu te zijn. De waterpomp blijft de hele tijd draaien, dus die koppel ik gewoon los als ik hem niet nodig heb. De kinderziektes van een 'nieuwe' camper. Maar we zijn onderweg, eerst naar het Nationaal Onderwijsmuseum in Dordrecht en daarna naar het nabijgelegen natuurgebied De Biesbosch."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/education.png", "alt": "Education museum"},
+                    {   "src": "assets/images/river.png", "alt": "Biesbosch 1"},
+                    {   "src": "assets/images/swam.png", "alt": "Biesbosch 2"},
+                    {   "src": "assets/images/museum.png", "alt": "Biesbosch 3"},
+                    {   "src": "assets/images/hut.png", "alt": "Biesbosch 4"},
+                    {   "src": "assets/images/path.png", "alt": "Biesbosch 5"}
+                ]
+            }
+        ]
     }
 
 ]
