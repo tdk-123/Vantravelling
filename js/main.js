@@ -228,10 +228,10 @@ let lightboxCtx = {
     el: null,
     imgEl: null,
     captionEl: null,
-    // Zoom state
-    isZoomed: false,
-    zoomTranslateX: 0,
-    zoomTranslateY: 0,
+    // Zoom/pan state
+    scale: 1,
+    translateX: 0,
+    translateY: 0,
 };
 
 function initLightbox() {
@@ -252,32 +252,34 @@ function initLightbox() {
     lightboxCtx.imgEl = lb.querySelector('.lightbox-img');
     lightboxCtx.captionEl = lb.querySelector('.lightbox-caption');
 
-    // --- Existing click/keyboard events (unchanged) ---
+    // --- Click events ---
     lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
     lb.querySelector('.lightbox-prev').addEventListener('click', (e) => {
         e.stopPropagation();
-        if (!lightboxCtx.isZoomed) prevImage();
+        if (lightboxCtx.scale === 1) prevImage();
     });
     lb.querySelector('.lightbox-next').addEventListener('click', (e) => {
         e.stopPropagation();
-        if (!lightboxCtx.isZoomed) nextImage();
+        if (lightboxCtx.scale === 1) nextImage();
     });
     lb.addEventListener('click', (e) => {
         if (e.target === lb) closeLightbox();
     });
+
+    // --- Keyboard ---
     document.addEventListener('keydown', (e) => {
         if (!lightboxCtx.isOpen) return;
         if (e.key === 'Escape') {
-            if (lightboxCtx.isZoomed) resetZoom();
+            if (lightboxCtx.scale > 1) resetZoom();
             else closeLightbox();
         }
-        if (!lightboxCtx.isZoomed) {
+        if (lightboxCtx.scale === 1) {
             if (e.key === 'ArrowLeft') prevImage();
             if (e.key === 'ArrowRight') nextImage();
         }
     });
 
-    // --- Touch handling ---
+    // --- Touch state ---
     let touchStartX = 0;
     let touchStartY = 0;
     let touchStartTime = 0;
@@ -285,30 +287,75 @@ function initLightbox() {
     let lastTapX = 0;
     let lastTapY = 0;
     let isDragging = false;
-    let dragMode = null; // 'pan' | 'swipe' | 'dismiss'
+    let dragMode = null; // 'pan' | 'swipe' | 'dismiss' | 'pinch'
     let dragCurrentX = 0;
     let dragCurrentY = 0;
 
-    lightboxCtx.imgEl.addEventListener('touchstart', (e) => {
+    // Pinch state
+    let pinchStartDist = 0;
+    let pinchStartScale = 1;
+
+    function getTouchDist(e) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    function clampTranslate(x, y, scale) {
+        const rect = lightboxCtx.imgEl.getBoundingClientRect();
+        // rect reflects current rendered size (before scale transform)
+        // max pan = half the extra size revealed by zoom, in scaled coords
+        const maxX = (rect.width  * (scale - 1)) / (2 * scale);
+        const maxY = (rect.height * (scale - 1)) / (2 * scale);
+        return {
+            x: Math.max(-maxX, Math.min(maxX, x)),
+            y: Math.max(-maxY, Math.min(maxY, y)),
+        };
+    }
+
+    // All touch listeners on the container so dismiss works on dark area too
+    lb.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 2) {
+            // Start of pinch
+            dragMode = 'pinch';
+            isDragging = true;
+            pinchStartDist = getTouchDist(e);
+            pinchStartScale = lightboxCtx.scale;
+            return;
+        }
         if (e.touches.length === 1) {
             touchStartX = e.touches[0].clientX;
             touchStartY = e.touches[0].clientY;
             touchStartTime = Date.now();
             isDragging = false;
             dragMode = null;
+            dragCurrentX = lightboxCtx.translateX;
+            dragCurrentY = lightboxCtx.translateY;
         }
     }, { passive: true });
 
-    lightboxCtx.imgEl.addEventListener('touchmove', (e) => {
+    lb.addEventListener('touchmove', (e) => {
+        if (dragMode === 'pinch' && e.touches.length === 2) {
+            const newDist = getTouchDist(e);
+            let newScale = pinchStartScale * (newDist / pinchStartDist);
+            newScale = Math.max(1, Math.min(4, newScale));
+            const clamped = clampTranslate(lightboxCtx.translateX, lightboxCtx.translateY, newScale);
+            lightboxCtx.scale = newScale;
+            lightboxCtx.translateX = clamped.x;
+            lightboxCtx.translateY = clamped.y;
+            applyZoomTransform();
+            updateZoomedState();
+            return;
+        }
+
         if (e.touches.length !== 1) return;
         const dx = e.touches[0].clientX - touchStartX;
         const dy = e.touches[0].clientY - touchStartY;
 
         if (!isDragging) {
-            // Commit to a drag mode once movement exceeds threshold
             if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
             isDragging = true;
-            if (lightboxCtx.isZoomed) {
+            if (lightboxCtx.scale > 1) {
                 dragMode = 'pan';
             } else {
                 dragMode = Math.abs(dy) > Math.abs(dx) ? 'dismiss' : 'swipe';
@@ -316,77 +363,91 @@ function initLightbox() {
         }
 
         if (dragMode === 'pan') {
-            dragCurrentX = lightboxCtx.zoomTranslateX + dx;
-            dragCurrentY = lightboxCtx.zoomTranslateY + dy;
+            const clamped = clampTranslate(
+                lightboxCtx.translateX + dx,
+                lightboxCtx.translateY + dy,
+                lightboxCtx.scale
+            );
+            dragCurrentX = clamped.x;
+            dragCurrentY = clamped.y;
             applyZoomTransform(dragCurrentX, dragCurrentY);
         } else if (dragMode === 'dismiss') {
-            // Visually follow finger downward only
             if (dy > 0) {
+                lb.style.transition = 'none';
                 lb.style.transform = `translateY(${dy}px)`;
                 lb.style.opacity = Math.max(0, 1 - dy / 300);
             }
         }
-        // 'swipe' mode: no visual feedback needed, handled on touchend
     }, { passive: true });
 
-    lightboxCtx.imgEl.addEventListener('touchend', (e) => {
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dy = e.changedTouches[0].clientY - touchStartY;
+    lb.addEventListener('touchend', (e) => {
+        // Pinch ended — just commit, don't interpret as tap
+        if (dragMode === 'pinch') {
+            // If scale snapped back to ~1, fully reset
+            if (lightboxCtx.scale <= 1.05) resetZoom();
+            dragMode = null;
+            isDragging = false;
+            return;
+        }
+
+        if (e.touches.length > 0) return; // still fingers on screen
+
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        const dx = endX - touchStartX;
+        const dy = endY - touchStartY;
         const elapsed = Date.now() - touchStartTime;
         const now = Date.now();
 
-        // --- Double-tap detection ---
+        // --- Double-tap ---
         if (!isDragging && elapsed < 300) {
             const timeSinceLastTap = now - lastTapTime;
-            const tapDx = e.changedTouches[0].clientX - lastTapX;
-            const tapDy = e.changedTouches[0].clientY - lastTapY;
+            const tapDx = endX - lastTapX;
+            const tapDy = endY - lastTapY;
             const tapDist = Math.sqrt(tapDx * tapDx + tapDy * tapDy);
 
             if (timeSinceLastTap < 300 && tapDist < 40) {
-                // Double-tap
-                if (lightboxCtx.isZoomed) {
-                    resetZoom();
-                } else {
-                    // Zoom centered on tap point relative to image
-                    const rect = lightboxCtx.imgEl.getBoundingClientRect();
-                    const tapX = e.changedTouches[0].clientX;
-                    const tapY = e.changedTouches[0].clientY;
-                    // Offset from image center
-                    const offsetX = (rect.left + rect.width / 2) - tapX;
-                    const offsetY = (rect.top + rect.height / 2) - tapY;
-                    lightboxCtx.zoomTranslateX = offsetX;
-                    lightboxCtx.zoomTranslateY = offsetY;
-                    lightboxCtx.isZoomed = true;
-                    lb.classList.add('zoomed');
-                    applyZoomTransform(offsetX, offsetY);
-                }
-                lastTapTime = 0; // reset so triple-tap doesn't re-trigger
+                // Cycle: 1 → 2 → 4 → 1
+                let newScale;
+                if (lightboxCtx.scale < 1.5) newScale = 2;
+                else if (lightboxCtx.scale < 3) newScale = 4;
+                else { resetZoom(); lastTapTime = 0; return; }
+
+                // Center zoom on tap point
+                const rect = lightboxCtx.imgEl.getBoundingClientRect();
+                const offsetX = (rect.left + rect.width  / 2) - endX;
+                const offsetY = (rect.top  + rect.height / 2) - endY;
+                const clamped = clampTranslate(offsetX, offsetY, newScale);
+                lightboxCtx.scale = newScale;
+                lightboxCtx.translateX = clamped.x;
+                lightboxCtx.translateY = clamped.y;
+                lightboxCtx.imgEl.style.transition = 'transform 0.25s ease';
+                applyZoomTransform();
+                updateZoomedState();
+                lastTapTime = 0;
                 return;
             }
             lastTapTime = now;
-            lastTapX = e.changedTouches[0].clientX;
-            lastTapY = e.changedTouches[0].clientY;
+            lastTapX = endX;
+            lastTapY = endY;
             return;
         }
 
         // --- Drag end ---
         if (dragMode === 'pan') {
-            // Commit the translated position
-            lightboxCtx.zoomTranslateX = dragCurrentX;
-            lightboxCtx.zoomTranslateY = dragCurrentY;
+            lightboxCtx.translateX = dragCurrentX;
+            lightboxCtx.translateY = dragCurrentY;
         } else if (dragMode === 'dismiss') {
             if (dy > 80) {
                 closeLightbox();
             } else {
-                // Snap back
+                lb.style.transition = '';
                 lb.style.transform = '';
                 lb.style.opacity = '';
             }
-        } else if (dragMode === 'swipe') {
-            if (Math.abs(dx) > 50 && !lightboxCtx.isZoomed) {
-                if (dx < 0) nextImage();
-                else prevImage();
-            }
+        } else if (dragMode === 'swipe' && lightboxCtx.scale === 1) {
+            if (dx < -50) nextImage();
+            else if (dx > 50) prevImage();
         }
 
         isDragging = false;
@@ -395,15 +456,29 @@ function initLightbox() {
 }
 
 function applyZoomTransform(x, y) {
-    lightboxCtx.imgEl.style.transform = `scale(2) translate(${x / 2}px, ${y / 2}px)`;
+    // Use stored values if not passed explicitly (e.g. during pinch)
+    const tx = (x !== undefined) ? x : lightboxCtx.translateX;
+    const ty = (y !== undefined) ? y : lightboxCtx.translateY;
+    lightboxCtx.imgEl.style.transform =
+        `scale(${lightboxCtx.scale}) translate(${tx / lightboxCtx.scale}px, ${ty / lightboxCtx.scale}px)`;
+}
+
+function updateZoomedState() {
+    if (lightboxCtx.scale > 1) {
+        lightboxCtx.el.classList.add('zoomed');
+    } else {
+        lightboxCtx.el.classList.remove('zoomed');
+    }
 }
 
 function resetZoom() {
-    lightboxCtx.isZoomed = false;
-    lightboxCtx.zoomTranslateX = 0;
-    lightboxCtx.zoomTranslateY = 0;
+    lightboxCtx.scale = 1;
+    lightboxCtx.translateX = 0;
+    lightboxCtx.translateY = 0;
+    lightboxCtx.imgEl.style.transition = 'transform 0.25s ease';
     lightboxCtx.imgEl.style.transform = '';
     lightboxCtx.el.classList.remove('zoomed');
+    lightboxCtx.el.style.transition = '';
     lightboxCtx.el.style.transform = '';
     lightboxCtx.el.style.opacity = '';
 }
