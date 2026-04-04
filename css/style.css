@@ -643,9 +643,10 @@ main {
 /* Lightbox Caption */
 .lightbox-caption {
   position: absolute;
-  bottom: -40px;
+  top: 100%;
   left: 0;
   width: 100%;
+  margin-top: 8px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
