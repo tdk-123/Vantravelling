@@ -142,8 +142,8 @@
             {
                 "type": "gallery",
                 "images": [
-                    {   "src": "assets/images/flowers.png", "alt": "De velden bij de Keukenhof"},
                     {   "src": "assets/images/uni.png", "alt": "De plaats waar het bijna 20 jaar geleden allemaal begon"},
+                    {   "src": "assets/images/flowers.png", "alt": "De velden bij de Keukenhof"},
 		    {   "src": "assets/images/sunset.png", "alt": "Onderweg in Duitsland. Dank aan een lieve fotograaf voor deze mooie foto."}
                 ]
             },
