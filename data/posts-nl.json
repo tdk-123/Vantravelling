@@ -124,6 +124,50 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 6,
+        "title": "In de bergen",
+        "date": "April 9, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/mont blanc.png",
+                "alt": "Uitzicht op de Mont Blanc"
+            },
+            {
+                "type": "text",
+                "content": "Het is alweer een week geleden, dus hoog tijd voor een nieuwe post. Vorige week nog in Nederland, waar de reis ging langs de tulpenvelden en ook een bezoek aan mijn eerste studentenstad, Leiden. Dan volgde de eerste echt grote trip naar Zwitserland, waar ik vanaf gisteren de reis alleen verder gezet heb. Alleen of met z'n tweeen reizen is een heel verschil, nu start de echte uitdaging om 'onderweg' te zijn, onderweg te werken, eten, ontspannen en reflecteren."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/flowers.png", "alt": "De velden bij de Keukenhof"},
+                    {   "src": "assets/images/uni.png", "alt": "De plaats waar het bijna 20 jaar geleden allemaal begon"},
+		    {   "src": "assets/images/sunset.png", "alt": "Onderweg in Duitsland. Dank aan een lieve fotograaf voor deze mooie foto."}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Naast het werk dat weer begonnen is ook tijd voor ontspanning: een wandeling naar een van de toppen in het Jura gebergte in Frankrijk, met uitzicht over het meer van Geneve en de Mont Blanc. Het skiseizoen is gelukkig al voorbij, dus het is vrij rustig hier. Voor wie deze blog volgt voor de mooie foto's zoals hieronder: het zal weer eventjes duren voordat ik weer langs zo'n spectaculair uitzicht kom. Vanaf morgen reis ik langzaam weer wat meer naar het noorden, om volgende week weer in België en Nederland langs te komen."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/gems.png", "alt": "Een vroege gast op de parkeerplaats deze ochtend"},
+                    {   "src": "assets/images/ski2.png", "alt": "De lege piste"},
+                    {   "src": "assets/images/ski.png", "alt": "De piste vanaf boven"},
+                    {   "src": "assets/images/smelt sculpture.png", "alt": "De smeltende sneeuw op het wandelpad"},
+                    {   "src": "assets/images/smelten.png", "alt": "De weg komt vrij te liggen"},
+                    {   "src": "assets/images/top.png", "alt": "Hoogtepunt"},
+                    {   "src": "assets/images/voetstappen.png", "alt": "Op de terugweg mijn eigen voetstappen terugvinden"},
+                    {   "src": "assets/images/waar pad.png", "alt": "Waar is het pad?"},
+                    {   "src": "assets/images/back home.png", "alt": "Terug thuis. Voor de precieze route van deze wandeling, zie mijn Komoot account."}
+
+                ]
+            }
+        ]
     }
+
 
 ]

@@ -126,6 +126,50 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 6,
+        "title": "In the Mountains",
+        "date": "April 9, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/mont blanc.png",
+                "alt": "View on the Mont Blanc"
+            },
+            {
+                "type": "text",
+                "content": "It has already been a week, so it is time for a new post. Last week I was still in the Netherlands, where the journey took me past the tulip fields and included a visit to my first student city, Leiden. Then followed the first really big trip to Switzerland, where I continued the journey alone as of yesterday. Traveling alone or with someone is a big difference; now the real challenge begins of being 'on the road,' working, eating, relaxing, and reflecting while traveling."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/flowers.png", "alt": "The flower fields next to Keukenhof"},
+                    {   "src": "assets/images/uni.png", "alt": "The place where it all started nearly 20 years ago"},
+		    {   "src": "assets/images/sunset.png", "alt": "On the road in Germany. Thanks to a lovely photographer for this beautiful picture."}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Besides work having started again, there is also time for relaxation: a walk to one of the peaks in the Jura Mountains in France, with a view over the Geneva Lake and the Mont Blanc. Fortunately, the ski season is already over, so it is quiet here. For those following this blog for the beautiful photos like the ones below: it will be a little while before I come across such spectacular views again. Starting tomorrow, I will slowly travel further north again, to pass by Belgium and the Netherlands again next week."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/gems.png", "alt": "An early guest at the parking place this morning"},
+                    {   "src": "assets/images/ski2.png", "alt": "The empty ski slope"},
+                    {   "src": "assets/images/ski.png", "alt": "The ski slope from above"},
+                    {   "src": "assets/images/smelt sculpture.png", "alt": "The melting snow on the hiking trail"},
+                    {   "src": "assets/images/smelten.png", "alt": "The road appears again"},
+                    {   "src": "assets/images/top.png", "alt": "Summit"},
+                    {   "src": "assets/images/voetstappen.png", "alt": "Finding back my footsteps on the way back"},
+                    {   "src": "assets/images/waar pad.png", "alt": "Where is the path?"},
+                    {   "src": "assets/images/back home.png", "alt": "Back home. For the exact route of this walk, see my Komoot account."}
+
+
+                ]
+            }
+        ]
     }
 
 
