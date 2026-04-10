@@ -71,7 +71,7 @@
     {
         "id": 4,
         "title": "Proefrit",
-        "date": "March 30, 2026",
+        "date": "30 maart 2026",
         "blocks": [
             {
                 "type": "image",
@@ -90,7 +90,7 @@
     {
         "id": 5,
         "title": "Onderweg",
-        "date": "April 2, 2026",
+        "date": "2 april, 2026",
         "blocks": [
             {
                 "type": "image",
@@ -128,7 +128,7 @@
     {
         "id": 6,
         "title": "In de bergen",
-        "date": "April 9, 2026",
+        "date": "9 april, 2026",
         "blocks": [
             {
                 "type": "image",
