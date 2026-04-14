@@ -682,10 +682,8 @@ function getMobileGalleryConfig(n, h1, h2) {
 
         case 7:  return {
             cols: 3,
-            // hero2 goes below hero1 if h1 is horizontal, to the right if h1 is vertical
-            const c1 = hero1cls(h1);
-            const c2 = hero2cls(h2);
-            cells: [{ cls: c1 }, { cls: c2 }, ...plain(5)]
+
+            cells: [{ cls: hcls(h1) }, ...plain(6)]
         };
 
         case 8:  return {
