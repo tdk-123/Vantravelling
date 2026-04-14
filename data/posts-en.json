@@ -222,8 +222,8 @@
                     {   "src": "assets/images/graves.png", "alt": "The War Cemetery with 16.000 graves"},
                     {   "src": "assets/images/ossuary graves.png", "alt": "War Cemetery with view on the Ossuary"},
                     {   "src": "assets/images/ossuary.png", "alt": "In the Ossuary the remains of 130.000 not identified soldiers are laid to rest"},
-                    {   "src": "assets/images/namur citadel.png", "alt": "The entrance of the Citadel"},
-                    {   "src": "assets/images/namur monument.png", "alt": "Monument in the city of Verdun"}
+                    {   "src": "assets/images/verdun citadel.png", "alt": "The entrance of the Citadel"},
+                    {   "src": "assets/images/verdun monument.png", "alt": "Monument in the city of Verdun"}
                 ]
             },
             {
