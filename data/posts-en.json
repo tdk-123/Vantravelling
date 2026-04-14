@@ -170,6 +170,81 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 7,
+        "title": "Door Frankrijk",
+        "date": "April 14, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/canal.png",
+                "alt": "Canal de Bourgogne"
+            },
+            {
+                "type": "text",
+                "content": "This time, a slightly more extensive update. On the way back to Leuven and the Netherlands, there are two places I wanted to visit, and the first of these is the canal pictured above. This canal is special for several reasons. It connects the Seine with the Saône and Rhône, making it possible for the first time to reach the Mediterranean Sea from Paris via France's inland waterways. The construction of the canal is impressive, as a large difference in elevation had to be overcome. This resulted in 189 locks and, at the highest point, a tunnel more than 3 km long. But for me personally, this canal is also special because I stumbled upon it by chance during my cycling trip through Europe in the summer of 2013. After conquering many mountains and hills, it was a relief to be able to follow a cycling path along the water. Almost thirteen years ago, at that time already I thought: when I am a bit older, and no longer make such a trip with a bike and a tent, I will do it in a van. And now I am here, cycling on my mountain bike along those same bike paths as almost 13 years ago. What a different journey, and what a different world. Back then, I didn't have a smartphone yet, and in the beginning, I even set off without a map. I sent a text message once a week to let my family know where I was. Now I use my smartphone constantly: to look up where I can park the camper for the night, for navigation, I look up where I can refuel or do groceries, and I search for hiking and cycling trails via Komoot. Moreover, I work online and maintain this blog. How different this journey is now compared to 13 years ago, but also: how different the world is now. The contrast with 13 years ago makes me reflect on that as well. I am happy with all the online options that make this current journey possible, and at the same time, when the news comes along or when I see titles on YouTube screaming for attention, the world of 2026 feels so much more chaotic than the world of 2013. Part of this current journey is also a detachment from a frenzied existence, and at the same time, I do not want it to be a flight, a withdrawal from responsibility for this world. Where are all these considerations leading? Hopefully, that will become clearer over the next months."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/van at canal.png", "alt": "The van on the left, next to the water basin at the highest point of the canal"},
+                    {   "src": "assets/images/canal basin.png", "alt": "To supply the canal at its highest point of enough water, this basin was constructed"},
+		    {   "src": "assets/images/canal narrow.png", "alt": "Further along the canal becomes narrower"},
+                    {   "src": "assets/images/canal tunnel 1.png", "alt": "At the village Pouilly-en-Auxois the canal disappears underground"},
+                    {   "src": "assets/images/canal tunnel 2.png", "alt": "Even though it is narrower, it still is an impressive waterway, that was excavated in the rock over a length of 3333 meter with handdrills and black powder (in the years 1826-1832)"},
+		    {   "src": "assets/images/canal tunnel 3.png", "alt": "Keeping a good hold of my phone while taking this picture!"},
+                    {   "src": "assets/images/canal shaft.png", "alt": "To construct the tunnel, shafts were built that needed to reach up to 40 meters deep to reach the canal level"},
+		    {   "src": "assets/images/canal shaft meter.png", "alt": "Altitude of the shaft above sea level"},
+		    {   "src": "assets/images/tugboat.png", "alt": "From 1892 onwards an electric tugboat was used to pull ships through the tunnel"},
+                    {   "src": "assets/images/canal house 1.png", "alt": "The houses along the canal that were in the past inhabited by the lockkeepers are also interesting"},
+                    {   "src": "assets/images/canal house 2.png", "alt": "Some have a more modern attachment built to them"},
+		    {   "src": "assets/images/canal house 3.png", "alt": "Do the children really play this close to the water?"},
+                    {   "src": "assets/images/canal house 4.png", "alt": "Some houses are abandoned"}
+
+                ]
+            },
+            {
+                "type": "text",
+                "content": "The second destination I absolutely wanted to visit was Verdun. Already when I cycled through northern France 13 years ago, I realized that it would be much easier to visit the various historical sites connected to the First World War with a van. And where better to start than in Verdun?
+The first destination was the citadel, an underground stronghold from which the city's defense was coordinated. A modern tour through the citadel's underground tunnels consists of a ride in a self-driving vehicle for a maximum of 5 people, where you put on VR glasses to see various scenes from that time in the corridors. However, the result remains somewhat disappointing. Typically enough, the story told during the tour is about 4 soldiers coming from the front line to attend a ceremony. The underground citadel is safe, where the soldiers' raw experiences cannot find a place. All of this comes a little closer when you arrive in Fleury-devant-Douamont. This small village was right on the front line, and was captured by the Germans multiple times and recaptured by the French. It was completely destroyed and never rebuilt, but the streets and houses of that time have been made visible again by street signs and stones marking the houses, shops, and other buildings. All of this is situated in a landscape where the bomb craters are still visible. Even as you drive further through these woods, that is the scene: a crater landscape, reclaimed by nature, yet still clearly visible. Perhaps that speaks even more than all the memorial stones for peace and brotherhood erected here and there, the raw power of the shells, the wounds in the earth, still so clearly visible after exactly 110 years.
+And then you drive further, out of the forest, and you reach the first inhabited vilage again. Here people live, in warmth and shelter. Precious and fragile."
+            },
+            {
+                "type": "image",
+                "src": "assets/images/fleury-devant-douamont 2.png",
+                "alt": "Fleury-devant-Douamont"
+            },
+
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/craters.png", "alt": "Trees in bomb craters"},
+                    {   "src": "assets/images/fleury-devant-douamont.png", "alt": "The village"},
+                    {   "src": "assets/images/graves.png", "alt": "The War Cemetery with 16.000 graves"},
+                    {   "src": "assets/images/ossuary graves.png", "alt": "War Cemetery with view on the Ossuary"},
+                    {   "src": "assets/images/ossuary.png", "alt": "In the Ossuary the remains of 130.000 not identified soldiers are laid to rest"},
+                    {   "src": "assets/images/namur citadel.png", "alt": "The entrance of the Citadel"},
+                    {   "src": "assets/images/namur monument.png", "alt": "Monument in the city of Verdun"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Besides all these heavy themes, van life continues in its everyday aspects. Cooked a real meal for the first time, cooked rice for the first time using energy from the solar panels. And some final images from the Jura Mountains, with two beautiful lakes, and the first short mountain bike ride I took there."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/eten.png", "alt": "An oldfashioned meal"},
+                    {   "src": "assets/images/rice.png", "alt": "Cooking on solar energy"},
+                    {   "src": "assets/images/lake 2.png", "alt": "Lac des Rousses"},
+                    {   "src": "assets/images/mtb 1.png", "alt": "Testing the MTB"},
+                    {   "src": "assets/images/lake.png", "alt": "Lac de Chalain"},
+                    {   "src": "assets/images/castle.png", "alt": "Remains of an old castle at Lac de Chalain"},
+                    {   "src": "assets/images/geology.png", "alt": "Interesting sedimented limestone layers at the roadside"}
+                ]
+            }
+        ]
     }
 
 
