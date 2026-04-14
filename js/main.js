@@ -681,6 +681,8 @@ function getMobileGalleryConfig(n, h1, h2) {
         case 6:  return { cols: 3, cells: plain(6) };
 
 case 7: {
+      console.log('case 7 hit:', h1, h2);
+
     const c1 = hcls(h1);
     const c2 = hcls(h2);
     return { cols: 3, cells: [{ cls: c1 }, { cls: c2 }, ...plain(5)] };
