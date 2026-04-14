@@ -216,12 +216,12 @@
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/craters.png", "alt": "Bomen in bomkraters"},
+                    {   "src": "assets/images/verdun monument.png", "alt": "Monument in de stad Verdun"},
                     {   "src": "assets/images/fleury-devant-douamont.png", "alt": "Het dorp"},
                     {   "src": "assets/images/graves.png", "alt": "Het ereveld met 16.000 graven"},
                     {   "src": "assets/images/ossuary graves.png", "alt": "Ereveld met zicht op het ossuarium"},
                     {   "src": "assets/images/ossuary.png", "alt": "In het ossuarium zijn de stoffelijke overschotten van 130.000 niet geidentifieerde soldaten te ruste gelegd."},
-                    {   "src": "assets/images/verdun citadel.png", "alt": "De ingang van de Citadel"},
-                    {   "src": "assets/images/verdun monument.png", "alt": "Monument in de stad Verdun"}
+                    {   "src": "assets/images/verdun citadel.png", "alt": "De ingang van de Citadel"}
 
 
                 ]
