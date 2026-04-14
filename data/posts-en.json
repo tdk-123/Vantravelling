@@ -240,7 +240,10 @@
                     {   "src": "assets/images/lake.png", "alt": "Lac de Chalain"},
                     {   "src": "assets/images/castle.png", "alt": "Remains of an old castle at Lac de Chalain"},
                     {   "src": "assets/images/geology.png", "alt": "Interesting sedimented limestone layers at the roadside"},
-                    {   "src": "assets/images/bever.png", "alt": "When you have a big task in front of you, think about this bever"}
+                    {   "src": "assets/images/bever.png", "alt": "When you have a big task in front of you, think about this bever"},
+                    {   "src": "assets/images/morning mist.png", "alt": "Nature reserve at this morning's parking place"},
+                    {   "src": "assets/images/cow.png", "alt": "The host of the nature reserve"}
+
 
                 ]
             }
