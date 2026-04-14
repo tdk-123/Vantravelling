@@ -239,7 +239,9 @@
                     {   "src": "assets/images/mtb 1.png", "alt": "Testing the MTB"},
                     {   "src": "assets/images/lake.png", "alt": "Lac de Chalain"},
                     {   "src": "assets/images/castle.png", "alt": "Remains of an old castle at Lac de Chalain"},
-                    {   "src": "assets/images/geology.png", "alt": "Interesting sedimented limestone layers at the roadside"}
+                    {   "src": "assets/images/geology.png", "alt": "Interesting sedimented limestone layers at the roadside"},
+                    {   "src": "assets/images/bever.png", "alt": "When you have a big task in front of you, think about this bever"}
+
                 ]
             }
         ]
