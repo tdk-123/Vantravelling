@@ -189,8 +189,9 @@
                 "type": "gallery",
                 "images": [
                     {   "src": "assets/images/van at canal.png", "alt": "The van on the left, next to the water basin at the highest point of the canal"},
-                    {   "src": "assets/images/canal basin.png", "alt": "To supply the canal at its highest point of enough water, this basin was constructed"},
 		    {   "src": "assets/images/canal narrow.png", "alt": "Further along the canal becomes narrower"},
+                    {   "src": "assets/images/canal basin.png", "alt": "To supply the canal at its highest point of enough water, this basin was constructed"},
+
                     {   "src": "assets/images/canal tunnel 1.png", "alt": "At the village Pouilly-en-Auxois the canal disappears underground"},
                     {   "src": "assets/images/canal tunnel 2.png", "alt": "Even though it is narrower, it still is an impressive waterway, that was excavated in the rock over a length of 3333 meter with handdrills and black powder (in the years 1826-1832)"},
 		    {   "src": "assets/images/canal tunnel 3.png", "alt": "Keeping a good hold of my phone while taking this picture!"},
