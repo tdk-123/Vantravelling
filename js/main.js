@@ -680,11 +680,11 @@ function getMobileGalleryConfig(n, h1, h2) {
 
         case 6:  return { cols: 3, cells: plain(6) };
 
-        case 7:  return {
-            cols: 3,
-
-            cells: [{ cls: hcls(h1) }, ...plain(6)]
-        };
+case 7: {
+    const c1 = hcls(h1);
+    const c2 = hcls(h2);
+    return { cols: 3, cells: [{ cls: c1 }, { cls: c2 }, ...plain(5)] };
+}
 
         case 8:  return {
             cols: 3,
@@ -693,10 +693,11 @@ function getMobileGalleryConfig(n, h1, h2) {
 
         case 9:  return { cols: 3, cells: plain(9) };
 
-        case 10: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(8)]
-        };
+case 10: {
+    const c1 = hcls(h1);
+    const c2 = hcls(h2);
+    return { cols: 3, cells: [{ cls: c1 }, { cls: c2 }, ...plain(8)] };
+}
 
         case 11: return {
             cols: 3,
@@ -705,10 +706,11 @@ function getMobileGalleryConfig(n, h1, h2) {
 
         case 12: return { cols: 3, cells: plain(12) };
 
-        case 13: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(11)]
-        };
+case 13: {
+    const c1 = hcls(h1);
+    const c2 = hcls(h2);
+    return { cols: 3, cells: [{ cls: c1 }, { cls: c2 }, ...plain(11)] };
+}
 
         case 14: return {
             cols: 3,
@@ -717,11 +719,11 @@ function getMobileGalleryConfig(n, h1, h2) {
 
         case 15: return { cols: 3, cells: plain(15) };
 
-        case 16: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(14)]
-        };
-
+case 16: {
+    const c1 = hcls(h1);
+    const c2 = hcls(h2);
+    return { cols: 3, cells: [{ cls: c1 }, { cls: c2 }, ...plain(14)] };
+}
         case 17: return {
             cols: 3,
             cells: [{ cls: hcls(h1) }, ...plain(16)]
@@ -729,11 +731,12 @@ function getMobileGalleryConfig(n, h1, h2) {
 
         case 18: return { cols: 3, cells: plain(18) };
 
-        case 19: return {
-            cols: 3,
-            cells: [{ cls: hcls(h1) }, { cls: hcls(h2) }, ...plain(17)]
-        };
 
+case 19: {
+    const c1 = hcls(h1);
+    const c2 = hcls(h2);
+    return { cols: 3, cells: [{ cls: c1 }, { cls: c2 }, ...plain(17)] };
+}
         case 20: return {
             cols: 3,
             cells: [{ cls: hcls(h1) }, ...plain(19)]
@@ -814,7 +817,7 @@ const isMobile = window.innerWidth <= 768;
 // Counts that need h1 on desktop, mobile, or both
 const needsH1 = [3, 5, 7, 8, 10, 11, 13, 14, 17, 18, 19, 20].includes(count);
 // Counts that need h2 on desktop, mobile, or both
-const needsH2 = [10, 13, 14, 16, 18, 19].includes(count);
+const needsH2 = [7, 10, 13, 14, 16, 18, 19].includes(count);
 
 const buildGrid = (h1, h2) => {
     blockDiv.innerHTML = '';
