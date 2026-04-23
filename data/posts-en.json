@@ -249,6 +249,42 @@
                 ]
             }
         ]
+    },
+{
+        "id": 8,
+        "title": "The challenges of van life",
+        "date": "April 23, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/startmotor2.png",
+                "alt": "Under the hood"
+            },
+            {
+                "type": "text",
+                "content": "Lately, I’ve been wondering: what is missing from the image I project with my blog posts? Which part of my van life am I not showing? When I mainly show the places I visit, maybe I am no better than people who just show beautiful pictures on Instagram? Looking back, I had indeed kept an important part of the past few weeks unmentioned. Particularly regarding the trip to Switzerland, there were doubts about whether this van, which I bought last autumn but had been sitting idle for a while before that, would be able to handle it. In early April, during the first trip through the Netherlands, there was also a moment when a lot of smoke suddenly came out of the exhaust. Fortunately, I had good remote assistance, the problem was diagnosed correctly, and I was able to continue driving (A first time many thanks to H.!!). In the days that followed, I did constantly check the oil level, and although it was slightly too high, the decision was made to drive to Switzerland anyway. It is a slightly older van with a not-so-powerful engine, and some parts will be checked again in the coming weeks. But the feeling that you are not entirely sure about your mode of transport/home can certainly be categorized under the title 'challenges of van life'. I am not entirely sure why I hadn't mentioned this in the blog before, but this week I have a good opportunity to give it my full attention. Because earlier this week, there was suddenly a day when the engine simply wouldn't start... (read more below the photos)"
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/oliepeil.png", "alt": "Checking the oil level every morning"},
+                    {   "src": "assets/images/relais.png", "alt": "Here's where the problem was/is situated probably"},
+                    {   "src": "assets/images/startmotor.png", "alt": "Picture taken from below"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "The battery had enough voltage, so it wasn't just a matter of connecting the jumper cables to another car. But fortunately, this was once again properly diagnosed remotely (thanks again H.!!!), and the problem likely turned out to be in the electrical system. When you press the relay (grey block above), proper contact is made and the engine does start. Now, every time I start, the question is whether the engine will actually start, and whether everything will go well until I return to the Netherlands next week. However, the interesting thing about all this is primarily the mental aspect: surrendering to the uncertainty, being able to make peace with it when all your plans are thwarted, and when unexpected costs suddenly arise. Staying calm, anticipating negative outcomes, but at the same time not letting your mood drag down because of it. It remains a challenge every time, but these incidents are important points in that process.\nBut besides all these practical and mental concerns, there are sometimes beautiful places you come across: a parking lot specifically for vans, with toilets, water, and a drain to empty your toilet. And that right next to a beautiful park.\nNext week I am going back to the Netherlands to work on the van a bit and to have the engine checked further, so the next update will focus more on the van's interior."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/park van.png", "alt": "The park with the van hidden between the leaves"},
+                    {   "src": "assets/images/park dieren.png", "alt": "There are also some animals in the park..."},
+                    {   "src": "assets/images/pauw.png", "alt": "...with most beautifully this peacock"}
+                ]
+            }
+        ]
     }
 
 

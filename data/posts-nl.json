@@ -248,6 +248,42 @@
                 ]
             }
         ]
+    },
+{
+        "id": 8,
+        "title": "De uitdagingen van het camperleven",
+        "date": "23 april 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/startmotor2.png",
+                "alt": "Onder de motorkap"
+            },
+            {
+                "type": "text",
+                "content": "Ik vroeg me de laatste tijd af: het beeld dat ik geef met mijn blogposts, wat mist daarin? Welk deel van mijn camperleven toon ik daarin niet? Als ik vooral de plekken toon die ik bezoek, ben ik dan eigenlijk geen haar beter dan mensen die op instagram mooie plaatjes tonen? Als ik terugkijk, had ik inderdaad een belangrijk deel verzwegen van de afgelopen weken. Met name voor de reis naar Zwitserland was er twijfel of deze camper, die ik vorig jaar herfst gekocht heb, maar die daarvoor ook wel een tijdje stilgestaan heeft, dit aan zou kunnen. Begin april, tijdens de eerste tocht door Nederland, was er ook opeens een moment dat er veel rook uit de uitlaat kwam. Gelukkig had ik goede hulp op afstand, werd dit goed gediagnosticeerd en kon ik ermee doorrijden (Een eerste keer dankjewel H.!!). De dagen daarna ben ik wel voortdurend het oliepeil gaan checken, en hoewel dit iets te hoog stond, was de keuze om toch naar Zwitserland te rijden. Het is een iets ouder busje met niet zo'n sterke motor, en sommige onderdelen worden in de komende weken nog eens extra gecheckt. Maar het gevoel dat je niet helemaal zeker bent van je vervoersmiddel/huis, kan wel onder de titel 'uitdagingen van het camperleven' geschaard worden. Waarom ik dit nog niet eerder in de blog genoemd had, weet ik niet goed, maar deze week heb ik een goede gelegenheid om er eens alle aandacht aan te geven. Want eerder deze week was er opeens een dag dat de motor niet meer wilde starten... (lees verder onder de foto's)"
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/oliepeil.png", "alt": "Iedere ochtend het oliepeil checken"},
+                    {   "src": "assets/images/relais.png", "alt": "Hier zat/zit waarschijnlijk het probleem"},
+                    {   "src": "assets/images/startmotor.png", "alt": "Foto gemaakt van onderaf"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "De accu had genoeg spanning, dus het was geen kwestie van even de startkabels verbinden met een andere auto. Maar gelukkig werd dit opnieuw goed vanop afstand gediagnosticeerd (nog eens dankjewel H.!!!), en bleek het probleem waarschijnlijk in het elektrische systeem te zitten. Wanneer je op het relais (grijs blokje hierboven) duwt, wordt er wel goed contact gemaakt en start de motor wel. Nu is het iedere keer als ik start weer de vraag of de motor echt begint, en of dit allemaal goed gaat totdat ik volgende week weer naar Nederland ga. Het interessante aan dit alles is echter vooral de mentale kant: je overgeven aan de onzekerheid, er vrede mee kunnen hebben als al je voornemens doorkruist worden, en als er opeens onverwachte kosten zijn. De rust bewaren, rekening houden met negatieve uitkomsten, maar tegelijkertijd je stemming daardoor niet naar beneden te laten trekken. Het blijft iedere keer weer een uitdaging, maar deze voorvallen zijn belangrijke punten in dat proces. Maar naast al deze praktische en mentale beslommeringen, zijn er soms ook mooie plaatsen waar je langs komt: een parkeerplaats speciaal voor campers, met toiletten, water en een putje om je toilet te legen. En dat naast een mooi park. Volgende week ga ik weer naar Nederland om wat aan de camper te werken en om de motor verder na te laten kijken, dus een volgende update zal wat meer gaan over het interieur van de camper."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/park van.png", "alt": "Het park met de camper verscholen tussen het groen"},
+                    {   "src": "assets/images/park dieren.png", "alt": "Er zijn ook dieren in het park..."},
+                    {   "src": "assets/images/pauw.png", "alt": "...met als mooiste deze pauw"}
+                ]
+            }
+        ]
     }
 
 
