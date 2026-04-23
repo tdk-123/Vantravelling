@@ -485,6 +485,7 @@ main {
   font-size: 1.1rem;
   color: var(--secondary-text);
   line-height: 1.8;
+  white-space: pre-wrap;
 }
 
 .post-block-image img,
