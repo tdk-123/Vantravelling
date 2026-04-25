@@ -279,7 +279,7 @@
             {
                 "type": "gallery",
                 "images": [
-                    {   "src": "assets/images/park van.png", "alt": "The park with the van hidden between the leaves"},
+                    {   "src": "assets/images/park van.png", "alt": "The park with the van hidden among the leaves"},
                     {   "src": "assets/images/park dieren.png", "alt": "There are also some animals in the park..."},
                     {   "src": "assets/images/pauw.png", "alt": "...with most beautifully this peacock"}
                 ]
