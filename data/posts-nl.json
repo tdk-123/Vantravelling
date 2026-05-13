@@ -284,6 +284,31 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 9,
+        "title": "Weer onderweg",
+        "date": "13 mei 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/cloud.png"
+            },
+            {
+                "type": "text",
+                "content": "De bedoeling was om iedere week een update te posten, maar daar is de laatste tijd niet veel van gekomen. Nu lag de reis ook even stil door updates aan de camper, en was mijn aandacht ook meer bij familie. Inmiddels ben ik weer onderweg, nu in de Ardennen op een mooie parkeerplek naast een boerderij./nIk hoop ongeveer over een week weer een update te posten, als je per email een bericht wilt krijgen bij een nieuwe update, kun je dat doorgeven als je hierboven klikt op Contact."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/farm.png", "alt": "Boerderij op de Ardennenheuvels"},
+                    {   "src": "assets/images/goats.png", "alt": "Geitenweide naast het bos"},
+                    {   "src": "assets/images/field.png", "alt": "Ardennenweide"},
+                    {   "src": "assets/images/schrootjes.png", "alt": "Het plafond heeft schrootjes en spotjes gekregen"},
+                    {   "src": "assets/images/keukenkastje.png", "alt": "En deze schap boven het keukentje is erg handig om wat spullen kwijt te kunnen"}
+                ]
+            }
+        ]
     }
 
 
