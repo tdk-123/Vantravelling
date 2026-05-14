@@ -304,8 +304,9 @@
                     {   "src": "assets/images/farm.png", "alt": "Boerderij op de Ardennenheuvels"},
                     {   "src": "assets/images/goats.png", "alt": "Geitenweide naast het bos"},
                     {   "src": "assets/images/field.png", "alt": "Ardennenweide"},
-                    {   "src": "assets/images/schrootjes.png", "alt": "Het plafond heeft schrootjes en spotjes gekregen"},
-                    {   "src": "assets/images/keukenkastje.png", "alt": "En deze schap boven het keukentje is erg handig om wat spullen kwijt te kunnen"}
+                    {   "src": "assets/images/keukenkastje.png", "alt": "En deze schap boven het keukentje is erg handig om wat spullen kwijt te kunnen"},
+                    {   "src": "assets/images/schrootjes.png", "alt": "Het plafond heeft schrootjes en spotjes gekregen"}
+
                 ]
             }
         ]

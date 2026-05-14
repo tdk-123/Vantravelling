@@ -305,8 +305,9 @@
                     {   "src": "assets/images/farm.png", "alt": "Farm in the Ardennes"},
                     {   "src": "assets/images/goats.png", "alt": "Goats"},
                     {   "src": "assets/images/field.png", "alt": "Ardennes field"},
-                    {   "src": "assets/images/schrootjes.png", "alt": "The ceiling has gotten wooden slats and spotlights"},
-                    {   "src": "assets/images/keukenkastje.png", "alt": "This shelf above the kitchen areas comes in handy to store stuff"}
+                    {   "src": "assets/images/keukenkastje.png", "alt": "This shelf above the kitchen areas comes in handy to store stuff"},
+                    {   "src": "assets/images/schrootjes.png", "alt": "The ceiling has gotten wooden slats and spotlights"}
+
                 ]
             }
         ]
