@@ -239,7 +239,7 @@
                     {   "src": "assets/images/lake 2.png", "alt": "Lac des Rousses"},
                     {   "src": "assets/images/mtb 1.png", "alt": "Testing the MTB"},
                     {   "src": "assets/images/lake.png", "alt": "Lac de Chalain"},
-                    {   "src": "assets/images/castle.png", "alt": "Remains of an old castle at Lac de Chalain"},
+                    {   "src": "assets/images/castle3.png", "alt": "Remains of an old castle at Lac de Chalain"},
                     {   "src": "assets/images/geology.png", "alt": "Interesting sedimented limestone layers at the roadside"},
                     {   "src": "assets/images/bever.png", "alt": "When you have a big task in front of you, think about this bever"},
                     {   "src": "assets/images/morning mist.png", "alt": "Nature reserve at this morning's parking place"},
@@ -307,6 +307,73 @@
                     {   "src": "assets/images/field.png", "alt": "Ardennes field"},
                     {   "src": "assets/images/keukenkastje.png", "alt": "This shelf above the kitchen areas comes in handy to store stuff"},
                     {   "src": "assets/images/schrootjes.png", "alt": "The ceiling has gotten wooden slats and spotlights"}
+
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "In the Vulkaneifel",
+        "date": "May 21, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/immerather maar2.png"
+            },
+            {
+                "type": "text",
+                "content": "Another longer update this week. The lake pictured above looks like an ordinary, tranquil spot in nature, but it turns out that it has a fascinating story behind it. And not just here; throughout the Eifel region, there are various special lakes that have a unique tale to tell. These "Eyes of the Eifel" were formed by volcanoes erupting upon contact with groundwater, a process that blasted away layers of rock, creating a deep, funnel-shaped cavity. Once the volcanic activity subsided, the funnel filled with water, giving rise to lakes encircled by a rim formed from the material ejected from the crater during the eruption. Such a volcanic lake is also known as a 'maar' (derived from the Latin word 'mare', meaning "sea"). Some lakes, such as the one shown above (Lake Immerath), are older and relatively shallow. This particular lake was even drained for agricultural use for a time, only to be submerged once again later on. The youngest of these lakes is the Ulmener lake, which remains tens of meters deep. Moreover, it possesses a unique feature: on the outer slope of its rim, one can clearly observe the distinct layers left behind by the various eruptions. The volcanic origin of these formations is evident not only from the solidified basalt fragments scattered amidst the rubble, but also from the fact that larger stones and fine debris were hurled skyward together before falling back down here. There is even a single boulder among them measuring nearly a meter across."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/immerather maar.png", "alt": "Immerather maar from the top of the rim"},
+                    {   "src": "assets/images/holzmaar.png", "alt": "Another deeper maar, the Holzmaar"},
+                    {   "src": "assets/images/pulvermaar.png", "alt": "Pulvermaar"},
+                    {   "src": "assets/images/dry maar.png", "alt": "A maar that has since completely filled in. This volcano was unique because the eruption emerged laterally from a hill, and consequently did not form a circular rim, but rather the hill visible in the background of this photograph."},
+                    {   "src": "assets/images/meerfelder maar 2.png", "alt": "The Meerfelder maar"},
+                    {   "src": "assets/images/meerfelder maar.png", "alt": "The Meerfeld Maar, too, is half-dry; you can see that the small village of Meerfeld, situated on the opposite side of the lake, lies within the rim of the original maar."},
+                    {   "src": "assets/images/junferweiher.png", "alt": "Jungferweiher, a shallow maar right next to the Ulmener maar"},
+                    {   "src": "assets/images/ulmen maar.png", "alt": "The Ulmener maar"},
+                    {   "src": "assets/images/ulmen layers.png", "alt": "The back of the rim surrounding the Ulmener Maar. You can distinguish the various layers from the different eruptions."},
+                    {   "src": "assets/images/rock 1m.png", "alt": "The meter-sized boulder amidst the crushed layers."},
+                    {   "src": "assets/images/ulmen mtb.png", "alt": "An information board explaining the different rock layers."},
+                    {   "src": "assets/images/ulmen info.png", "alt": "The information board"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "There is yet another reason why the Ulmener Maar is so remarkable. Layers can be found not only within the rim surrounding the volcano but also on the bottom of the maar itself. Once the water level in the maar had stabilized, annual deposits consisting of algae and other microorganisms, among other things, began to accumulate. Because there is no oxygen at the bottom of such a deep maar, no life can exist there; consequently, these layers are sometimes beautifully preserved. The ELSA project conducted boreholes in 20 different maars, reaching depths of up to 100 meters, and subsequently analyzed the resulting sediment cores. The deposits were found to be particularly well-preserved in the Holzmaar and the Ulmener Maar, making it possible to distinguish between summer (characterized by a lighter layer consisting primarily of plankton) and winter (a darker layer of organic material) dating back thousands of years. These layers are known as "varves." Not only can one count the years by examining the alternating light and dark layers, but the thickness of these layers also provides clues regarding the living conditions and climate of that era. The Ulmener Maar is the youngest maar in the Eifel region (10,900 years old); the Holzmaar is somewhat older (23,000 years old); however, the oldest of all is the Eckfelder Maar (43 million years old)—a site situated deep within the forest that is no longer recognizable as a maar, yet where numerous fossils have been discovered and boreholes have also been drilled."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/maarmuseum.png", "alt": "In the Maar Museum in the small village of Manderscheid, there stands a replica of a drill core, along with several small samples of actual drill cores."},
+                    {   "src": "assets/images/holzmaar info.png", "alt": "The information board at the Holzmaar"},
+                    {   "src": "assets/images/eckfelder maar.png", "alt": "The specific spot within the original Eckfeld site where excavations are being conducted."},
+                    {   "src": "assets/images/eckfelder maar info.png", "alt": "Information board at the Eckfelder maar"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Finally, included below are some miscellaneous photos—mostly from various bike rides—along with a lovely story. What would've happened to me had I lived 500 years ago? That was the question that crossed my mind when, during a bike ride, I came across the following story hanging inside a small hut."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/kobesloch.png", "alt": "The hut named 'Kobesloch'"},
+                    {   "src": "assets/images/kobesloch story.png", "alt": "The story in German"},
+                    {   "src": "assets/images/kobesloch story english.png", "alt": "With help of AI the story translated into English."},
+                    {   "src": "assets/images/uitkijktoren.png", "alt": "A lookout tower I passed during a mountain bike ride."},
+                    {   "src": "assets/images/uitzicht uitkijktoren.png", "alt": "The view from within the lookout tower"},
+                    {   "src": "assets/images/ruhrsee.png", "alt": "All the photos above were taken in the region known as the 'Vulkaneifel'. To the north lies the Eifel National Park where dams for fresh water provision and electricity generation result in several beautiful lakes surrounded by forests."},
+                    {   "src": "assets/images/ofertalsperre.png", "alt": "Een dam"},
+                    {   "src": "assets/images/houten brug.png", "alt": "wooden bridge"},
+                    {   "src": "assets/images/steel bridge.png", "alt": "Also some hikes in the forrest; crossing a river on this steel bridge"},
+                    {   "src": "assets/images/castle.png", "alt": "View on an old castle from between the trees"},
+                    {   "src": "assets/images/castle2.png", "alt": "The castle from close up"},
+                    {   "src": "assets/images/teufelsstein.png", "alt": "Finally, here is another lovely story. Along a bicycle path, a small sign suddenly appeared bearing the name 'Teufelsstein' (Devil's Stone). When I followed the path leading uphill, I found this. The folklore behind it turns out to be that a man building a church outwitted the Devil, tricking him into helping gather stones for the building. When the Devil discovered that the structure in question was a church, he dropped the stone right here."}
 
                 ]
             }

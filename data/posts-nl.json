@@ -238,7 +238,7 @@
                     {   "src": "assets/images/lake 2.png", "alt": "Lac des Rousses"},
                     {   "src": "assets/images/mtb 1.png", "alt": "De MTB getest"},
                     {   "src": "assets/images/lake.png", "alt": "Lac de Chalain"},
-                    {   "src": "assets/images/castle.png", "alt": "Resten van een oud kasteel bij Lac de Chalain"},
+                    {   "src": "assets/images/castle3.png", "alt": "Resten van een oud kasteel bij Lac de Chalain"},
                     {   "src": "assets/images/geology.png", "alt": "Interessante gesedimenteerde steenlagen langs de kant van de weg"},
                     {   "src": "assets/images/bever.png", "alt": "Als je een grote taak moet volbrengen, denk dan aan deze bever"},
                     {   "src": "assets/images/morning mist.png", "alt": "Natuurgebied bij de parkeerplaats vanochtend"},
@@ -306,6 +306,75 @@
                     {   "src": "assets/images/field.png", "alt": "Ardennenweide"},
                     {   "src": "assets/images/keukenkastje.png", "alt": "En deze schap boven het keukentje is erg handig om wat spullen kwijt te kunnen"},
                     {   "src": "assets/images/schrootjes.png", "alt": "Het plafond heeft schrootjes en spotjes gekregen"}
+
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "In de Vulkaneifel",
+        "date": "21 mei 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/immerather maar2.png"
+            },
+            {
+                "type": "text",
+                "content": "Deze week weer een iets uitgebreidere update. Het meer hierboven ziet eruit als een gewone, rustige plek in de natuur, maar het blijkt dat achter deze plek een heel verhaal schuil gaat. En niet alleen hier, maar op allerlei plekken hier in de Eifel zijn er speciale meren die een bijzonder verhaal te vertellen hebben. Deze 'ogen van de Eifel' zijn ontstaan door vulkanen die uitbarsten na contact met het grondwater, waardoor er steenlagen weggeslingerd worden er een diep trechtervormig gat ontstaat. Nadat de vulkaan tot rust komt, vult de trechter zich met water, waardoor er meren ontstaan met als wal om het meer, die het resultaat is van het materiaal dat in de eruptie uit de krater geslingerd werd. Een vulkaanmeer wordt ook wel een 'maar' genoemd (van het Latijnse 'mare', dat zee betekent). Sommige meren zoals die hierboven (het Immerather meer) zijn al ouder en nog ondiep. Dit meer is zelfs enige tijd drooggelegd voor landbouw, maar later weer onder water gelopen. Het jongste meer is het Ulmener meer, dat is nog tientallen meters diep. Het heeft bovendien de bijzonderheid dat je aan de buitenkant van de wal de verschillende eruptielagen kunt zien. Dat het om vulkaanuitbarstingen gaat, is niet alleen op te maken uit de gestolde basaltresten tussen het gruis, maar ook dat er grotere stenen en klein gruis samen omhooggeslingerd is en hier neergedaald. Er is zelfs een rotsblok bij van bijna een meter groot."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/immerather maar.png", "alt": "Immerather maar van bovenop de wal"},
+                    {   "src": "assets/images/holzmaar.png", "alt": "Een ander diep maar, het Holzmaar"},
+                    {   "src": "assets/images/pulvermaar.png", "alt": "Pulvermaar"},
+                    {   "src": "assets/images/dry maar.png", "alt": "Een maar dat inmiddels helemaal gevuld is. Deze vulkaan was bijzonder omdat de uitbarsting opzij uit een heuvel kwam, en daardoor geen ronde wal gemaakt heeft, maar de heuvel in de achtergrond van deze foto."},
+                    {   "src": "assets/images/meerfelder maar 2.png", "alt": "Het Meerfelder maar"},
+                    {   "src": "assets/images/meerfelder maar.png", "alt": "Het Meerfelder maar ligt ook half droog, je ziet dat het dorpje Meerfeld aan de overkant van het meer binnen wal van het oorspronkelijke maar ligt"},
+                    {   "src": "assets/images/junferweiher.png", "alt": "Jungferweiher, een ondiep maar, vlak naast het Ulmener maar"},
+                    {   "src": "assets/images/ulmen maar.png", "alt": "Het Ulmener maar"},
+                    {   "src": "assets/images/ulmen layers.png", "alt": "De achterkant van de wal om het Ulmener maar. Je kunt de verschillende lagen van de verschillende uitbarstingen onderscheiden."},
+                    {   "src": "assets/images/rock 1m.png", "alt": "Het rotsblok van een meter groot tussen de geplette andere lagen"},
+                    {   "src": "assets/images/ulmen mtb.png", "alt": "Een infobord met uitleg over de verschillende steenlagen."},
+                    {   "src": "assets/images/ulmen info.png", "alt": "Het infobord"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Er is nog een reden waarom het Ulmener maar zo bijzonder is. Er zijn namelijk niet alleen lagen te vinden in de wal rondom de vulkaan, maar ook op de bodem van het maar. Nadat het water in het maar gestabiliseert is, gebeuren er ieder jaar afzettingen van onder andere algen en andere micro-organismen. Omdat er bij de bodem van zo'n diep maar geen zuurstof is, is er geen leven mogelijk en kunnen deze lagen soms mooi bewaart worden. Het ELSA project heeft in 20 maren boringen gedaan tot wel 100 meter diep, en deze boorkernen geanalyseerd. Met name in het Holzmaar en het Ulmener maar zijn de afzettingen goed bewaard gebleven, waardoor tot duizenden jaren terug het verschil tussen zomer (lichtere laag van met name plankton) en winter (donkere laag van organisch materiaal) gezien kan worden. Deze lagen worden 'warven' genoemd. Niet alleen kun je de jaren tellen aan de hand van de lichte en donkere lagen, maar aan de hand van de dikte van de lagen zijn ook dingen af te leiden over de leefomstandigheden en het klimaat in die tijd. Het Ulmener maar is het jongste in de Eifel (10.900 jaar), het Holzmaar is al wat ouder (23.000 jaar) maar het oudste is het Eckfelder maar (43 miljoen jaar), dat midden in het bos eigenlijk niet meer als maar te herkennen is, maar waar veel fossielen gevonden zijn en ook boringen verricht zijn."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/maarmuseum.png", "alt": "In het Maarmuseum in het dorpje Manderscheid staat een replica van een boorkern en enkele kleine monsters van echte boorkernen"},
+                    {   "src": "assets/images/holzmaar info.png", "alt": "Het infobord bij het Holzmaar"},
+                    {   "src": "assets/images/eckfelder maar.png", "alt": "De plek in het oorspronkelijke Eckfelder maar waar opgravingen gedaan worden."},
+                    {   "src": "assets/images/eckfelder maar info.png", "alt": "Infobord bij het Eckfelder maar"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Tot slot hieronder nog wat diverse foto's, vooral van verschillende fietstochten, en een mooi verhaal. Zou het mij zo vergaan zijn als ik 500 jaar geleden geleefd zou hebben? Dat was de vraag die bij mij op kwam toen ik tijdens een fietstocht in een hut het volgende verhaal zag hangen."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/kobesloch.png", "alt": "De hut genaamd het 'Kobesloch'"},
+                    {   "src": "assets/images/kobesloch story.png", "alt": "Het verhaal in het Duits"},
+                    {   "src": "assets/images/kobesloch story nederlands.png", "alt": "Met behulp van AI vertaald in het Nederlands."},
+                    {   "src": "assets/images/kobesloch2.png", "alt": "Het paadje naar beneden"},
+                    {   "src": "assets/images/kobesloch3.png", "alt": "Om het hoekje na dit smalle paadje is de grot"},
+                    {   "src": "assets/images/uitkijktoren.png", "alt": "Een uitkijktoren waar ik tijdens een MTB tocht langs kwam"},
+                    {   "src": "assets/images/uitzicht uitkijktoren.png", "alt": "Het uitzicht vanuit de toren"},
+                    {   "src": "assets/images/ruhrsee.png", "alt": "Alle bovengaande foto's komen uit het gebied dat de 'Vulkaneifel' heet. Ten noorden daarvan ligt nog het nationale park de Eifel, waar door stuwdammen voor watervoorziening en electriciteitsopwekking enkele mooie meren zijn met bossen daaromheen"},
+                    {   "src": "assets/images/ofertalsperre.png", "alt": "Een stuwdam"},
+                    {   "src": "assets/images/houten brug.png", "alt": "Houten bruggetje"},
+                    {   "src": "assets/images/steel bridge.png", "alt": "Ook enkele wandelingen door het bos, een river overstekend over deze stalen brug"},
+                    {   "src": "assets/images/castle.png", "alt": "Uitzicht op een oud kasteel van tussen de bomen"},
+                    {   "src": "assets/images/castle2.png", "alt": "Het kasteel van dichterbij"},
+                    {   "src": "assets/images/teufelsstein.png", "alt": "Tot slot nog ander mooi verhaal. Langs een fietspad stond opeens een bordje 'Teufelsstein' (duivelssteen). Toen ik het paadje omhoog volgde, vond ik dit. Het volksverhaal erachter blijkt te zijn dat iemand die een kerk bouwde de duivel om de tuin geleid had en hem mee liet helpen om stenen te verzamelen voor de kerk. Toen de duivel er achter kwam dat het om een kerk ging, heeft hij de steen hier laten vallen."}
 
                 ]
             }
