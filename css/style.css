@@ -588,7 +588,7 @@ main {
 }
 
 .lightbox-img {
-  max-height: 80vh;
+  max-height: 85vh;
   max-width: 90vw;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);

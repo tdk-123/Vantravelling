@@ -490,6 +490,7 @@ function resetZoom() {
         lightboxCtx.currentIndex = index;
         lightboxCtx.isOpen = true;
         lightboxCtx.el.classList.add('open');
+        document.body.style.overflow = 'hidden';
         updateLightboxImage();
     }
 
@@ -497,6 +498,7 @@ function resetZoom() {
         if (!lightboxCtx.el) return;
         lightboxCtx.isOpen = false;
         lightboxCtx.el.classList.remove('open');
+        document.body.style.overflow = '';
 	resetZoom();
     }
 
