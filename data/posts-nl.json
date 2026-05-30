@@ -379,6 +379,40 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 11,
+        "title": "En weer even terug",
+        "date": "30 mei 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/veere1.png"
+            },
+            {
+                "type": "text",
+                "content": "Weer even een korte update, nu ik weer even terug in Belgie en Nederland ben. Volgende week ga ik ook weer even aan de camper werken, waardoor het reizen even stil ligt. De foto's hieronder geven wel nog de mooie kant van het camperleven aan, maar tegelijkertijd zijn er ook de moeilijke kanten. Motorisch loopt het momenteel prima (fingers crossed), maar er zijn genoeg kleine dingen die je altijd wel even uit je evenwicht kunnen halen. Mieren in de camper, een keer vallen met de mountainbike, of gewoon het wisselende gevoel van goede en slechte dagen. Je hebt dagen waarin alles minder goed loopt, je meer met je ziel onder je arm loopt. De gedachte dat zo'n gevoel opgelost wordt door in een camper te gaan wonen klopt natuurlijk niet. Laten we het zo zeggen dat ik meer en meer gewend raak aan het wonen in een camper, en dat het integreren van moelijke ervaringen, klein en groot, daaronder valt."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/Eifelblick.png", "alt": "Een laatste blik over de Eifel"},
+                    {   "src": "assets/images/kapel1.png", "alt": "Wat zou dit toch zijn?"},
+                    {   "src": "assets/images/kapel2.png", "alt": "De binnenkant. Een moderne kapelvorm?"},
+                    {   "src": "assets/images/kronenburg castle.png", "alt": "De ruine van een kasteel in het oude stadje Kronenburg"},
+                    {   "src": "assets/images/goeringhaus.png", "alt": "Het oude stadje Kronenburg had klaarblijkelijk zo'n 'Germaanse' uitstraling, dat in de tijd van het nationaal-socialisme Hermann Göring hier een schildersschool gesticht heeft, om in die tijd 'Arische' kunstenaars op te leiden"},
+                    {   "src": "assets/images/meer kronenburg.png", "alt": "Naast het dorpje Kronenburg ligt een meer waar je ook in kunt zwemmen, wat erg goed uitkwam tijdens de warmste dagen van de afgelopen week"},
+                    {   "src": "assets/images/meerdaalwoud.png", "alt": "Terug in Leuven, nostalgisch fietsend door het Meerdaalwoud"},
+                    {   "src": "assets/images/veere2.png", "alt": "Dan in Nederland, hier de haven van het mooie plaatsje Veere. Wat een geluk om familie aan de Zeeuwse kust te hebben:)"},
+                    {   "src": "assets/images/veere3.png", "alt": "De oude verdediging van het stadje"},
+                    {   "src": "assets/images/veere4.png", "alt": "Het oude stadhuis"},
+                    {   "src": "assets/images/veere5.png", "alt": "Zicht op de oude gebouwen vanuit het groen"},
+                    {   "src": "assets/images/kerk veere.png", "alt": "De oude kerk van Veere"},
+                    {   "src": "assets/images/nescio.png", "alt": "In het park rondom de kerk hangen beschrijvingen van personen die vroeger in Veere waren. Onder hen was ook de schrijver Nescio"},
+
+                ]
+            }
+        ]
     }
 
 
