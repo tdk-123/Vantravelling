@@ -581,6 +581,7 @@ main {
   align-items: center;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-top: 40px; 
 }
 
 .lightbox-content-wrapper::-webkit-scrollbar {
