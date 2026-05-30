@@ -574,7 +574,7 @@ main {
 .lightbox-content-wrapper {
   position: relative;
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 100vh;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
