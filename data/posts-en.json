@@ -414,6 +414,39 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 12,
+        "title": "Working on the van - sick - and on the road again",
+        "date": "June 13, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/baarle.png",
+                "alt": "Baarle Hertog - Baarle Nassau"
+            },
+            {
+                "type": "text",
+                "content": "It has already been two weeks since the last update, and the title of this post reflects the most important events of that timeframe. As I mentioned in the last post, I was mainly at home working on the van (and getting it certified again). I am now back on the road, with today a bike ride to the Belgian-Dutch village of Baarle Hertog - Baarle Nassau."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/houten wand.png", "alt": "The most important visible upgrade to the van is the wood on the left wall"},
+                    {   "src": "assets/images/uitzichttoren bels lijntje.png", "alt": "From Tornhout in Belgium, 8 km from the Dutch border, there is a cycle path to Baarle Hertog - Baarle Nassau, through a beautiful fen area"},
+                    {   "src": "assets/images/vennengebied.png", "alt": "View over the fen area"},
+                    {   "src": "assets/images/fietspad bels lijntje.png", "alt": "The cycle path (seen here from the tower) lies on the route of an old Belgian railway line to Tilburg, popularly known as the 'Bels lijntje'. That is now the name of the cycling path	"},
+                    {   "src": "assets/images/grensstation.png", "alt": "The old border station next to the bike path"},
+                    {   "src": "assets/images/grens baarle.png", "alt": "5 km further into the Netherlands, in Baarle, there is suddenly the Belgian border again"},
+                    {   "src": "assets/images/park Leuven.png", "alt": "In addition to the trip to Baarle, another visit to Leuven, here the view of a new park in the city center"},
+                    {   "src": "assets/images/turtles.png", "alt": "Visiting a few old friends in Leuven"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Visiting and documenting sights, such as the one from Baarle above, feels more and more like a distraction from what this journey is really about. Under the heading 'The Journey' on this website, I wrote three months ago: 'What this journey is exactly, will probably only become clear over time.' There is certainly no clear answer to that question yet, but I do sense various tendencies. Visiting sights is to someone who travels what children are to someone who has settled down: it gives meaning, purpose, and direction to your existence. But there remains something unsatisfying about having to visit new things every time, as Ecclesiastes already said: 'The eye is not satisfied with seeing.' And at the same time, it has an appeal; you know where you want to go, and it is fun to share with others. I will continue to do that, too, but I do not want to lose sight of the other things that feel more essential: reflecting, reading, and writing. This can be done by pausing a bit more along the way, but even a break like the past week provides food for reflection. Being sick for a few days (which, by the way, meant not as much work was done on the van as I would have liked) also makes you reflect on the contrast between the traveling existence in which I prefer to fend for myself, and the stable base of home, where it is nice to have family nearby, especially when you are sick. Moreover, being sick is in itself a ground for reflection, feeling how existence is at the mercy of processes that take their own course; the fever that comes and goes, which you try to attune to with rest, food, and sometimes some medication, but where you are always just waiting to see how your body reacts, and where some surrender is required. Even with something as minor as a bad cold or a mild flu, you already feel something of all the existential themes hidden within it. So, I will take things a bit easier this coming week, but there are plenty of other things going on, such as finishing my training. In just over a week, I hope to return to the Netherlands to carry out (or have carried out) the final work (for now) on the camper (both interior and mechanical), so that I can leave for a slightly longer period in July. (destination: France)"
+            }
+        ]
     }
 
 
