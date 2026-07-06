@@ -88,7 +88,6 @@ function switchLanguage(targetLang) {
         return isInEnFolder ? '../' + src : src;
     }
 
-container.innerHTML = text.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
 
 // Get the blog page path based on language
 function getBlogPath() {
@@ -793,7 +792,7 @@ let currentIndex = getPostIndexFromHash();
 
                     if (block.type === 'text') {
                         blockDiv.classList.add('post-block-text');
-                        blockDiv.innerHTML = `<p>${block.content}</p>`;
+                        blockDiv.innerHTML = block.content.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
                         postBody.appendChild(blockDiv);
 		    } else if (block.type === 'image') {
 		        blockDiv.classList.add('post-block-image');
