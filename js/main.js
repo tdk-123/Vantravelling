@@ -88,6 +88,8 @@ function switchLanguage(targetLang) {
         return isInEnFolder ? '../' + src : src;
     }
 
+container.innerHTML = text.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+
 // Get the blog page path based on language
 function getBlogPath() {
     const basePath = getBasePath();
