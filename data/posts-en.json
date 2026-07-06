@@ -450,12 +450,12 @@
     },
     {
         "id": 13,
-        "title": "Opleiding afgerond - upgrades - weer op reis",
+        "title": "Training finished - upgrades - on the road again",
         "date": "6 juli 2026",
         "blocks": [
             {
                 "type": "image",
-                "src": "assets/images/back view.png"
+                "src": "assets/images/view back.png"
             },
             {
                 "type": "text",
