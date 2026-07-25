@@ -271,8 +271,7 @@ function initLightbox() {
     document.addEventListener('keydown', (e) => {
         if (!lightboxCtx.isOpen) return;
         if (e.key === 'Escape') {
-            if (lightboxCtx.scale > 1) resetZoom();
-            else closeLightbox();
+            closeLightbox();
         }
         if (lightboxCtx.scale === 1) {
             if (e.key === 'ArrowLeft') prevImage();
