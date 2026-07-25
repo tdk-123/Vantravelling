@@ -494,9 +494,7 @@ main {
 .post-block-image img,
 .post-block-video video {
   width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  object-position: top; /* was defaulting to center */
+  height: auto;
   border-radius: 16px;
   display: block;
   box-shadow: var(--shadow-sm);
