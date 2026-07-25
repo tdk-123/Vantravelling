@@ -462,6 +462,69 @@
                 "content": "I haven't really been traveling that much these past few weeks. My training program was completed, and before I'm going on a trip for a longer period again, there were still a few things that needed to be done to the van. The battery capacity has been increased, which means I could now prepare an oven meal. But with the heat these days, I'm rather having a cold salad.\nBy the way, the heat is the subject of the question I hear most often these weeks: how is it in the van with this heat? And indeed, without air conditioning, it is even a bit warmer inside than in most houses. Moreover, when I am working, I need to be able to see a reasonable amount of open sky for my internet connection, which means parking completely in the shade isn't possible at those times. Then it is usually just a matter of accepting how hot it is, drinking enough, and getting through it. If your attention is fully focused on your work, that usually goes reasonably well. But at other times, when the van is in the shade and the wind blows through the door and the skylight, it is actually quite manageable.\nI also wanted to list how various aspects of van life are going after three months:\n\n- A weekly blog update: didn't work out (this time it even took more than three weeks, but now that I'm really on the road for the next two months, I do hope to stick to a weekly schedule again)\n- Working online: that is actually going quite well. It needed to get used to it at first, and then sometimes I had to be careful to switch smoothly from a sightseeing trip to being present online again, but it works well and I like it.\n- The 'goal' of the trip: reflection, reading and writing. This is perhaps the point that is still the hardest. Reading something every now and then is manageable, but the picture of a truly disciplined approach where I am more productive and make good use of all my current free time remains somewhat of a utopia. But also on this point I hope that the coming weeks, when I'll be on the road non-stop for longer than a month for the first time, will help me take at least a few steps forward. The next step: Schelling's 'Über das Wesen der menschlichen Freiheit'.\n- (If I should add other points here: send me a message!)"
             }
         ]
+    },
+    {
+        "id": 14,
+        "title": "Through Northern France",
+        "date": "July 25, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/soldier.png"
+            },
+            {
+                "type": "text",
+                "content": "It has already been more than two weeks, so it is surely time for a new blog post. The original plan was to visit a few more parts of Northern France and then follow the Atlantic coast, possibly as far as Normandy. However, I have now settled into the rhythm of really slow travel: staying somewhere for 2-3 days, driving 20-30 km, and then staying there for a while again. That way, you don't get to the most spectacular places, but you do get to know a region a bit better. But I don't expect to reach the coast at this pace.\nBefore reaching France, I first visited the village of Bouillon on the French-Belgian border, home to the castle of the crusader Godfrey of Bouillon. (And while I was here, I even had a lovely family visit!)\nIf you cross the border into France from Bouillon and head west, you first come across villages that look more like the outdated industrial part of Wallonia. A little further on, there is already more to see; the village of Montcornet, for example, has a beautiful ruin of an old castle, with underground passages that are still intact. The next small village I visited was Eteignières, and there I encountered the theme I want to focus on more in the coming weeks: the First World War. As in many French villages, there was a monument to the soldiers who had fallen in the First World War. Here however, the monument was an unusually beautiful statue of a French soldier. When you look at the monument, it becomes clear why extra attention is paid to it here. The village had about 600 inhabitants at that time; the monument shows that six soldiers from this village were killed on August 22, 1914 (on that day, a total of about 27,000 French soldiers died). In the rest of 1914, another six soldiers from this village died, and in the following three years of the war, another nine. And that in a village of 600 inhabitants... The village was also occupied for almost the entirety of the war, and there were civilian casualties to mourn as well. In the coming weeks, I also hope to visit various places where the Battle of the Somme took place. An impressive book about this is 'The First Day at the Somme' by Martin Middlebrook, which describes the first day of this battle, a day on which nearly 20,000 British soldiers were killed. The book describes that day not only within the broader context of the war but also from the perspective of individual soldiers."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/kasteel bouillon.png", "alt": "The castle sold by Godfried van Bouillon to pay for his crusade"},
+                    {   "src": "assets/images/roofvogelshow bouillon.png", "alt": "There is a birds of prey show in the castle courtyard."},
+                    {   "src": "assets/images/binnenzijde kasteel bouillon.png", "alt": "Stairs and corridors inside the castle"},
+                    {   "src": "assets/images/uitzicht bouillon.png", "alt": "View over the village Bouillon"},
+                    {   "src": "assets/images/hollandse wachtpost.png", "alt": "This building in the castle is the 'Dutch guard post', a section that was built during the time when Belgium was part of the Netherlands."},
+                    {   "src": "assets/images/nouzonville.png", "alt": "The village of Nouzonville along the Meuse still has something of the appearance of bygone industry."},
+                    {   "src": "assets/images/uitzicht nouzonville.png", "alt": "The mountain bike routes in the area however are well worth it."},
+                    {   "src": "assets/images/mtb nouzonville.png", "alt": "But sometimes the descent is a bit too steep for me"},
+                    {   "src": "assets/images/kasteel montcornet.png", "alt": "The castle/ruin of Montcornet"}
+                    {   "src": "assets/images/kasteel montcornet2.png", "alt": "The drawbridge of the castle"},
+                    {   "src": "assets/images/zaal kasteel.png", "alt": "One of the better-preserved rooms of the castle"},
+                    {   "src": "assets/images/gang kasteel.png", "alt": "Underground passages with walls meters thick"},
+                    {   "src": "assets/images/gevangenis montcornet.png", "alt": "Loopholes reached from the underground passages. This specific location has also served as a prison."},
+                    {   "src": "assets/images/genealogie montcornet.png", "alt": "The castle of Montcornet was in the hands of a Protestant lord in 1567, the castle was attacked by the Catholics and partly destroyed"},
+                    {   "src": "assets/images/achterkant kasteel montcornet.png", "alt": "The rear of the castle, with a fish pond"},
+                    {   "src": "assets/images/hutten montcornet.png", "alt": "Opposite the castle, a few huts from that period have also been reconstructed."},
+                    {   "src": "assets/images/eteignieres.png", "alt": "The main street and the church in the village Eteignières"},
+                    {   "src": "assets/images/monument eteignieres.png", "alt": "The names on the monument"},
+                    {   "src": "assets/images/the first day on the somme.png", "alt": "The book by Martin Middlebrook"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "In the meantime, I have traveled quite a bit further, preparing myself once again for next week's heatwave. The advantage of a traveling lifestyle is that you can look for a lake to provide some cooling. I have already done this a few times over the past few weeks, and by the looks of it, it will be necessary next week as well. Cooking is also a challenge in this heat. However, I have found a solution for that with a tasty salad (I never liked salads, so it was a nice discovery to be able to make something I enjoy (with some help from Claude)). And finally, a peculiarity: a series of unusual animals I have encountered over the past few weeks (the roe deer and the squirrel weren't very keen on posing, though as you can see below, some of the others do stay very still)."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/bever2.png", "alt": "I suspect this is a bever"},
+                    {   "src": "assets/images/kraanvogel.png", "alt": "A peculiar bird"},
+                    {   "src": "assets/images/schildpad.png", "alt": "Turtle (on the stone in the middle of the water)"},
+                    {   "src": "assets/images/struisvogel.png", "alt": "An ostrich"},
+                    {   "src": "assets/images/zwart en wit.png", "alt": "A crow and a seagull stand guard together at the passage"},
+                    {   "src": "assets/images/vleermuis.png", "alt": "A bat"},
+                    {   "src": "assets/images/vissen.png", "alt": "Fish"},
+                    {   "src": "assets/images/eekhoorn.png", "alt": "A squirrel after all"},
+                    {   "src": "assets/images/uil.png", "alt": "An owl"},
+                    {   "src": "assets/images/bosmuis.png", "alt": "Somewhere along the side of the path, among the leaves, sits a wood mouse. When I took this photo, I saw him, but now I can't see it anymore... Would the person who sees him please send me a message??"},
+                    {   "src": "assets/images/uitzicht groen.png", "alt": "Opened back doors"}
+                    {   "src": "assets/images/salade.png", "alt": "The salad"},
+                    {   "src": "assets/images/meer2.png", "alt": "A place to swim"},
+                    {   "src": "assets/images/1870-71.png", "alt": "To conclude, a war monument after all. In the village of Lessiers, on the side of the church, a memorial to the soldiers who fell in the Franco-Prussian War of 1870-1871."}
+                ]
+            }
+
+        ]
     }
 
 

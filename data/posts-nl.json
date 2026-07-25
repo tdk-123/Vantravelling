@@ -461,7 +461,71 @@
                 "content": "De afgelopen weken was ik niet zoveel echt op reis. De opleiding werd afgerond, en voordat ik weer voor iets langere tijd op reis ging, waren er nog wat dingen die aan de camper gedaan moesten worden. De batterij-capaciteit is vergroot, waardoor ik nu een ovenmaaltijd klaar zou kunnen maken. Maar met de warmte deze dagen, neig ik eerder naar een koude salade.\n\nDe warmte is trouwens onderwerp van de vraag die ik het vaakst hoor deze weken: hoe is het in de camper met deze warmte? En inderdaad, zonder airco is het hierbinnen nog iets warmer dan in de meeste huizen. Bovendien moet ik als ik werk voor mijn internetverbinding een redelijk stuk open lucht kunnen zien, waardoor helemaal in de schaduw parkeren op die momenten ook niet gaat. Dan is het meestal gewoon accepteren hoe warm het is, genoeg drinken, en er doorheen geraken. Als je aandacht helemaal bij je werk zit, gaat dat meestal nog redelijk goed. Maar op andere momenten, als de camper in de schaduw staat en de wind door de deur en het dakraam waait, dan is het best goed te doen.\nIk wilde ook eens op een rijtje zetten hoe verschillende aspecten van het camperleven verlopen na drie maanden:\n\n- Iedere week een update op de blog posten: niet gelukt (deze keer heeft het zelfs meer dan drie weken geduurd, maar nu ik de komende twee maanden echt onderweg ben, hoop ik wel weer een wekelijks schema aan te houden)\n- Online werken: dat verloopt eigenlijk best wel goed. Het was eerst even wennen, en daarna soms ook opletten om goed te switchen van een toeristische tocht naar weer online present zijn, maar het werkt wel en bevalt me ook goed.\n- Het 'doel' van de reis: bezinning, lezen en schrijven. Dit is misschien het punt dat nog het moeilijkst verloopt. Zo nu en dan iets lezen lukt wel, maar het beeld van een echt gedisciplineerde aanpak waarbij ik productiever ben en al mijn vrije tijd goed gebruik, dat blijft wat een utopie. Maar ook daarbij hoop ik dat de komende weken, wanneer ik voor het eerst langer dan een maand non-stop onderweg zal zijn, hierbij zal helpen om in ieder geval wat stapjes vooruit te zetten. De eerstvolgende stap: Schelling's 'Über das Wesen der menschlichen Freiheit'.\n- (als ik hier nog puntjes toe moet voegen: stuur me een berichtje!)"
             }
         ]
+    },
+    {
+        "id": 14,
+        "title": "Door Noord-Frankrijk",
+        "date": "25 juli 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/soldier.png"
+            },
+            {
+                "type": "text",
+                "content": "Het is alweer meer dan twee weken geleden, hoog tijd voor een nieuwe blogpost. Het oorspronkelijke plan was om nog enkele stukken van Noord-Frankrijk te bezoeken, en dan de Atlantische kust te volgen, mogelijk tot Normandië. Ik ben nu echter in het ritme gekomen van echt langzaam reizen, 2-3 dagen ergens blijven, een 20-30km rijden, en dan daar weer even blijven. Op die manier kom je niet op de meest spectaculaire plekken, maar je leert een regio wel iets beter kennen. Maar met dit tempo verwacht ik niet meer om de kust te bereiken.\nVoordat ik Frankrijk bereikte, bezocht ik aan de Frans-Belgische grens eerst nog het dorpje Bouillon, met daar het kasteel van de kruisvaarder Godfried van Bouillon. (En toen ik hjier was kreeg ik ook nog gezellig familiebezoek!)\nAls je vanuit Bouillon de grens met Frankrijk oversteekt en naar het westen gaat, kom je eerst dorpjes tegen die meer lijken op het verouderde industriële deel van Wallonië. Iets verderop is er al meer te zien, het dorpje Montcornet bijvoorbeeld heeft een mooie ruine van een oud kasteel, met onderaardse gangen die nog intact zijn. Een volgend klein dorpje dat ik bezocht was Eteignières, en daar kwam ik het thema tegen waar ik de komende weken meer mee bezig wil zijn, namelijk de Eerste Wereldoorlog. Zoals in veel Franse dorpjes is er een monument voor de soldaten die in de Eerste Wereldoorlog gesneuveld zijn. Hier was het monument echter een ongewoon mooi beeld van een Franse soldaat (de foto hierboven). Als je op het monument kijkt, blijkt waarom er hier extra aandacht aan gegeven wordt. Het dorp telde destijds ongeveer 600 inwoners, en op het monument is te zien dat er op 22 augustus 1914 zes soldaten uit dit dorp sneuvelden (op die dag sneuvelden er in totaal ongeveer 27.000 Franse soldaten). In de rest van 1914 zijn uit dit dorp nog eens zes soldaten omgekomen, en in de volgende drie jaar van de oorlog nog eens negen. En dat in een dorp van 600 inwoners... Het dorp is ook bijne de gehele Eerste Wereldoorlog bezet geweest, en daarbij waren ook nog burgerslachtoffers te betreuren. In de komende weken hoop ik ook verschillende plekken te bezoeken waar de Slag aan de Somme (1916) zich afgespeeld heeft. Een indrukwekkend boek daarover is 'The First Day at the Somme' van Martin Middlebrook, waar de eerste dag van deze slag beschreven wordt, een dag waarop bijna 20.000 Britse soldaten gesneuveld zijn. Het boek beschrijft die dag niet alleen binnen het grotere verband van de oorlog, maar ook vanuit het perspectief van individuele soldaten."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/kasteel bouillon.png", "alt": "Het kasteel dat Godfried van Bouillon verkocht om zijn kruisvaart te betalen"},
+                    {   "src": "assets/images/roofvogelshow bouillon.png", "alt": "Op het binnenplein van het kasteel is een roofvogelshow"},
+                    {   "src": "assets/images/binnenzijde kasteel bouillon.png", "alt": "Trappen en gangen binnen in het kasteel"},
+                    {   "src": "assets/images/uitzicht bouillon.png", "alt": "Uitzicht over het dorpje Bouillon"},
+                    {   "src": "assets/images/hollandse wachtpost.png", "alt": "Dit gebouw in het kasteel is de 'Hollandse wachtpost', een gedeelte dat gebouwd is tijdens de tijd dat België deel uitmaakte van Nederland"},
+                    {   "src": "assets/images/nouzonville.png", "alt": "Het dorpje Nouzonville langs de Maas heeft nog wat de uitstraling van vergane industrie"},
+                    {   "src": "assets/images/uitzicht nouzonville.png", "alt": "De mountainbike routes in de omgeving zijn wel de moeite waard"},
+                    {   "src": "assets/images/mtb nouzonville.png", "alt": "Alleen soms is de afdaling ook voor mij wat te steil"},
+                    {   "src": "assets/images/kasteel montcornet.png", "alt": "De kasteelruine van Montcornet"}
+                    {   "src": "assets/images/kasteel montcornet2.png", "alt": "De ophaalbrug van het kasteel"},
+                    {   "src": "assets/images/zaal kasteel.png", "alt": "Eén van de beter bewaarde zalen van het kasteel"},
+                    {   "src": "assets/images/gang kasteel.png", "alt": "Onderaardse gangen met metersdikke muren"},
+                    {   "src": "assets/images/gevangenis montcornet.png", "alt": "Schietgaten die bereikt worden vanuit de onderaardse gangen. Deze specifieke plek heeft ook dienst gedaan als gevangenis"},
+                    {   "src": "assets/images/genealogie montcornet.png", "alt": "Het kasteel van Montcornet was in 1567 in handen van een protestantse kasteelheer, het kasteel is destijds aangevallen door de katholieken en deels verwoest"},
+                    {   "src": "assets/images/achterkant kasteel montcornet.png", "alt": "De achterzijde van het kasteel, met visvijver"},
+                    {   "src": "assets/images/hutten montcornet.png", "alt": "Tegenover het kasteel zijn ook nog enkele hutten van die tijd nagebouwd"},
+                    {   "src": "assets/images/eteignieres.png", "alt": "De hoofdstraat en de kerk van het dorpje Eteignières"},
+                    {   "src": "assets/images/monument eteignieres.png", "alt": "De namen op het monument"},
+                    {   "src": "assets/images/the first day on the somme.png", "alt": "Het boek van Martin Middlebrook"}
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Inmiddels ben ik al wat verder gereisd, waarbij ik me ook weer voorbereid op de hitte van volgende week. Het voordeel van een reizend bestaan is dat je dan kunt uitzoeken waar er een meer is, zodat er wel wat verkoeling is. Dat heb ik de afgelopen weken ook al eens gedaan, en zo te zien gaat het volgende week ook wel nodig zijn. Wat met de warmte ook een uitdaging is, is eten koken. Daar heb ik echter wat op gevonden, met een lekkere salade (ik hield nooit van salades, dus het was een mooie ontdekking om (met wat hulp van Claude) toch iets te kunnen maken dat me bevalt). En tot slot nog een eigenaardigheid, een reeks bijzondere dieren die ik de afgelopen weken tegengekomen ben (de ree en de eekhoorn hadden niet veel zin om te poseren, zoals je hieronder ziet blijven sommigen wel heel stil zitten)."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/bever2.png", "alt": "Ik vermoed dat dit een bever is"},
+                    {   "src": "assets/images/kraanvogel.png", "alt": "Een bijzondere vogel"},
+                    {   "src": "assets/images/schildpad.png", "alt": "Schildpad (op de steen in het midden van het water)"},
+                    {   "src": "assets/images/struisvogel.png", "alt": "Een struisvogel"},
+                    {   "src": "assets/images/zwart en wit.png", "alt": "Een kraai en een meeuw houden samen de wacht bij de doorgang"},
+                    {   "src": "assets/images/vleermuis.png", "alt": "Een vleermuis"},
+                    {   "src": "assets/images/vissen.png", "alt": "Vissen"},
+                    {   "src": "assets/images/eekhoorn.png", "alt": "Toch nog een eekhoorn"},
+                    {   "src": "assets/images/uil.png", "alt": "Een uil"},
+                    {   "src": "assets/images/bosmuis.png", "alt": "Ergens langs de kant van het pad, tussen de bladeren, zit een bruine bosmuis. Toen ik deze foto maakte, zag ik hem, maar nu niet meer... Wil degene die hem ziet mij een berichtje sturen??"},
+                    {   "src": "assets/images/uitzicht groen.png", "alt": "De achterdeuren open"}
+                    {   "src": "assets/images/salade.png", "alt": "De salade"},
+                    {   "src": "assets/images/meer2.png", "alt": "Een plek om te zwemmen"},
+                    {   "src": "assets/images/1870-71.png", "alt": "Als afsluiting toch nog een oorlogsmonument. In het dorpje Lessiers, op de zijkant van de kerk, een gedenkteken voor de soldaten die gesneuveld zijn in de Duits-Franse oorlog van 1870-1871."}
+                ]
+            }
+
+        ]
     }
+
 
 
 ]
