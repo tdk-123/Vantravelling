@@ -525,7 +525,51 @@
             }
 
         ]
+    },
+    {
+        "id": 15,
+        "title": "The First World War",
+        "date": "August 8, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/cemetery.png"
+            },
+            {
+                "type": "text",
+                "content": "Updating the blog weekly hasn't succeeded these past few weeks, even when I was traveling continuously. Hence, starting today, a new approach: every Saturday a blog post with at least a very short piece of text and one photo.\nActually, I would like to give a long reflection on the First World War sites I have visited over the past two weeks, and especially on the importance of the First World War. As the first truly industrial war, it shattered the belief in progress and confronts us with the harsh reality hidden behind all our technological advancements. But this reflection will therefore be limited to a few sentences; however, below is the beginning of a gallery that I hope to expand later. The reason I don't have much time today, by the way, is another very pleasant family visit! And that in the southernmost point of France that I am now reaching; from next week onwards, I will slowly head north again."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/thiepval1.png", "alt": "The Battle of the Somme began on July 1, 1916, with a major attack that resulted in nearly 20,000 killed and 40,000 wounded on the British side alone. One of the sites of the fiercest fighting was Thiepval, where the Ulster Division attacked. Thousands perished here, while hardly any progress was made. The battle ultimately lasted into November, when the village of Thiepval was finally fully captured. After the war, this monument was erected at one of the fortified sites of the German line in memory of the 73,000 British soldiers who fell in the area of ​​the Battle of the Somme but whose identifiable remains were not recovered."},
+                    {   "src": "assets/images/thiepval2.png", "alt": "The monument has 16 square pillars each a few meters wide; the names of these 73,000 soldiers are engraved on the sides of the pillars, arranged by regiment."},
+                    {   "src": "assets/images/thiepval3.png", "alt": "The pilars of the monument"},
+                    {   "src": "assets/images/thiepval4.png", "alt": "In front of the monument is a cemetery containing the remains of 300 French and 300 British soldiers. To me, this cemetery most clearly illustrates the layout of war cemeteries. The idea is that these soldiers stand as if on a parade, a parade of 300 French and 300 British soldiers standing guard of honour at this monument."},
+                    {   "src": "assets/images/thiepval5.png", "alt": "View over the field in front of the monument. It was over this slope that the British soldiers had to attack the German positions with machine-gun nests uphill."},
+                    {   "src": "assets/images/tank.png", "alt": "Another area I visited before that was the area of the Battle of Cambrai (1917). This battle is best known because tanks were successfully deployed here on a large scale for the first time. (378 tanks were used)"},
+                    {   "src": "assets/images/cambrai1.png", "alt": "Monument to the Battle of Cambrai. See the trace of tank tracks in the monument."},
+                    {   "src": "assets/images/cambrai2.png", "alt": "The first day of the battle was successful for the British, but the fighting stalled again in the following days, with fierce fighting in the Bourlon Wood, among other places. In this wood, and right next to it, I came across two monuments to soldiers who perished here but whose remains have not been found. These monuments were erected after the war by their parents to provide a place to commemorate their son. Monuments like these are poignant attempts to hold onto something human amidst the sheer scale of industrialized destruction."},
+                    {   "src": "assets/images/cambrai3.png", "alt": "The second monument in the forest."}
+                ]
+            },
+,
+            {
+                "type": "text",
+                "content": "What I actually wanted to include in this blog post as well, and of which some photos will follow: the museum in Bullecourt with the story of the farmer who found war material in his field and started a museum, the museum in Peronne with the exhibition of a German war volunteer from 1914 who created anti-militarist art after the war. And even more stories about the Battle of the Somme, the South African regiment, the Newfoundlanders and their part of the front where you can still see the remains of the trenches and bomb craters. And after everything about the First World War, also a visit to a mining museum. I hope to add more photos below in the coming week!"
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/thiepval1.png", "alt": "."},
+                    {   "src": "assets/images/thiepval2.png", "alt": "."},
+                    {   "src": "assets/images/thiepval3.png", "alt": "."},
+                    {   "src": "assets/images/thiepval4.png", "alt": "."}
+                ]
+            }
+        ]
     }
+
 
 
 

@@ -524,6 +524,49 @@
             }
 
         ]
+    },
+    {
+        "id": 15,
+        "title": "De Eerste Wereldoorlog",
+        "date": "8 augustus 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/cemetery.png"
+            },
+            {
+                "type": "text",
+                "content": "Het wekelijks updaten van de blog is ook de laatste weken, toen ik wel continu reisde, niet gelukt. Vandaar vanaf vandaag een nieuwe aanpak: iedere zaterdag een blogdesnoods heel kort een klein stukje tekst en één foto.\nEigenlijk zou ik nu een lange beschouwing willen geven over de plekken van de Eerste Wereldoorlog die ik de afgelopen twee weken bezocht heb, en vooral ook het belang van de Eerste Wereldoorlog. Hoe het als eerste echt industriële oorlog het vooruitgangsgeloof gebroken heeft, en ons confronteert met de harde realiteit die schuil gaat achter al onze technologische vooruitgang. Maar deze beschouwing blijft nu dus beperkt tot een paar zinnen, hieronder wel het begin van een gallery die ik later nog wat aan hoop te vullen. De reden dat ik vandaag ook niet veel tijd heb, is trouwens weer een heel gezellig familiebezoek! En dat in het meest zuidelijke punt van Frankrijk dat ik nu bereik, vanaf volgende week gaat het weer langzaamaan noordwaards."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/thiepval1.png", "alt": "De Slag aan de Somme begon op 1 juli 1916, met een grote aanval waarbij alleen al aan Britse zijde bijna 20.000 doden en 40.000 gewonden vielen. Eén van de plekken van hevigste gevechten was Thiepval, waar de Ulster divisie aanviel. Duizenden vonden hier de dood, terwijl er nauwelijks vooruitgang geboekt werd. De slag duurde uiteindelijk tot in november, toen werd het dorpje Thiepval pas helemaal ingenomen. Op één van de versterkte plekken van de Duitse linie is na de oorlog dit monument gebouwd, ter herinnering aan de 73.000 Britse soldaten die gesneuveld waren in het gebied van de Slag aan de Somme, maar waarvan geen identificeerbare stoffelijke resten teruggevonden waren."},
+                    {   "src": "assets/images/thiepval2.png", "alt": "Het monument telt 16 vierkante pilaren van enkele meters breed, op de zijkanten van deze pilaren zijn de namen van deze 73.000 soldaten gegraveerd, geordend per regiment."},
+                    {   "src": "assets/images/thiepval3.png", "alt": "De pilaren van het monument"},
+                    {   "src": "assets/images/thiepval4.png", "alt": "Voor het monument een begraafplaats met de stoffelijke resten van 300 Franse en 300 Britse soldaten. Deze begraafplaats geeft voor mij het duidelijkste de opzet van oorlogsbegraafplaatsen weer. Het idee is dat deze soldaten als op een parade staan, een parade van 300 Franse en 300 Britse soldaten die een erewacht houden bij dit monument."},
+                    {   "src": "assets/images/thiepval5.png", "alt": "Uitzicht over het veld voor het monument. Het is over deze helling dat de Britse soldaten bergop de Duitse stellingen met mitralleursnesten aan moesten vallen."},
+                    {   "src": "assets/images/tank.png", "alt": "Een ander gebied wat ik daarvoor bezocht heb, was dat van de Slag bij Cambrai (1917). Deze slag is vooral bekend omdat hier voor het eerst op grote schaal succesvol tanks werden ingezet. "},
+                    {   "src": "assets/images/cambrai1.png", "alt": "Monument voor de slag bij Cambrai. Zie de sporen van de rupsbanden van tanks in het monument."},
+                    {   "src": "assets/images/cambrai2.png", "alt": "De eerste dag van de slag was succesvol voor de Britten, maar de volgende dagen kwam de strijd weer stil te liggen, met onder andere hevige gevechten in het bos van Bourlon. In dit bos en net naast het bos kwam ik twee monumenten tegen, van soldaten die hier omgekomen zijn maar waarvan niets teruggevonden is. Deze monumenten zijn na de oorlog door hun ouders geplaatst om toch een plek te hebben om hun zoon te gedenken. Monumenten als deze zijn tekenende pogingen om in de massaliteit van een geindustrialiseerde vernietiging toch iets menselijks vast te houden"},
+                    {   "src": "assets/images/cambrai3.png", "alt": "Het tweede monument in het bos."}
+                ]
+            },
+,
+            {
+                "type": "text",
+                "content": "Wat ik eigenlijk nog meer in deze blogpost wilde verwerken, en waarvan nog wat foto's volgen: het museum in Bullecourt met het verhaal van de boer die oorlogsmateriaal in zijn veld vond en een museum startte, en het museum in Peronne met de tentoonstelling van een Duitse oorlogsvrijwiller van 1914 die na de oorlog antimilitaristische kuntst maakte. En nog meer verhalen over de Slag bij de Somme, van het Zuid-Afrikaanse regiment, van de Newfoundlanders en hun deel van het front waar je nog de resten kunt zien van de loopgragen en de bomkraters. En naast alles over de Eerste Wereldoorlog nog een bezoek aan een mijnbouwmuseum. Ik hoop in de komende week hieronder nog foto's toe te voegen!"
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/thiepval1.png", "alt": "."},
+                    {   "src": "assets/images/thiepval2.png", "alt": "."},
+                    {   "src": "assets/images/thiepval3.png", "alt": "."},
+                    {   "src": "assets/images/thiepval4.png", "alt": "."}
+                ]
+            }
+        ]
     }
 
 
