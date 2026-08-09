@@ -559,10 +559,11 @@
             {
                 "type": "gallery",
                 "images": [
-                    {   "src": "assets/images/thiepval1.png", "alt": "."},
-                    {   "src": "assets/images/thiepval2.png", "alt": "."},
-                    {   "src": "assets/images/thiepval3.png", "alt": "."},
-                    {   "src": "assets/images/thiepval4.png", "alt": "."}
+                    {   "src": "assets/images/delville wood.png", "alt": "Eén van de plekken waar later in July 1916 zwaar gevochten is, is 'Delville Wood', door de soldaten vanwege de helse gevechten 'devil wood' genoemd."},
+                    {   "src": "assets/images/jackie1.png", "alt": "."},
+                    {   "src": "assets/images/jackie2.png", "alt": "."},
+                    {   "src": "assets/images/jackie en.png", "alt": "."},
+                    {   "src": "assets/images/jackie nl.png", "alt": "."}
                 ]
             }
         ]
