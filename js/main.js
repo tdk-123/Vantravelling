@@ -465,6 +465,8 @@ if (!isDragging) {
         } else if (dragMode === 'swipe' && lightboxCtx.scale === 1) {
             if (dx < -50) nextImage();
             else if (dx > 50) prevImage();
+        } else if (dragMode === 'scroll' || dragMode === 'dismiss-blocked') {
+            // no-op, native scroll already handled it
         }
 
         isDragging = false;
