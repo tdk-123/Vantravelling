@@ -352,15 +352,32 @@ function initLightbox() {
         const dx = e.touches[0].clientX - touchStartX;
         const dy = e.touches[0].clientY - touchStartY;
 
-        if (!isDragging) {
-            if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
-            isDragging = true;
-            if (lightboxCtx.scale > 1) {
-                dragMode = 'pan';
-            } else {
-                dragMode = Math.abs(dy) > Math.abs(dx) ? 'dismiss' : 'swipe';
-            }
+const wrapper = lb.querySelector('.lightbox-content-wrapper');
+
+// ...inside touchmove, replace the dragMode decision block:
+if (!isDragging) {
+    if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+    isDragging = true;
+    if (lightboxCtx.scale > 1) {
+        dragMode = 'pan';
+    } else if (Math.abs(dy) > Math.abs(dx)) {
+        const atTop = wrapper.scrollTop <= 0;
+        const atBottom = wrapper.scrollTop + wrapper.clientHeight >= wrapper.scrollHeight - 1;
+        const scrollable = wrapper.scrollHeight > wrapper.clientHeight;
+
+        if (dy > 0 && (!scrollable || atTop)) {
+            dragMode = 'dismiss';        // pulling down, nothing left to scroll up into
+        } else if (dy < 0 && atBottom) {
+            dragMode = 'dismiss-blocked'; // dragging up past the end — no-op, don't dismiss
+        } else if (scrollable) {
+            dragMode = 'scroll';         // let native scrolling happen
+        } else {
+            dragMode = 'dismiss';
         }
+    } else {
+        dragMode = 'swipe';
+    }
+}
 
         if (dragMode === 'pan') {
             const clamped = clampTranslate(
