@@ -610,6 +610,35 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 17,
+        "title": "Kunst",
+        "date": "22 augustus 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/gormley1.png",
+                "alt": "Een kunstwerk van de kunstenaar Gormley"
+            },
+            {
+                "type": "text",
+                "content": "De afgelopen week was wat rustiger, met bezoek aan familie (en hulp bij het schilderen van de camper, dankjewel C.!) en vrienden. De komende week zal eveneens in het teken daarvan staan, en nog wat werkzaamheden aan de camper.\nVandaar een korte blogpost, met als focus twee museumbezoeken. De tentoonstelling 'Geestgrond' in het KMSKA in Antwerpen gaf veel te denken, en was voor mij ook aanleiding om nog enkele foto's te posten van een museumbezoek enkele weken geleden. In het museum over de Eerste Wereldoorlog in Peronne (Frankrijk) was namelijk ook een tentoonstelling van Otto Dix (1891-1969). Deze oorlogsvrijwilliger van 1914 maakte namelijk later kunst die de gruwelen van de oorlog weergaf. Enkele voorbeelden hieronder.\nAls je de Eerste Wereldoorlog ziet in de context van een technologie die al het menselijke verzwelgd, dan is het geen grote sprong om het werk van de kunstenaar Gormley hiernaast te zetten. De zoektocht naar wat belichaming kan betekenen in een vertechnologiseerde wereld wordt treffend weergegeven in de menselijke figuren die bestaan uit metalen balkjes. Het lichaam gereduceerd tot koude geometrische figuren. Het treffende van de tentoonstelling in Antwerpen is dat daar ook het contrast getoond wordt met traditionele kunst. Waar een Christusfiguur aan het kruis een belichaming was van een rijke betekeniswereld die het hele menselijke leven voedt, geeft moderne kunst vooral een weergave van een verlies, een reductie, een crisis."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/dix1.png", "alt": "Een werk van Otto Dix"},
+                    {   "src": "assets/images/dix2.png", "alt": "Otto Dix' weergave van een loopgraaf"},
+                    {   "src": "assets/images/gormley2.png", "alt": "Traditionele en moderne kunst in één ruimte"},
+                    {   "src": "assets/images/gormley3.png", "alt": "De geometrische reductie van een boom"},
+                    {   "src": "assets/images/gormley4.png", "alt": "."},
+                    {   "src": "assets/images/gormley5.png", "alt": "."},
+                    {   "src": "assets/images/gormley6.png", "alt": "."},
+                    {   "src": "assets/images/gormley7.png", "alt": "."}
+                ]
+            }
+        ]
     }
 
 

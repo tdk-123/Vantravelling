@@ -606,6 +606,35 @@
                     {   "src": "assets/images/strand.png", "alt": "And then the end of my week. As a tourist, at the beach. See, feel, experience the dissonance."}                ]
             }
         ]
+    },
+    {
+        "id": 17,
+        "title": "Art",
+        "date": "Augustus 22, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/gormley1.png",
+                "alt": "An artwork by the artist Gormley"
+            },
+            {
+                "type": "text",
+                "content": "The past week was a bit quieter, with visits to family (and help for painting the van, thanks C.!) and friends. The coming week will also revolve around that, as well as some more work on the van. Hence, a short blog post, focusing on two museum visits.\nThe exhibition 'Geestgrond' at the KMSKA in Antwerp gave much food for thought, and also prompted me to post a few photos from a museum visit a few weeks ago. Back then there was an exhibition by Otto Dix (1891-1969) at the museum about the First World War in Peronne (France). This war volunteer from 1914 later created art that depicted the horrors of war. A few examples are shown below. If you view the First World War in the context of a technology that devours everything human, then it is not a big leap to place the work of the artist Gormley alongside it. The search for what embodiment can mean in a highly technological world is strikingly depicted in the human figures composed of metal bars. The body reduced to cold geometric figures. The striking aspect of the exhibition in Antwerp is that it also shows the contrast with traditional art. Whereas a Christ figure on the cross was an embodiment of a rich world of meaning that nourishes all of human life, modern art primarily presents a representation of a loss, a reduction, a crisis."
+            },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/dix1.png", "alt": "A work by Otto Dix"},
+                    {   "src": "assets/images/dix2.png", "alt": "Otto Dix' depiction of a trench"},
+                    {   "src": "assets/images/gormley2.png", "alt": "Traditional and modern art in one room"},
+                    {   "src": "assets/images/gormley3.png", "alt": "The geometrical reduction of a tree"},
+                    {   "src": "assets/images/gormley4.png", "alt": "."},
+                    {   "src": "assets/images/gormley5.png", "alt": "."},
+                    {   "src": "assets/images/gormley6.png", "alt": "."},
+                    {   "src": "assets/images/gormley7.png", "alt": "."}
+                ]
+            }
+        ]
     }
 
 
