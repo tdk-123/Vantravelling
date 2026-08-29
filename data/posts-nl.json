@@ -639,6 +639,21 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 18,
+        "title": "Een boekenplankje en een pauze",
+        "date": "29 augustus 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/boekenplank.png"
+            },
+            {
+                "type": "text",
+                "content": "Deze keer een korte update. De laatste dagen heb ik wat gewerkt aan de camper, met het boekenplankje hierboven als belangrijkste resultaat. Misschien volgen er later nog wat extra foto's hieronder. Verder neem ik vanaf volgende week eventjes pauze van het reizen! Als 'petsitter' even het dak van een huis boven mijn hoofd, met al het comfort wat daarbij hoort. En de kans om de camper eens wat langer naar de garage te brengen om nog wat dingen uit te laten zoeken. Volgende week zaterdag dus geen blogpost, de zaterdag daarna waarschijnlijk wel weer."
+            }
+        ]
     }
 
 

@@ -635,7 +635,23 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 18,
+        "title": "A bookshelf and a break",
+        "date": "August 29, 2026",
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/boekenplank.png"
+            },
+            {
+                "type": "text",
+                "content": "A short update this time. I’ve been working on the van a bit over the last few days, with the small bookshelf above as the main result. Some extra photos might follow below later. Furthermore, starting next week, I’m taking a short break from traveling! As a 'petsitter,' I’ll have the roof of a house over my head for a few weeks, with all the comforts that come with it. And the chance to take the van to the garage for a bit longer to have some things checked out. So, no blog post next Saturday, but probably again the Saturday after that."
+            }
+        ]
     }
+
 
 
 
