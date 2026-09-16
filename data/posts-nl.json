@@ -108,8 +108,8 @@
         "title": "Onderweg",
         "date": "2 april 2026",
 	"locations": [
-    	{ "lat": 51.7656, "lng": 4.7727 },
-    	{ "lat": 51.8089, "lng": 4.6615 }
+    	{ "lat": 51.7656, "lng": 4.7727, "img": "assets/images/river.png"}, 
+    	{ "lat": 51.8089, "lng": 4.6615, "img": "assets/images/education.png"}
 	],
         "blocks": [
             {
@@ -150,11 +150,11 @@
         "title": "In de bergen",
         "date": "9 april 2026",
 	"locations": [
-    	{ "lat": 52.1573, "lng": 4.4818 },
-    	{ "lat": 52.2761, "lng": 4.5485 },
-    	{ "lat": 50.8072, "lng": 6.7627 },
-    	{ "lat": 46.3682, "lng": 6.0182 },
-    	{ "lat": 46.3578, "lng": 6.0174 }
+    	{ "lat": 52.1573, "lng": 4.4818, "img": "assets/images/uni.png" },
+    	{ "lat": 52.2761, "lng": 4.5485, "img": "assets/images/flowers.png" },
+    	{ "lat": 50.8072, "lng": 6.7627, "img": "assets/images/sunset.png" },
+    	{ "lat": 46.3682, "lng": 6.0182, "img": "assets/images/back home.png" },
+    	{ "lat": 46.3578, "lng": 6.0174, "img": "assets/images/mont blanc.png" }
 	],
         "blocks": [
             {
