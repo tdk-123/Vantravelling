@@ -432,6 +432,12 @@
         "id": 11,
         "title": "And back home again for a little while",
         "date": "May 30, 2026",
+	"locations": [
+    	{ "lat": 50.3469, "lng": 6.5242},
+    	{ "lat": 50.3633, "lng": 6.4774 },
+    	{ "lat": 50.3580, "lng": 6.4689 },
+    	{ "lat": 51.5473, "lng": 3.6671 }
+	],
         "blocks": [
             {
                 "type": "image",
