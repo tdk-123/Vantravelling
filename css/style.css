@@ -329,6 +329,7 @@ main {
   color: var(--secondary-text);
   font-size: 0.9rem;
   margin-top: 0.6rem;
+  cursor: pointer;
 }
 
 .full-map-wrapper {
