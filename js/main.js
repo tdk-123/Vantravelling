@@ -305,7 +305,7 @@ if (fullMapEl) {
                         lat: loc.lat,
                         lng: loc.lng,
                         img,
-                        label: `${post.id}${letters[locIndex]}`,
+                        label: locs.length > 1 ? `${post.id}${letters[locIndex]}` : `${post.id}`,
                         title: post.title,
                         date: post.date,
                         actualIndex
