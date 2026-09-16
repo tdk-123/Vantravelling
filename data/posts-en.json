@@ -199,11 +199,11 @@
         "title": "Travelling through France",
         "date": "April 14, 2026",
 	"locations": [
-    	{ "lat": 46.49866, "lng": 6.0788 },
-    	{ "lat": 46.6667, "lng": 5.8115 },
-    	{ "lat": 47.2630, "lng": 4.5531 },
-    	{ "lat": 49.1937, "lng": 5.4347 },
-    	{ "lat": 49.3493, "lng": 5.4014 }
+    	{ "lat": 46.49866, "lng": 6.0788, "img": "assets/images/lake 2.png" },
+    	{ "lat": 46.6667, "lng": 5.8115, "img": "assets/images/lake.png" },
+    	{ "lat": 47.2630, "lng": 4.5531, "img": "assets/images/canal.png" },
+    	{ "lat": 49.1937, "lng": 5.4347, "img": "assets/images/fleury-devant-douamont 2.png" },
+    	{ "lat": 49.3493, "lng": 5.4014, "img": "assets/images/morning mist.png" }
 	],
         "blocks": [
             {
