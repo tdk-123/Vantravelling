@@ -213,6 +213,96 @@ function getBlogPath() {
             });
     }
 
+// ===== HOMEPAGE MINI MAP =====
+const miniMapEl = document.getElementById('mini-map');
+
+if (miniMapEl) {
+    fetch(getDataPath() + '?t=' + new Date().getTime())
+        .then(response => response.json())
+        .then(posts => {
+            const routePosts = posts.filter(p => p.lat && p.lng);
+            if (routePosts.length === 0) return;
+
+            const miniMap = L.map('mini-map', {
+                zoomControl: false,
+                dragging: false,
+                scrollWheelZoom: false,
+                doubleClickZoom: false,
+                touchZoom: false,
+                boxZoom: false,
+                keyboard: false
+            });
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 18
+            }).addTo(miniMap);
+
+            const latlngs = routePosts.map(p => [p.lat, p.lng]);
+            L.polyline(latlngs, { color: '#6B8F6B', weight: 3, opacity: 0.85 }).addTo(miniMap);
+
+            routePosts.forEach(p => {
+                L.circleMarker([p.lat, p.lng], {
+                    radius: 5,
+                    color: '#2C3E2C',
+                    fillColor: '#98C198',
+                    fillOpacity: 1,
+                    weight: 1.5
+                }).addTo(miniMap);
+            });
+
+            miniMap.fitBounds(latlngs, { padding: [20, 20] });
+
+            // Click anywhere on the mini map -> go to the full map
+            document.getElementById('mini-map-wrapper').addEventListener('click', () => {
+                const basePath = getBasePath();
+                const isInEnFolder = window.location.pathname.includes('/en/');
+                window.location.href = (isInEnFolder ? basePath + '/en/about.html' : basePath + '/about.html') + '#map';
+            });
+        })
+        .catch(error => console.error('Error loading mini map:', error));
+}
+
+// ===== ABOUT PAGE FULL MAP =====
+const fullMapEl = document.getElementById('full-map');
+
+if (fullMapEl) {
+    fetch(getDataPath() + '?t=' + new Date().getTime())
+        .then(response => response.json())
+        .then(posts => {
+            const routePosts = posts.filter(p => p.lat && p.lng);
+            if (routePosts.length === 0) return;
+
+            const fullMap = L.map('full-map');
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 18
+            }).addTo(fullMap);
+
+            const latlngs = routePosts.map(p => [p.lat, p.lng]);
+            L.polyline(latlngs, { color: '#6B8F6B', weight: 3, opacity: 0.85 }).addTo(fullMap);
+
+            routePosts.forEach((p, i) => {
+                const actualIndex = posts.findIndex(post => post.id === p.id);
+                const marker = L.circleMarker([p.lat, p.lng], {
+                    radius: 7,
+                    color: '#2C3E2C',
+                    fillColor: '#98C198',
+                    fillOpacity: 1,
+                    weight: 2
+                }).addTo(fullMap);
+
+                marker.bindPopup(`<strong>${p.title}</strong><br>${p.date}<br><a href="${getBlogPath()}#post-${actualIndex + 1}">Read post</a>`);
+            });
+
+            fullMap.fitBounds(latlngs, { padding: [30, 30] });
+        })
+        .catch(error => console.error('Error loading full map:', error));
+}
+
+
+
     // ===== BLOG PAGE FUNCTIONALITY =====
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');

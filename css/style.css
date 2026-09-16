@@ -304,6 +304,56 @@ main {
   box-shadow: var(--shadow-md);
 }
 
+/* ===== MAP ===== */
+.mini-map-wrapper {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.mini-map {
+  height: 200px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.mini-map:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.map-hint {
+  text-align: center;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+.full-map-wrapper {
+  margin: 0 auto 3rem;
+  max-width: 1000px;
+}
+
+.full-map {
+  height: 420px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  font-family: var(--font-main);
+}
+
+.leaflet-popup-content a {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
 /* ===== PREVIEW GRID ===== */
 .preview-grid {
   display: grid;
