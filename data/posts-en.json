@@ -324,6 +324,9 @@
         "id": 9,
         "title": "On the road again",
         "date": "May 13, 2026",
+	"locations": [
+    	{ "lat": 50.5245, "lng": 5.8122 }
+	],
         "blocks": [
             {
                 "type": "image",
@@ -350,6 +353,16 @@
         "id": 10,
         "title": "In the Vulkaneifel",
         "date": "May 21, 2026",
+	"locations": [
+    	{ "lat": 50.6075, "lng": 6.3909 },
+    	{ "lat": 50.2592, "lng": 6.9151 },
+    	{ "lat": 50.2118, "lng": 6.9816 },
+    	{ "lat": 50.1219, "lng": 6.9633 },
+    	{ "lat": 50.1191, "lng": 6.8769 },
+    	{ "lat": 50.0915, "lng": 6.8074 },
+    	{ "lat": 50.1143, "lng": 6.8187 },
+    	{ "lat": 50.1113, "lng": 6.8109 }
+	],
         "blocks": [
             {
                 "type": "image",
