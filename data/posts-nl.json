@@ -7,8 +7,9 @@
         "id": 1,
         "title": "Voorbereidingen",
         "date": "19 maart 2026",
-	"lat": 52.0,
-	"lng": 5.6,
+	"locations": [
+    	{ "lat": 52.0, "lng": 5.6 }
+	],
         "blocks": [
             {
                 "type": "image",
