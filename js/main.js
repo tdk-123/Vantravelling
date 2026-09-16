@@ -333,7 +333,7 @@ if (fullMapEl) {
                 });
 
                 const marker = L.marker([s.lat, s.lng], { icon }).addTo(fullMap);
-                marker.bindPopup(`<strong>${s.title}</strong><br>${s.date}<br><a href="${getBlogPath()}#post-${s.actualIndex + 1}">Read post</a>`);
+                marker.bindPopup(`<img src="${s.img}" alt="${s.title}" style="width:100%;max-width:180px;border-radius:8px;margin-bottom:6px;display:block;"><strong>${s.title}</strong><br>${s.date}<br><a href="${getBlogPath()}#post-${s.actualIndex + 1}">Read post</a>`);
             });
 
             fullMap.fitBounds(latlngs, { padding: [40, 40] });
