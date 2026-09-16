@@ -88,6 +88,26 @@ function switchLanguage(targetLang) {
         return isInEnFolder ? '../' + src : src;
     }
 
+// Get the leading image for a post (first image/video/gallery block)
+function getPostLeadingImage(post) {
+    let imageSrc = 'assets/images/placeholder_2.png';
+    if (post.blocks) {
+        const mediaBlock = post.blocks.find(b => b.type === 'image' || b.type === 'video' || b.type === 'gallery');
+        if (mediaBlock) {
+            if (mediaBlock.type === 'image') imageSrc = getMediaPath(mediaBlock.src);
+            else if (mediaBlock.type === 'video') imageSrc = getMediaPath('assets/images/placeholder_2.png');
+            else if (mediaBlock.type === 'gallery' && mediaBlock.images.length > 0) imageSrc = getMediaPath(mediaBlock.images[0].src);
+        }
+    }
+    return imageSrc;
+}
+
+// Normalize a post's locations, supporting both old (lat/lng) and new (locations array) formats
+function getPostLocations(post) {
+    if (Array.isArray(post.locations) && post.locations.length > 0) return post.locations;
+    if (post.lat && post.lng) return [{ lat: post.lat, lng: post.lng }];
+    return [];
+}
 
 // Get the blog page path based on language
 function getBlogPath() {
@@ -220,8 +240,13 @@ if (miniMapEl) {
     fetch(getDataPath() + '?t=' + new Date().getTime())
         .then(response => response.json())
         .then(posts => {
-            const routePosts = posts.filter(p => p.lat && p.lng);
-            if (routePosts.length === 0) return;
+            const stops = [];
+            posts.forEach(post => {
+                const locs = getPostLocations(post);
+                const img = getPostLeadingImage(post);
+                locs.forEach(loc => stops.push({ lat: loc.lat, lng: loc.lng, img }));
+            });
+            if (stops.length === 0) return;
 
             const miniMap = L.map('mini-map', {
                 zoomControl: false,
@@ -238,22 +263,21 @@ if (miniMapEl) {
                 maxZoom: 18
             }).addTo(miniMap);
 
-            const latlngs = routePosts.map(p => [p.lat, p.lng]);
+            const latlngs = stops.map(s => [s.lat, s.lng]);
             L.polyline(latlngs, { color: '#6B8F6B', weight: 3, opacity: 0.85 }).addTo(miniMap);
 
-            routePosts.forEach(p => {
-                L.circleMarker([p.lat, p.lng], {
-                    radius: 5,
-                    color: '#2C3E2C',
-                    fillColor: '#98C198',
-                    fillOpacity: 1,
-                    weight: 1.5
-                }).addTo(miniMap);
+            stops.forEach(s => {
+                const icon = L.divIcon({
+                    className: '',
+                    html: `<div class="map-marker mini-marker" style="background-image:url('${s.img}')"></div>`,
+                    iconSize: [28, 28],
+                    iconAnchor: [14, 14]
+                });
+                L.marker([s.lat, s.lng], { icon, interactive: false }).addTo(miniMap);
             });
 
-            miniMap.fitBounds(latlngs, { padding: [20, 20] });
+            miniMap.fitBounds(latlngs, { padding: [24, 24] });
 
-            // Click anywhere on the mini map -> go to the full map
             document.getElementById('mini-map-wrapper').addEventListener('click', () => {
                 const basePath = getBasePath();
                 const isInEnFolder = window.location.pathname.includes('/en/');
@@ -270,8 +294,25 @@ if (fullMapEl) {
     fetch(getDataPath() + '?t=' + new Date().getTime())
         .then(response => response.json())
         .then(posts => {
-            const routePosts = posts.filter(p => p.lat && p.lng);
-            if (routePosts.length === 0) return;
+            const letters = 'abcdefghijklmnopqrstuvwxyz';
+            const stops = [];
+
+            posts.forEach((post, actualIndex) => {
+                const locs = getPostLocations(post);
+                const img = getPostLeadingImage(post);
+                locs.forEach((loc, locIndex) => {
+                    stops.push({
+                        lat: loc.lat,
+                        lng: loc.lng,
+                        img,
+                        label: `${post.id}${letters[locIndex]}`,
+                        title: post.title,
+                        date: post.date,
+                        actualIndex
+                    });
+                });
+            });
+            if (stops.length === 0) return;
 
             const fullMap = L.map('full-map');
 
@@ -280,27 +321,25 @@ if (fullMapEl) {
                 maxZoom: 18
             }).addTo(fullMap);
 
-            const latlngs = routePosts.map(p => [p.lat, p.lng]);
+            const latlngs = stops.map(s => [s.lat, s.lng]);
             L.polyline(latlngs, { color: '#6B8F6B', weight: 3, opacity: 0.85 }).addTo(fullMap);
 
-            routePosts.forEach((p, i) => {
-                const actualIndex = posts.findIndex(post => post.id === p.id);
-                const marker = L.circleMarker([p.lat, p.lng], {
-                    radius: 7,
-                    color: '#2C3E2C',
-                    fillColor: '#98C198',
-                    fillOpacity: 1,
-                    weight: 2
-                }).addTo(fullMap);
+            stops.forEach(s => {
+                const icon = L.divIcon({
+                    className: '',
+                    html: `<div class="map-marker" style="background-image:url('${s.img}')"><span class="map-marker-badge">${s.label}</span></div>`,
+                    iconSize: [44, 44],
+                    iconAnchor: [22, 22]
+                });
 
-                marker.bindPopup(`<strong>${p.title}</strong><br>${p.date}<br><a href="${getBlogPath()}#post-${actualIndex + 1}">Read post</a>`);
+                const marker = L.marker([s.lat, s.lng], { icon }).addTo(fullMap);
+                marker.bindPopup(`<strong>${s.title}</strong><br>${s.date}<br><a href="${getBlogPath()}#post-${s.actualIndex + 1}">Read post</a>`);
             });
 
-            fullMap.fitBounds(latlngs, { padding: [30, 30] });
+            fullMap.fitBounds(latlngs, { padding: [40, 40] });
         })
         .catch(error => console.error('Error loading full map:', error));
 }
-
 
 
     // ===== BLOG PAGE FUNCTIONALITY =====

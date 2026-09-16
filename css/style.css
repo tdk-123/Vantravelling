@@ -354,6 +354,46 @@ main {
   font-weight: 600;
 }
 
+/* ===== MAP MARKERS ===== */
+.map-marker {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--card-bg);
+  outline: 2px solid var(--accent-main);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--accent-light);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.map-marker.mini-marker {
+  width: 28px;
+  height: 28px;
+  border-width: 2px;
+  outline-width: 1.5px;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-marker-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background: var(--accent-dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--card-bg);
+}
+
 /* ===== PREVIEW GRID ===== */
 .preview-grid {
   display: grid;

@@ -4,6 +4,9 @@
         "title": "Preparations",
         "date": "March 19, 2026",
 	"locations": [
+    	{ "lat": 52.3, "lng": 5.6 },
+    	{ "lat": 52.2, "lng": 5.6 },
+    	{ "lat": 52.1, "lng": 5.6 },
     	{ "lat": 52.0, "lng": 5.6 }
 	],
         "blocks": [
@@ -34,8 +37,9 @@
         "id": 2,
         "title": "Update",
         "date": "March 21, 2026",
-	"lat": 51.9,
-	"lng": 5.6,
+	"locations": [
+    	{ "lat": 51.9, "lng": 5.6 }
+	],
         "blocks": [
             {
                 "type": "image",
