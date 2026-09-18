@@ -304,7 +304,7 @@ if (fullMapEl) {
                     stops.push({
                         lat: loc.lat,
                         lng: loc.lng,
-                        img: loc.img || img,
+                        img: loc.img ? getMediaPath(loc.img) : img,
                         label: locs.length > 1 ? `${post.id}${letters[locIndex]}` : `${post.id}`,
                         title: post.title,
                         date: post.date,
