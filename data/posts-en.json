@@ -354,7 +354,7 @@
         "title": "In the Vulkaneifel",
         "date": "May 21, 2026",
 	"locations": [
-    	{ "lat": 50.6075, "lng": 6.3909 },
+    	{ "lat": 50.6075, "lng": 6.3909, "img": "assets/images/ruhrsee.png" },
     	{ "lat": 50.2592, "lng": 6.9151 },
     	{ "lat": 50.2118, "lng": 6.9816 },
     	{ "lat": 50.1219, "lng": 6.9633 },
@@ -433,7 +433,7 @@
         "title": "And back home again for a little while",
         "date": "May 30, 2026",
 	"locations": [
-    	{ "lat": 50.3469, "lng": 6.5242},
+    	{ "lat": 50.3469, "lng": 6.5242, "img": "assets/images/Eifelblick.png"},
     	{ "lat": 50.3633, "lng": 6.4774 },
     	{ "lat": 50.3580, "lng": 6.4689 },
     	{ "lat": 51.5473, "lng": 3.6671 }
@@ -472,6 +472,10 @@
         "id": 12,
         "title": "Working on the van - sick - and on the road again",
         "date": "June 13, 2026",
+	"locations": [
+    	{ "lat": 51.4433, "lng": 4.9306, "img": "assets/images/baarle.png"}, 
+    	{ "lat": 51.3691, "lng": 4.9383, "img": "assets/images/uitzichttoren bels lijntje.png"}
+	],
         "blocks": [
             {
                 "type": "image",
@@ -505,6 +509,9 @@
         "id": 13,
         "title": "Training finished - upgrades - on the road again",
         "date": "July 6, 2026",
+	"locations": [
+    	{ "lat": 50.5457, "lng": 4.8917 }
+	],
         "blocks": [
             {
                 "type": "image",
@@ -520,6 +527,10 @@
         "id": 14,
         "title": "Through Northern France",
         "date": "July 25, 2026",
+	"locations": [
+    	{ "lat": 49.7937, "lng": 5.0665, "img": "assets/images/kasteel bouillon.png"}, 
+    	{ "lat": 49.8864, "lng": 4.3924, "img": "assets/images/soldier.png"}
+	],
         "blocks": [
             {
                 "type": "image",
@@ -583,6 +594,10 @@
         "id": 15,
         "title": "The First World War",
         "date": "August 8, 2026",
+	"locations": [
+    	{ "lat": 50.1199, "lng": 3.1222, "img": "assets/images/soldier.png"},
+    	{ "lat": 50.0504, "lng": 2.6863, "img": "assets/images/thiepval1.png"} 
+	],
         "blocks": [
             {
                 "type": "image",
@@ -715,7 +730,7 @@
             },
             {
                 "type": "text",
-                "content": "The past few weeks have been filled with caring for the cats, handling various practical matters, working, and occasionally getting some rest. While the comforts of a house are pleasant for a while, I'm drawn towards vanlife again after this stay. Repairs were also carried out on the van recently to resolve a persistent issue (occasional smoke from the exhaust). It seems the underlying cause has been identified and fixed, so that’s good news!\nFurthermore, my plans for the coming weeks have become clearer. After wrapping up a few more practical tasks, I hope to go to Switzerland again in two weeks. That was my first destination back in April, but I couldn't stay there long at the time. Now, I hope to stay there for a few weeks. Partly in a house, since living in a van with two people can sometimes be a bit cramped. So, after focusing entirely on history during my summer travels, I’m now heading toward impressive natural landscapes again! My plans beyond that are still taking shape, but the idea is to spend much of the winter in Southern Europe.This quieter period also offers a chance to reflect and look back. (And to create some upgrades for this website, including the addition of a map;let me know if anything isn't working properly!)\nLooking back over the past few months, I also reflected on the photos I had taken along the way and which ones I’d still like to share on this blog. That is how I came to the photo above: at first glance, just an ordinary path amidst the greenery. But there’s something you can’t see in the picture: just a few dozen meters to the right, there is the ceaseless roar of highway traffic. For me, this photo symbolizes the experience of being a 'citizen of two worlds.' On the one hand, I seek out greenery, nature, and tranquility. On the other, I am one of those drivers speeding along these highways. This experience creates a certain tension, or even a sense of contortedness. Perhaps it is not the point to bring these two worlds together, but rather of realizing what our current world has become—and who we have become within it."
+                "content": "The past few weeks have been filled with caring for the cats, handling various practical matters, working, and occasionally getting some rest. While the comforts of a house are pleasant for a while, I'm drawn towards vanlife again after this stay. Repairs were also carried out on the van recently to resolve a persistent issue (occasional smoke from the exhaust). It seems the underlying cause has been identified and fixed, so that’s good news!\nFurthermore, my plans for the coming weeks have become clearer. After wrapping up a few more practical tasks, I hope to go to Switzerland again in two weeks. That was my first destination back in April, but I couldn't stay there long at the time. Now, I hope to stay there for a few weeks. Partly in a house, since living in a van with two people can sometimes be a bit cramped. So, after focusing entirely on history during my summer travels, I’m now heading toward impressive natural landscapes again! My plans beyond that are still taking shape, but the idea is to spend much of the winter in Southern Europe.This quieter period also offers a chance to reflect and look back. (And to create some upgrades for this website, including the addition of a map. Let me know if anything isn't working properly!)\nLooking back over the past few months, I also reflected on the photos I had taken along the way and which ones I’d still like to share on this blog. That is how I came to the photo above: at first glance, just an ordinary path amidst the greenery. But there’s something you can’t see in the picture: just a few dozen meters to the right, there is the ceaseless roar of highway traffic. For me, this photo symbolizes the experience of being a 'citizen of two worlds.' On the one hand, I seek out greenery, nature, and tranquility. On the other, I am one of those drivers speeding along these highways. This experience creates a certain tension, or even a sense of contortedness. Perhaps it is not the point to bring these two worlds together, but rather of realizing what our current world has become—and who we have become within it."
             }
         ]
     }
