@@ -434,8 +434,8 @@
         "date": "May 30, 2026",
 	"locations": [
     	{ "lat": 50.3469, "lng": 6.5242, "img": "assets/images/Eifelblick.png"},
-    	{ "lat": 50.3633, "lng": 6.4774 },
-    	{ "lat": 50.3580, "lng": 6.4689 },
+    	{ "lat": 50.3633, "lng": 6.4774, "img": "assets/images/kronenburg castle.png" },
+    	{ "lat": 50.3580, "lng": 6.4689, "img": "assets/images/meer kronenburg.png"},
     	{ "lat": 51.5473, "lng": 3.6671 }
 	],
         "blocks": [
@@ -595,7 +595,7 @@
         "title": "The First World War",
         "date": "August 8, 2026",
 	"locations": [
-    	{ "lat": 50.1199, "lng": 3.1222, "img": "assets/images/soldier.png"},
+    	{ "lat": 50.1199, "lng": 3.1222, "img": "assets/images/cambrai1.png"},
     	{ "lat": 50.0504, "lng": 2.6863, "img": "assets/images/thiepval1.png"} 
 	],
         "blocks": [

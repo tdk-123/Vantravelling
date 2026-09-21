@@ -436,9 +436,9 @@
         "title": "En weer even terug",
         "date": "30 mei 2026",
 	"locations": [
-    	{ "lat": 50.3469, "lng": 6.5242},
-    	{ "lat": 50.3633, "lng": 6.4774 },
-    	{ "lat": 50.3580, "lng": 6.4689 },
+    	{ "lat": 50.3469, "lng": 6.5242, "img": "assets/images/Eifelblick.png"},
+    	{ "lat": 50.3633, "lng": 6.4774, "img": "assets/images/kronenburg castle.png" },
+    	{ "lat": 50.3580, "lng": 6.4689, "img": "assets/images/meer kronenburg.png"},
     	{ "lat": 51.5473, "lng": 3.6671 }
 	],
         "blocks": [
@@ -475,6 +475,10 @@
         "id": 12,
         "title": "Werken aan de camper - ziek - en nu weer onderweg",
         "date": "13 juni 2026",
+	"locations": [
+    	{ "lat": 51.4433, "lng": 4.9306, "img": "assets/images/baarle.png"}, 
+    	{ "lat": 51.3691, "lng": 4.9383, "img": "assets/images/uitzichttoren bels lijntje.png"}
+	],
         "blocks": [
             {
                 "type": "image",
@@ -508,6 +512,9 @@
         "id": 13,
         "title": "Opleiding afgerond - upgrades - weer op reis",
         "date": "6 juli 2026",
+	"locations": [
+    	{ "lat": 50.5457, "lng": 4.8917 }
+	],
         "blocks": [
             {
                 "type": "image",
@@ -523,6 +530,10 @@
         "id": 14,
         "title": "Door Noord-Frankrijk",
         "date": "25 juli 2026",
+	"locations": [
+    	{ "lat": 49.7937, "lng": 5.0665, "img": "assets/images/kasteel bouillon.png"}, 
+    	{ "lat": 49.8864, "lng": 4.3924, "img": "assets/images/soldier.png"}
+	],
         "blocks": [
             {
                 "type": "image",
@@ -586,6 +597,10 @@
         "id": 15,
         "title": "De Eerste Wereldoorlog",
         "date": "8 augustus 2026",
+	"locations": [
+    	{ "lat": 50.1199, "lng": 3.1222, "img": "assets/images/cambrai1.png"},
+    	{ "lat": 50.0504, "lng": 2.6863, "img": "assets/images/thiepval1.png"} 
+	],
         "blocks": [
             {
                 "type": "image",
