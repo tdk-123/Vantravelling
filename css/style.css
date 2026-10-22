@@ -642,6 +642,12 @@ main {
     }
 }
 
+@media (min-width: 769px) {
+    .gallery-grid {
+        grid-auto-rows: 220px;
+    }
+}
+
 /* Lightbox */
 .lightbox {
   position: fixed;
