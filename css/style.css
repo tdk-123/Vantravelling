@@ -642,6 +642,14 @@ main {
     }
 }
 
+@media (min-width: 769px) {
+    .gallery-grid[data-cols="1"] { grid-auto-rows: 360px; }
+    .gallery-grid[data-cols="2"] { grid-auto-rows: 260px; }
+    .gallery-grid[data-cols="3"] { grid-auto-rows: 200px; }
+    .gallery-grid[data-cols="4"] { grid-auto-rows: 160px; }
+    .gallery-grid[data-cols="5"] { grid-auto-rows: 160px; }
+    
+}
 
 /* Lightbox */
 .lightbox {
