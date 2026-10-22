@@ -244,7 +244,7 @@ if (miniMapEl) {
             posts.forEach(post => {
                 const locs = getPostLocations(post);
                 const img = getPostLeadingImage(post);
-                locs.forEach(loc => stops.push({ lat: loc.lat, lng: loc.lng, img }));
+                if (locs.length > 0) stops.push({ lat: locs[0].lat, lng: locs[0].lng, img });
             });
             if (stops.length === 0) return;
 
@@ -289,6 +289,7 @@ if (miniMapEl) {
 
 // ===== ABOUT PAGE FULL MAP =====
 const fullMapEl = document.getElementById('full-map');
+const SHOW_ALL_ZOOM = 7; // at this zoom level and higher, show all photos per post
 
 if (fullMapEl) {
     fetch(getDataPath() + '?t=' + new Date().getTime())
@@ -308,7 +309,8 @@ if (fullMapEl) {
                         label: locs.length > 1 ? `${post.id}${letters[locIndex]}` : `${post.id}`,
                         title: post.title,
                         date: post.date,
-                        actualIndex
+                        actualIndex,
+			locIndex
                     });
                 });
             });
@@ -324,19 +326,38 @@ if (fullMapEl) {
             const latlngs = stops.map(s => [s.lat, s.lng]);
             L.polyline(latlngs, { color: '#6B8F6B', weight: 3, opacity: 0.85 }).addTo(fullMap);
 
-            stops.forEach(s => {
-                const icon = L.divIcon({
-                    className: '',
-                    html: `<div class="map-marker" style="background-image:url('${s.img}')"><span class="map-marker-badge">${s.label}</span></div>`,
-                    iconSize: [44, 44],
-                    iconAnchor: [22, 22]
-                });
+const secondaryMarkers = [];
 
-                const marker = L.marker([s.lat, s.lng], { icon }).addTo(fullMap);
-                marker.bindPopup(`<img src="${s.img}" alt="${s.title}" style="width:100%;max-width:180px;border-radius:8px;margin-bottom:6px;display:block;"><strong>${s.title}</strong><br>${s.date}<br><a href="${getBlogPath()}#post-${s.actualIndex + 1}">Read post</a>`);
-            });
+stops.forEach(s => {
+    const icon = L.divIcon({
+        className: '',
+        html: `<div class="map-marker" style="background-image:url('${s.img}')"><span class="map-marker-badge">${s.label}</span></div>`,
+        iconSize: [44, 44],
+        iconAnchor: [22, 22]
+    });
 
-            fullMap.fitBounds(latlngs, { padding: [40, 40] });
+    const marker = L.marker([s.lat, s.lng], { icon });
+    marker.bindPopup(`<img src="${s.img}" alt="${s.title}" style="width:100%;max-width:180px;border-radius:8px;margin-bottom:6px;display:block;"><strong>${s.title}</strong><br>${s.date}<br><a href="${getBlogPath()}#post-${s.actualIndex + 1}">Read post</a>`);
+
+    if (s.locIndex === 0) {
+        marker.addTo(fullMap);            // first photo: always visible
+    } else {
+        secondaryMarkers.push(marker);    // others: toggled by zoom
+    }
+});
+
+function updateMarkerVisibility() {
+    const showAll = fullMap.getZoom() >= SHOW_ALL_ZOOM;
+    secondaryMarkers.forEach(m => {
+        if (showAll && !fullMap.hasLayer(m)) m.addTo(fullMap);
+        if (!showAll && fullMap.hasLayer(m)) fullMap.removeLayer(m);
+    });
+}
+
+fullMap.on('zoomend', updateMarkerVisibility);
+
+fullMap.fitBounds(latlngs, { padding: [40, 40] });
+updateMarkerVisibility(); // set the initial state
         })
         .catch(error => console.error('Error loading full map:', error));
 }
