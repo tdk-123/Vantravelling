@@ -733,7 +733,32 @@
                 "content": "The past few weeks have been filled with caring for the cats, handling various practical matters, working, and occasionally getting some rest. While the comforts of a house are pleasant for a while, I'm drawn towards vanlife again after this stay. Repairs were also carried out on the van recently to resolve a persistent issue (occasional smoke from the exhaust). It seems the underlying cause has been identified and fixed, so that’s good news!\nFurthermore, my plans for the coming weeks have become clearer. After wrapping up a few more practical tasks, I hope to go to Switzerland again in two weeks. That was my first destination back in April, but I couldn't stay there long at the time. Now, I hope to stay there for a few weeks. Partly in a house, since living in a van with two people can sometimes be a bit cramped. So, after focusing entirely on history during my summer travels, I’m now heading toward impressive natural landscapes again! My plans beyond that are still taking shape, but the idea is to spend much of the winter in Southern Europe.This quieter period also offers a chance to reflect and look back. (And to create some upgrades for this website, including the addition of a map. Let me know if anything isn't working properly!)\nLooking back over the past few months, I also reflected on the photos I had taken along the way and which ones I’d still like to share on this blog. That is how I came to the photo above: at first glance, just an ordinary path amidst the greenery. But there’s something you can’t see in the picture: just a few dozen meters to the right, there is the ceaseless roar of highway traffic. For me, this photo symbolizes the experience of being a 'citizen of two worlds.' On the one hand, I seek out greenery, nature, and tranquility. On the other, I am one of those drivers speeding along these highways. This experience creates a certain tension, or even a sense of contortedness. Perhaps it is not the point to bring these two worlds together, but rather of realizing what our current world has become—and who we have become within it."
             }
         ]
+    },
+    {
+        "id": 20,
+        "title": "Plans changed",
+        "date": "October 22, 2026",
+	"locations": [
+    	{ "lat": 51.4845, "lng": 7.1948 }
+	],
+        "blocks": [
+            {
+                "type": "image",
+                "src": "assets/images/fietsbrug.png"
+            },
+            {
+                "type": "text",
+                "content": "The plans for October were changed at the last minute; consequently, instead of photos of the Swiss mountains, I have pictures of cycle paths in the Ruhr region, built along the routes of former railway lines. As of plans for the coming weeks: another week here, then about two weeks in Belgium and the Netherlands to visit family and friends, followed by a trip south in search of warmer climates. And, I should add: subject to further changes, of course! :)  },
+            {
+                "type": "gallery",
+                "images": [
+                    {   "src": "assets/images/rood.png", "alt": "The beginning of autumn"},
+                    {   "src": "assets/images/fietspad.png", "alt": "Cycling path in the place of an old railway line"}
+                ]
+            }
+        ]
     }
+
 
 
 
