@@ -355,13 +355,14 @@
         "date": "May 21, 2026",
 	"locations": [
     	{ "lat": 50.6075, "lng": 6.3909, "img": "assets/images/ruhrsee.png" },
-    	{ "lat": 50.2592, "lng": 6.9151 },
-    	{ "lat": 50.2118, "lng": 6.9816 },
-    	{ "lat": 50.1219, "lng": 6.9633 },
-    	{ "lat": 50.1191, "lng": 6.8769 },
-    	{ "lat": 50.0915, "lng": 6.8074 },
-    	{ "lat": 50.1143, "lng": 6.8187 },
-    	{ "lat": 50.1113, "lng": 6.8109 }
+    	{ "lat": 50.2592, "lng": 6.9151, "img": "assets/images/teufelsstein.png" },
+    	{ "lat": 50.2118, "lng": 6.9816, "img": "assets/images/ulmener maar.png" },
+    	{ "lat": 50.2105, "lng": 6.9801, "img": "assets/images/ulmen layers.png" },
+    	{ "lat": 50.1219, "lng": 6.9633, "img": "assets/images/immerather maar2.png"  },
+    	{ "lat": 50.1191, "lng": 6.8769, "img": "assets/images/holzmaar.png"  },
+    	{ "lat": 50.0915, "lng": 6.8074, "img": "assets/images/maarmuseum.png"  },
+    	{ "lat": 50.1143, "lng": 6.8187, "img": "assets/images/eckfelder maar.png"  },
+    	{ "lat": 50.1113, "lng": 6.8109, "img": "assets/images/kobesloch.png"  }
 	],
         "blocks": [
             {
@@ -436,7 +437,7 @@
     	{ "lat": 50.3469, "lng": 6.5242, "img": "assets/images/Eifelblick.png"},
     	{ "lat": 50.3633, "lng": 6.4774, "img": "assets/images/kronenburg castle.png" },
     	{ "lat": 50.3580, "lng": 6.4689, "img": "assets/images/meer kronenburg.png"},
-    	{ "lat": 51.5473, "lng": 3.6671 }
+    	{ "lat": 51.5473, "lng": 3.6671, "img": "assets/images/veere1.png" }
 	],
         "blocks": [
             {
@@ -596,6 +597,8 @@
         "date": "August 8, 2026",
 	"locations": [
     	{ "lat": 50.1199, "lng": 3.1222, "img": "assets/images/cambrai1.png"},
+    	{ "lat": 50.1681, "lng": 3.1423, "img": "assets/images/cambrai2.png"}, 
+    	{ "lat": 50.1249, "lng": 3.1241, "img": "assets/images/tank.png"},
     	{ "lat": 50.0504, "lng": 2.6863, "img": "assets/images/thiepval1.png"} 
 	],
         "blocks": [
@@ -641,6 +644,17 @@
         "id": 16,
         "title": "Back in Belgium",
         "date": "August 15, 2026",
+	"locations": [
+    	{ "lat": 50.0156, "lng": 2.6973, "img": "assets/images/lochnager1.png" },
+    	{ "lat": 50.0737, "lng": 2.6479, "img": "assets/images/trench3.png" },
+    	{ "lat": 50.6181, "lng": 2.8357, "img": "assets/images/cobbler.png" },
+    	{ "lat": 50.6099, "lng": 2.8393, "img": "assets/images/hitler bunker.png" },
+    	{ "lat": 50.8558, "lng": 2.9918, "img": "assets/images/cemetery3.png" },
+    	{ "lat": 50.8709, "lng": 2.9885, "img": "assets/images/trench ger.png" },
+    	{ "lat": 50.8544, "lng": 2.9777, "img": "assets/images/brothers in arms.png" },
+    	{ "lat": 50.8511, "lng": 2.8864, "img": "assets/images/ieper.png" },
+    	{ "lat": 51.1093, "lng": 2.6019, "img": "assets/images/strand.png" }
+	],
         "blocks": [
             {
                 "type": "image",
@@ -679,6 +693,9 @@
         "id": 17,
         "title": "Art",
         "date": "August 22, 2026",
+	"locations": [
+    	{ "lat": 51.2089, "lng": 4.3941 }
+	],
         "blocks": [
             {
                 "type": "image",
