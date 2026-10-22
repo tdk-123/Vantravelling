@@ -977,6 +977,7 @@ const buildGrid = (h1, h2) => {
         ? getMobileGalleryConfig(count, h1, h2)
         : getGalleryConfig(count, h1, h2);
     blockDiv.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    blockDiv.dataset.cols = cols;
 
     images.forEach((imgData, i) => {
         const item = document.createElement('div');
