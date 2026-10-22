@@ -952,6 +952,9 @@ let currentIndex = getPostIndexFromHash();
             // Clear existing blocks
             postBody.innerHTML = '';
 
+            // Jump back to top
+            window.scrollTo({ top: 0, behavior: "instant" });
+
             // Render Blocks
             if (post.blocks && Array.isArray(post.blocks)) {
                 post.blocks.forEach(block => {
@@ -1014,6 +1017,7 @@ const buildGrid = (h1, h2) => {
         item.addEventListener('click', () => openLightbox(images, i));
         blockDiv.appendChild(item);
     });
+
 };
 
     if (needsH1 || needsH2) {
