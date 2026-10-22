@@ -357,14 +357,15 @@
         "title": "In de Vulkaneifel",
         "date": "21 mei 2026",
 	"locations": [
-    	{ "lat": 50.6075, "lng": 6.3909 },
-    	{ "lat": 50.2592, "lng": 6.9151 },
-    	{ "lat": 50.2118, "lng": 6.9816 },
-    	{ "lat": 50.1219, "lng": 6.9633 },
-    	{ "lat": 50.1191, "lng": 6.8769 },
-    	{ "lat": 50.0915, "lng": 6.8074 },
-    	{ "lat": 50.1143, "lng": 6.8187 },
-    	{ "lat": 50.1113, "lng": 6.8109 }
+    	{ "lat": 50.6075, "lng": 6.3909, "img": "assets/images/ruhrsee.png" },
+    	{ "lat": 50.2592, "lng": 6.9151, "img": "assets/images/teufelsstein.png" },
+    	{ "lat": 50.2118, "lng": 6.9816, "img": "assets/images/ulmener maar.png" },
+    	{ "lat": 50.2105, "lng": 6.9801, "img": "assets/images/ulmen layers.png" },
+    	{ "lat": 50.1219, "lng": 6.9633, "img": "assets/images/immerather maar2.png"  },
+    	{ "lat": 50.1191, "lng": 6.8769, "img": "assets/images/holzmaar.png"  },
+    	{ "lat": 50.0915, "lng": 6.8074, "img": "assets/images/maarmuseum.png"  },
+    	{ "lat": 50.1143, "lng": 6.8187, "img": "assets/images/eckfelder maar.png"  },
+    	{ "lat": 50.1113, "lng": 6.8109, "img": "assets/images/kobesloch.png"  }
 	],
         "blocks": [
             {
@@ -599,7 +600,10 @@
         "date": "8 augustus 2026",
 	"locations": [
     	{ "lat": 50.1199, "lng": 3.1222, "img": "assets/images/cambrai1.png"},
+    	{ "lat": 50.1681, "lng": 3.1423, "img": "assets/images/cambrai2.png"}, 
+    	{ "lat": 50.1249, "lng": 3.1241, "img": "assets/images/tank.png"},
     	{ "lat": 50.0504, "lng": 2.6863, "img": "assets/images/thiepval1.png"} 
+
 	],
         "blocks": [
             {
@@ -608,7 +612,7 @@
             },
             {
                 "type": "text",
-                "content": "Het wekelijks updaten van de blog is ook de laatste weken, toen ik wel continu reisde, niet gelukt. Vandaar vanaf vandaag een nieuwe aanpak: iedere zaterdag een blogdesnoods heel kort een klein stukje tekst en één foto.\nEigenlijk zou ik nu een lange beschouwing willen geven over de plekken van de Eerste Wereldoorlog die ik de afgelopen twee weken bezocht heb, en vooral ook het belang van de Eerste Wereldoorlog. Hoe het als eerste echt industriële oorlog het vooruitgangsgeloof gebroken heeft, en ons confronteert met de harde realiteit die schuil gaat achter al onze technologische vooruitgang. Maar deze beschouwing blijft nu dus beperkt tot een paar zinnen, hieronder wel het begin van een gallery die ik later nog wat aan hoop te vullen. De reden dat ik vandaag ook niet veel tijd heb, is trouwens weer een heel gezellig familiebezoek! En dat in het meest zuidelijke punt van Frankrijk dat ik nu bereik, vanaf volgende week gaat het weer langzaamaan noordwaards."
+                "content": "Het wekelijks updaten van de blog is ook de laatste weken, toen ik wel continu reisde, niet gelukt. Vandaar vanaf vandaag een nieuwe aanpak: iedere zaterdag een blog, desnoods heel kort een klein stukje tekst en één foto.\nEigenlijk zou ik nu een lange beschouwing willen geven over de plekken van de Eerste Wereldoorlog die ik de afgelopen twee weken bezocht heb, en vooral ook het belang van de Eerste Wereldoorlog. Hoe het als eerste echt industriële oorlog het vooruitgangsgeloof gebroken heeft, en ons confronteert met de harde realiteit die schuil gaat achter al onze technologische vooruitgang. Maar deze beschouwing blijft nu dus beperkt tot een paar zinnen, hieronder wel het begin van een gallery die ik later nog wat aan hoop te vullen. De reden dat ik vandaag ook niet veel tijd heb, is trouwens weer een heel gezellig familiebezoek! En dat in het meest zuidelijke punt van Frankrijk dat ik nu bereik, vanaf volgende week gaat het weer langzaamaan noordwaards."
             },
             {
                 "type": "gallery",
@@ -649,12 +653,13 @@
     	{ "lat": 50.0737, "lng": 2.6479, "img": "assets/images/trench3.png" },
     	{ "lat": 50.6181, "lng": 2.8357, "img": "assets/images/cobbler.png" },
     	{ "lat": 50.6099, "lng": 2.8393, "img": "assets/images/hitler bunker.png" },
-    	{ "lat": 50.8709, "lng": 2.9885, "img": "assets/images/trench ger.png" },
     	{ "lat": 50.8558, "lng": 2.9918, "img": "assets/images/cemetery3.png" },
+    	{ "lat": 50.8709, "lng": 2.9885, "img": "assets/images/trench ger.png" },
     	{ "lat": 50.8544, "lng": 2.9777, "img": "assets/images/brothers in arms.png" },
     	{ "lat": 50.8511, "lng": 2.8864, "img": "assets/images/ieper.png" },
     	{ "lat": 51.1093, "lng": 2.6019, "img": "assets/images/strand.png" }
-	],        "blocks": [
+	],
+        "blocks": [
             {
                 "type": "image",
                 "src": "assets/images/ieper.png"
