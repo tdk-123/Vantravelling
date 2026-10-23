@@ -288,8 +288,8 @@
         "title": "De uitdagingen van het camperleven",
         "date": "23 april 2026",
 	"locations": [
-    	{ "lat": 50.9341, "lng": 5.1665 },
-    	{ "lat": 50.885, "lng": 4.4716 }
+    	{ "lat": 50.9341, "lng": 5.1665, "img": "assets/images/pauw.png"  },
+    	{ "lat": 50.885, "lng": 4.4716, "img": "assets/images/startmotor2.png"  }
 	],
         "blocks": [
             {
